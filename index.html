@@ -78,15 +78,15 @@
           <span>敷地速刷</span>
           <span class="text-[10px] px-1.5 py-0.5 rounded-full bg-emerald-500/20 text-emerald-400 font-bold border border-emerald-500/30">V5 旗艦版</span>
         </h1>
-        <p class="text-[10px] text-slate-400">專技建築師高考・零散時間極速複習</p>
+        <p class="text-xs text-slate-400">專技建築師高考・零散時間極速複習</p>
       </div>
     </div>
     <div class="flex items-center space-x-2">
-      <a href="https://a54621992-hub.github.io/architect-exam-quiz/" class="px-2.5 py-1 text-xs font-semibold rounded-lg bg-amber-500/15 text-amber-300 border border-amber-500/30 hover:bg-amber-500/25 active:scale-95 transition flex items-center space-x-1 shadow-sm" title="切換至建築法規衝刺 APP">
-        <span>⚖️</span>
-        <span>切換法規</span>
-      </a>
-      <button onclick="toggleSettingsModal()" class="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center text-slate-300 hover:text-white border border-slate-700 active:scale-95 transition" title="設定與系統資訊">
+      <button onclick="cycleFontScale()" class="px-2.5 py-1.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 text-xs font-bold active:scale-95 transition flex items-center space-x-1" title="切換字體大小 (標準 100% / 大字 115% / 特大 130%)">
+        <span>🔤</span>
+        <span id="header-font-scale-text">字體</span>
+      </button>
+      <button onclick="toggleSettingsModal()" class="w-9 h-9 rounded-full bg-slate-800 flex items-center justify-center text-slate-300 hover:text-white border border-slate-700 active:scale-95 transition" title="設定與系統資訊">
         ⚙️
       </button>
     </div>
@@ -98,24 +98,24 @@
     <!-- 頂部及格線信心儀表板 (Pass Radar) -->
     <section class="bg-gradient-to-br from-slate-900 via-slate-850 to-slate-900 p-4 rounded-3xl border border-slate-800 shadow-xl relative overflow-hidden">
       <div class="flex justify-between items-center mb-3">
-        <span class="text-xs font-bold text-slate-400 tracking-wider">🎯 零散時間備考儀表板</span>
-        <span class="text-[11px] font-mono px-2 py-0.5 rounded-full bg-blue-950 text-blue-300 border border-blue-800/50">40天衝刺</span>
+        <span class="text-sm font-bold text-slate-200 tracking-wider">🎯 零散時間備考儀表板</span>
+        <span class="text-xs font-mono font-bold px-2.5 py-0.5 rounded-full bg-blue-950 text-blue-300 border border-blue-800/50">40天衝刺</span>
       </div>
       <div class="grid grid-cols-3 gap-2 text-center">
-        <div class="bg-slate-950/60 p-2.5 rounded-2xl border border-slate-800/80">
-          <div class="text-[10px] text-slate-400">數字掌握度</div>
-          <div class="text-lg font-black text-emerald-400 mt-0.5" id="stats-num-rate">0%</div>
-          <div class="text-[9px] text-slate-500">84 項數字總表</div>
+        <div class="bg-slate-950/70 p-3 rounded-2xl border border-slate-800/80">
+          <div class="text-xs font-bold text-slate-300">數字掌握度</div>
+          <div class="text-2xl font-black text-emerald-400 mt-1" id="stats-num-rate">0%</div>
+          <div class="text-[11px] font-medium text-slate-400 mt-0.5">84 項數字總表</div>
         </div>
-        <div class="bg-slate-950/60 p-2.5 rounded-2xl border border-slate-800/80">
-          <div class="text-[10px] text-slate-400">SOP 反射連勝</div>
-          <div class="text-lg font-black text-cyan-400 mt-0.5" id="stats-sop-streak">0 題</div>
-          <div class="text-[9px] text-slate-500">11 步驟無腦接</div>
+        <div class="bg-slate-950/70 p-3 rounded-2xl border border-slate-800/80">
+          <div class="text-xs font-bold text-slate-300">SOP 反射連勝</div>
+          <div class="text-2xl font-black text-cyan-400 mt-1" id="stats-sop-streak">0 題</div>
+          <div class="text-[11px] font-medium text-slate-400 mt-0.5">11 步驟無腦接</div>
         </div>
-        <div class="bg-slate-950/60 p-2.5 rounded-2xl border border-slate-800/80">
-          <div class="text-[10px] text-slate-400">六格秒殺卡</div>
-          <div class="text-lg font-black text-purple-400 mt-0.5" id="stats-grid-count">0/72</div>
-          <div class="text-[9px] text-slate-500">已翻開覆盤</div>
+        <div class="bg-slate-950/70 p-3 rounded-2xl border border-slate-800/80">
+          <div class="text-xs font-bold text-slate-300">六格秒殺卡</div>
+          <div class="text-2xl font-black text-purple-400 mt-1" id="stats-grid-count">0/72</div>
+          <div class="text-[11px] font-medium text-slate-400 mt-0.5">已翻開覆盤</div>
         </div>
       </div>
     </section>
@@ -171,30 +171,30 @@
 
     <!-- 模組 2: 作圖 SOP 肌肉記憶專章 (SOP Blitz) -->
     <section id="view-sop" class="view-panel hidden space-y-4">
-      <div class="flex space-x-1.5 p-1 bg-slate-900 rounded-xl border border-slate-800 text-xs font-semibold">
-        <button onclick="switchSopTab('blitz')" id="sop-tab-blitz" class="flex-1 py-1.5 rounded-lg bg-emerald-500 text-slate-950 font-bold transition">下一步盲測</button>
-        <button onclick="switchSopTab('rules')" id="sop-tab-rules" class="flex-1 py-1.5 rounded-lg text-slate-400 transition">三條鐵律</button>
-        <button onclick="switchSopTab('colors')" id="sop-tab-colors" class="flex-1 py-1.5 rounded-lg text-slate-400 transition">色筆標記</button>
-        <button onclick="switchSopTab('list')" id="sop-tab-list" class="flex-1 py-1.5 rounded-lg text-slate-400 transition">11 步驟</button>
+      <div class="flex space-x-2 p-1.5 bg-slate-900 rounded-2xl border border-slate-800 text-sm font-bold">
+        <button onclick="switchSopTab('blitz')" id="sop-tab-blitz" class="flex-1 py-2.5 rounded-xl bg-emerald-500 text-slate-950 font-black transition">下一步盲測</button>
+        <button onclick="switchSopTab('rules')" id="sop-tab-rules" class="flex-1 py-2.5 rounded-xl text-slate-400 hover:text-white transition">三條鐵律</button>
+        <button onclick="switchSopTab('colors')" id="sop-tab-colors" class="flex-1 py-2.5 rounded-xl text-slate-400 hover:text-white transition">色筆標記</button>
+        <button onclick="switchSopTab('list')" id="sop-tab-list" class="flex-1 py-2.5 rounded-xl text-slate-400 hover:text-white transition">11 步驟</button>
       </div>
 
       <!-- SOP 子頁面 1: 下一步盲測 -->
       <div id="sop-sub-blitz" class="space-y-4">
         <div class="bg-slate-900 rounded-3xl border border-slate-800 p-5 shadow-xl space-y-4">
-          <div class="flex justify-between items-center text-xs">
-            <span class="px-2.5 py-0.5 rounded-full bg-cyan-950 text-cyan-300 font-bold border border-cyan-800/50">肌肉記憶反射測試</span>
-            <span class="text-slate-400 font-mono" id="sop-quiz-streak">🔥 連勝: 0 題</span>
+          <div class="flex justify-between items-center text-sm">
+            <span class="px-3 py-1 rounded-full bg-cyan-950 text-cyan-300 font-bold border border-cyan-800/50">肌肉記憶反射測試</span>
+            <span class="text-amber-300 font-mono font-bold" id="sop-quiz-streak">🔥 連勝: 0 題</span>
           </div>
-          <div class="text-base font-bold text-white leading-relaxed" id="sop-quiz-question">
+          <div class="text-lg md:text-xl font-bold text-white leading-relaxed" id="sop-quiz-question">
             題目載入中...
           </div>
-          <div class="space-y-2 pt-2" id="sop-quiz-options">
+          <div class="space-y-2.5 pt-2" id="sop-quiz-options">
             <!-- 動態生成選項 -->
           </div>
-          <div id="sop-quiz-feedback" class="hidden p-3.5 rounded-2xl bg-slate-950 border border-slate-800 space-y-2 text-xs">
-            <div id="sop-feedback-title" class="font-bold"></div>
-            <div id="sop-feedback-text" class="text-slate-300 leading-relaxed"></div>
-            <button onclick="loadNextSopQuiz()" class="w-full mt-2 py-2.5 rounded-xl bg-cyan-600 hover:bg-cyan-500 text-white font-bold text-xs transition">
+          <div id="sop-quiz-feedback" class="hidden p-4 rounded-2xl bg-slate-950 border border-slate-800 space-y-2.5 text-sm">
+            <div id="sop-feedback-title" class="font-bold text-base"></div>
+            <div id="sop-feedback-text" class="text-slate-200 leading-relaxed text-sm md:text-base"></div>
+            <button onclick="loadNextSopQuiz()" class="w-full mt-3 py-3.5 rounded-xl bg-cyan-600 hover:bg-cyan-500 text-white font-bold text-base shadow-lg shadow-cyan-600/30 transition">
               下一題反射 →
             </button>
           </div>
@@ -440,16 +440,23 @@
         </div>
       </div>
 
-      <!-- 快速切換科目 -->
+      <!-- 全站字體大小調整 -->
       <div class="space-y-2">
-        <div class="text-[11px] font-bold text-slate-400">跨科目切換</div>
-        <a href="https://a54621992-hub.github.io/architect-exam-quiz/" class="w-full py-2.5 px-3 rounded-xl bg-amber-500/15 border border-amber-500/30 text-amber-300 font-bold text-xs flex items-center justify-between hover:bg-amber-500/25 active:scale-95 transition">
-          <div class="flex items-center space-x-2">
-            <span>⚖️</span>
-            <span>切換至「建築法規極速衝刺」</span>
-          </div>
-          <span>→</span>
-        </a>
+        <div class="flex justify-between items-center text-xs text-slate-300 font-bold">
+          <span>🔍 全站字體大小調整</span>
+          <span id="current-font-label" class="text-emerald-400 font-mono text-xs">標準 (100%)</span>
+        </div>
+        <div class="grid grid-cols-3 gap-2">
+          <button onclick="setFontScale('normal')" id="font-btn-normal" class="py-2.5 px-2 rounded-xl bg-emerald-500 text-slate-950 text-xs font-black transition">
+            標準 A (100%)
+          </button>
+          <button onclick="setFontScale('large')" id="font-btn-large" class="py-2.5 px-2 rounded-xl bg-slate-800 text-slate-300 hover:text-white border border-slate-700 text-xs font-bold transition">
+            大字 A+ (115%)
+          </button>
+          <button onclick="setFontScale('xlarge')" id="font-btn-xlarge" class="py-2.5 px-2 rounded-xl bg-slate-800 text-slate-300 hover:text-white border border-slate-700 text-xs font-bold transition">
+            特大 A++ (130%)
+          </button>
+        </div>
       </div>
 
       <!-- 進度管理與快取 -->
@@ -574,8 +581,7 @@
       }
 
       modal.classList.remove('hidden');
-      const isMobilePortrait = (window.innerHeight > window.innerWidth) && (window.innerWidth < 768);
-      isLightboxRotated = isMobilePortrait;
+      isLightboxRotated = false;
       resetLightboxDimensions();
       resetLightboxZoom();
     };
@@ -586,8 +592,7 @@
       
       box.innerHTML = `<img src="${imgSrc}" class="w-full h-full object-contain pointer-events-none" alt="${title}">`;
       modal.classList.remove('hidden');
-      const isMobilePortrait = (window.innerHeight > window.innerWidth) && (window.innerWidth < 768);
-      isLightboxRotated = isMobilePortrait;
+      isLightboxRotated = false;
       resetLightboxDimensions();
       resetLightboxZoom();
     };
@@ -610,8 +615,8 @@
         box.style.maxWidth = 'none';
         box.style.maxHeight = 'none';
       } else {
-        box.style.width = '95vw';
-        box.style.maxWidth = '850px';
+        box.style.width = '96vw';
+        box.style.maxWidth = '900px';
         box.style.height = 'auto';
         box.style.maxHeight = '88vh';
       }
@@ -716,6 +721,56 @@
     }, { passive: false });
 
     // ==========================================
+    // 全站字體大小動態縮放引擎 (Font Scale Engine)
+    // ==========================================
+    const FONT_SCALES = {
+      'normal': { scale: 100, label: '標準 (100%)', shortLabel: '標準' },
+      'large': { scale: 115, label: '大字 (115%)', shortLabel: '大字' },
+      'xlarge': { scale: 130, label: '特大 (130%)', shortLabel: '特大' }
+    };
+    let currentFontScale = 'normal';
+
+    function setFontScale(scaleKey) {
+      if (!FONT_SCALES[scaleKey]) scaleKey = 'normal';
+      currentFontScale = scaleKey;
+      const config = FONT_SCALES[scaleKey];
+      
+      // 動態更新根節點 rem 基準
+      document.documentElement.style.fontSize = `${(config.scale / 100) * 16}px`;
+      
+      // 更新按鈕高亮
+      ['normal', 'large', 'xlarge'].forEach(k => {
+        const btn = document.getElementById(`font-btn-${k}`);
+        if (btn) {
+          if (k === scaleKey) {
+            btn.className = "py-2.5 px-2 rounded-xl bg-emerald-500 text-slate-950 text-xs font-black transition";
+          } else {
+            btn.className = "py-2.5 px-2 rounded-xl bg-slate-800 text-slate-300 hover:text-white border border-slate-700 text-xs font-bold transition";
+          }
+        }
+      });
+
+      const labelEl = document.getElementById('current-font-label');
+      if (labelEl) labelEl.innerText = config.label;
+
+      const headerText = document.getElementById('header-font-scale-text');
+      if (headerText) headerText.innerText = config.shortLabel;
+
+      localStorage.setItem('APP_FONT_SCALE', scaleKey);
+    }
+
+    function cycleFontScale() {
+      const order = ['normal', 'large', 'xlarge'];
+      const nextIdx = (order.indexOf(currentFontScale) + 1) % order.length;
+      setFontScale(order[nextIdx]);
+    }
+
+    function initFontScale() {
+      const saved = localStorage.getItem('APP_FONT_SCALE') || 'normal';
+      setFontScale(saved);
+    }
+
+    // ==========================================
     // 狀態持久化管理 (LocalStorage)
     // ==========================================
     const STATE_KEY = 'SITE_PLANNING_APP_STATE_V1';
@@ -730,6 +785,7 @@
     };
 
     function loadState() {
+      initFontScale();
       const saved = localStorage.getItem(STATE_KEY);
       if (saved) {
         try {
@@ -817,8 +873,8 @@
 
       options.forEach(opt => {
         const btn = document.createElement('button');
-        btn.className = "w-full py-3.5 px-4 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-800 text-left text-xs font-semibold text-slate-200 active:scale-98 transition flex items-center justify-between";
-        btn.innerHTML = `<span>${opt}</span><span class="text-slate-500">→</span>`;
+        btn.className = "w-full py-4 px-5 rounded-2xl bg-slate-900 hover:bg-slate-800 border border-slate-800 text-left text-base font-bold text-slate-100 active:scale-98 transition flex items-center justify-between shadow-md";
+        btn.innerHTML = `<span>${opt}</span><span class="text-slate-500 font-mono text-lg">→</span>`;
         btn.onclick = () => handleSopAnswer(opt, btn);
         container.appendChild(btn);
       });
@@ -857,13 +913,13 @@
       container.innerHTML = '';
       SITE_DATA.sop.iron_rules.forEach(r => {
         container.innerHTML += `
-          <div class="bg-slate-900 p-4 rounded-2xl border border-slate-800 space-y-2">
-            <span class="text-amber-400 font-bold text-sm block">🛡️ ${r.title}</span>
-            <div class="text-xs text-white font-medium bg-slate-950/80 p-2.5 rounded-xl border border-slate-850">
+          <div class="bg-slate-900 p-5 rounded-2xl border border-slate-800 space-y-2.5 shadow-lg">
+            <span class="text-amber-400 font-black text-base md:text-lg block">🛡️ ${r.title}</span>
+            <div class="text-sm md:text-base text-cyan-300 font-bold bg-slate-950/80 p-3.5 rounded-xl border border-slate-850">
               👉 ${r.key_action}
             </div>
-            <p class="text-xs text-slate-300 leading-relaxed italic">"${r.quote}"</p>
-            <p class="text-[11px] text-slate-400 leading-relaxed">💡 核心理由：${r.why}</p>
+            <p class="text-sm md:text-base text-slate-200 leading-relaxed italic">"${r.quote}"</p>
+            <p class="text-xs md:text-sm text-slate-400 leading-relaxed">💡 核心理由：${r.why}</p>
           </div>
         `;
       });
@@ -874,12 +930,12 @@
       container.innerHTML = '';
       SITE_DATA.sop.color_markings.forEach(c => {
         container.innerHTML += `
-          <div class="bg-slate-900 p-3.5 rounded-2xl border border-slate-800 space-y-2">
+          <div class="bg-slate-900 p-4 rounded-2xl border border-slate-800 space-y-2.5 shadow-lg">
             <div class="flex items-center justify-between">
-              <span class="px-2.5 py-0.5 rounded-md text-xs font-black ${c.css_class}">${c.color}色標記</span>
-              <span class="text-xs font-bold text-slate-300">${c.target}</span>
+              <span class="px-3 py-1 rounded-lg text-sm font-black ${c.css_class}">${c.color}色標記</span>
+              <span class="text-sm md:text-base font-bold text-slate-200">${c.target}</span>
             </div>
-            <div class="text-[11px] text-slate-400 space-y-1">
+            <div class="text-xs md:text-sm text-slate-300 space-y-1.5 leading-relaxed pt-1">
               ${c.examples.map(ex => `<div>• ${ex}</div>`).join('')}
             </div>
           </div>
@@ -892,17 +948,17 @@
       container.innerHTML = '';
       SITE_DATA.sop.steps.forEach(s => {
         container.innerHTML += `
-          <div class="bg-slate-900 p-3 rounded-xl border border-slate-800 flex items-start space-x-3">
-            <div class="w-7 h-7 rounded-lg bg-slate-800 flex items-center justify-center font-bold text-xs text-cyan-400 flex-shrink-0">
+          <div class="bg-slate-900 p-4 rounded-2xl border border-slate-800 flex items-start space-x-3.5 shadow-md">
+            <div class="w-9 h-9 rounded-xl bg-slate-800 flex items-center justify-center font-black text-sm text-cyan-400 flex-shrink-0 border border-slate-700">
               ${s.step}
             </div>
-            <div class="flex-1 text-xs">
+            <div class="flex-1 text-xs md:text-sm">
               <div class="flex justify-between items-center">
-                <span class="font-bold text-white">${s.name}</span>
-                <span class="text-[10px] text-slate-500 font-mono">${s.ratio}</span>
+                <span class="font-bold text-white text-sm md:text-base">${s.name}</span>
+                <span class="text-xs text-amber-300 font-mono font-bold">${s.ratio}</span>
               </div>
-              <p class="text-slate-300 mt-1 leading-relaxed">${s.key_points}</p>
-              <p class="text-[10px] text-slate-400 mt-0.5 font-mono">下一動作：${s.next_step_name}</p>
+              <p class="text-slate-200 mt-1.5 leading-relaxed text-xs md:text-sm">${s.key_points}</p>
+              <p class="text-xs text-cyan-300 mt-1 font-mono font-semibold">下一動作：${s.next_step_name}</p>
             </div>
           </div>
         `;
