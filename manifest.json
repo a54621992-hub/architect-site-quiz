@@ -1,0 +1,21 @@
+{
+  "name": "敷地計畫與都市設計極速複習",
+  "short_name": "敷地速刷",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#090d16",
+  "theme_color": "#0f172a",
+  "description": "建築師考試 敷地計畫與都市設計 零散時間碎片化複習 APP",
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
