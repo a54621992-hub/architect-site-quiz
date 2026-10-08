@@ -299,16 +299,22 @@
     <section id="view-diagrams" class="view-panel hidden space-y-4">
       <div class="flex space-x-2 overflow-x-auto no-scrollbar py-1" id="diag-nav-chips"></div>
       <div class="bg-slate-900 rounded-2xl border border-slate-800 p-4 shadow-xl space-y-4" id="diag-detail-card">
-        <div class="flex justify-between items-start gap-2 border-b border-slate-800/80 pb-2.5">
-          <div class="min-w-0">
-            <h3 class="text-lg md:text-xl font-black text-white tracking-wide truncate" id="diag-title">圖卡 01｜Lynch 五元素轉譯表</h3>
-            <p class="text-sm text-amber-400 font-semibold mt-1 truncate" id="diag-used-for">跨題用途</p>
-          </div>
-          <div class="flex items-center gap-2 shrink-0">
+        <div class="border-b border-slate-800/80 pb-3 space-y-2">
+          <!-- 頂部功能列：左側頁碼，右側複製按鈕 -->
+          <div class="flex items-center justify-between gap-2">
+            <span class="text-xs font-bold font-mono px-2.5 py-1 rounded-xl bg-slate-800 text-slate-300 border border-slate-700 shrink-0 whitespace-nowrap" id="diag-id-badge">01/11</span>
             <button onclick="copyCurrentDiagramCard(this)" class="shrink-0 flex items-center gap-1.5 px-3 py-1 rounded-xl font-bold text-xs bg-slate-800 hover:bg-slate-700 text-slate-200 hover:text-white border border-slate-700 active:scale-95 transition shadow-sm whitespace-nowrap" title="複製此圖卡重點發問 GEM">
               <span>📋</span><span>複製</span>
             </button>
-            <span class="text-xs font-bold px-2.5 py-1 rounded-xl bg-slate-800 text-slate-300 border border-slate-700 shrink-0 whitespace-nowrap" id="diag-id-badge">01/11</span>
+          </div>
+
+          <!-- 圖卡完整大標題 (允許自然換行，一字不漏，絕無 ... 截斷) -->
+          <h3 class="text-xl font-black text-white leading-snug tracking-wide break-words" id="diag-title">圖卡 01｜Lynch 五元素轉譯表</h3>
+
+          <!-- 跨題用途 (獨立結構化提示方塊，完整呈現) -->
+          <div class="bg-amber-500/10 border border-amber-500/20 px-3 py-1.5 rounded-xl text-xs sm:text-sm text-amber-300 font-semibold leading-relaxed break-words flex items-start gap-1.5">
+            <span class="shrink-0 text-amber-400">💡</span>
+            <span id="diag-used-for">跨題用途</span>
           </div>
         </div>
 
@@ -1107,37 +1113,37 @@
       filtered.forEach(g => {
         const isRevealed = !!appState.gridRevealed[g.id];
         const card = document.createElement('div');
-        // 加入 overflow-hidden 徹底防溢出，邊距與層次清晰
         card.className = "bg-slate-900 p-4 sm:p-5 rounded-3xl border border-slate-750 hover:border-slate-600 shadow-xl space-y-3 cursor-pointer active:scale-98 transition overflow-hidden";
         card.onclick = () => toggleGridReveal(g.id);
 
         const cleanNumber = (g.number || '').replace(/^[▸\s]+/, '');
 
         card.innerHTML = `
-          <!-- 頂部資訊列：左側機能徽章 + 主題分類，右側複製按鈕 (防止擠壓折行) -->
-          <div class="flex items-center justify-between gap-2 border-b border-slate-800/80 pb-2.5">
-            <div class="flex items-center gap-2 min-w-0">
+          <!-- 頂部資訊列：左側機能徽章，右側複製按鈕；主題名稱獨立完整呈現 -->
+          <div class="border-b border-slate-800/80 pb-2 space-y-1.5">
+            <div class="flex items-center justify-between gap-2">
               <span class="shrink-0 px-2.5 py-1 rounded-xl font-black text-xs bg-purple-950 text-purple-300 border border-purple-800/60 whitespace-nowrap shadow-sm">
                 【${g.func_abbr}】格 ${g.grid_no}
               </span>
-              <span class="text-xs sm:text-sm font-bold text-slate-400 truncate">
-                ${g.topic_header}
-              </span>
+              <button 
+                onclick="event.stopPropagation(); copyGridCard('${g.id}', this)"
+                class="shrink-0 flex items-center gap-1.5 px-3 py-1 rounded-xl font-bold text-xs bg-slate-800 hover:bg-slate-700 text-slate-200 hover:text-white border border-slate-700 active:scale-95 transition shadow-sm whitespace-nowrap"
+                title="複製小卡文字，最前方自動加上『詳細說明：』">
+                <span class="text-xs">📋</span><span>複製</span>
+              </button>
             </div>
-            <button 
-              onclick="event.stopPropagation(); copyGridCard('${g.id}', this)"
-              class="shrink-0 flex items-center gap-1.5 px-3 py-1 rounded-xl font-bold text-xs bg-slate-800 hover:bg-slate-700 text-slate-200 hover:text-white border border-slate-700 active:scale-95 transition shadow-sm whitespace-nowrap"
-              title="複製小卡文字，最前方自動加上『詳細說明：』">
-              <span class="text-xs">📋</span><span>複製</span>
-            </button>
+            <!-- 主題分類完整字串 (允許換行，絕無 ... 截斷) -->
+            <div class="text-xs sm:text-sm font-bold text-slate-400 leading-snug break-words">
+              ${g.topic_header}
+            </div>
           </div>
 
-          <!-- 卡片核心考點標題 (獨佔一行，大氣醒目不被按鈕擠壓) -->
-          <div class="text-lg sm:text-xl font-black text-white leading-snug tracking-wide pt-0.5">
+          <!-- 卡片核心考點標題 (獨佔一行，完整呈現) -->
+          <div class="text-lg sm:text-xl font-black text-white leading-snug tracking-wide pt-0.5 break-words">
             ${g.title}
           </div>
           
-          <!-- 展開內容區塊 (增加 break-words 防止長文字溢出) -->
+          <!-- 展開內容區塊 (完整呈現，防止溢出) -->
           <div id="grid-content-${g.id}" class="${isRevealed ? '' : 'hidden'} pt-3 border-t border-slate-800/80 space-y-2.5 text-sm sm:text-base">
             <div class="text-emerald-400 font-bold leading-relaxed flex items-start gap-2">
               <span class="shrink-0 text-emerald-500 font-black text-base leading-none pt-0.5">▸</span>
@@ -1230,14 +1236,19 @@
       // 渲染單題卡片
       const container = document.getElementById('strategy-single-card');
       container.innerHTML = `
-        <div class="flex justify-between items-center gap-2 border-b border-slate-800/80 pb-2.5">
-          <div class="flex items-center gap-2 min-w-0">
-            <span class="shrink-0 px-2.5 py-0.5 rounded-full bg-blue-900/50 text-blue-200 font-black text-xs border border-blue-700/50 whitespace-nowrap">${card.year}</span>
-            <span class="text-slate-300 font-bold text-sm truncate">${card.theme}</span>
+        <div class="border-b border-slate-800/80 pb-2.5 space-y-1.5">
+          <div class="flex items-center justify-between gap-2">
+            <span class="shrink-0 px-3 py-1 rounded-full bg-blue-900/50 text-blue-200 font-black text-xs border border-blue-700/50 whitespace-nowrap">
+              ${card.year}
+            </span>
+            <button onclick="copyCurrentStrategyCard(this)" class="shrink-0 flex items-center gap-1.5 px-3 py-1 rounded-xl font-bold text-xs bg-slate-800 hover:bg-slate-700 text-slate-200 hover:text-white border border-slate-700 active:scale-95 transition shadow-sm whitespace-nowrap" title="複製此審題快刀卡發問 GEM">
+              <span>📋</span><span>複製</span>
+            </button>
           </div>
-          <button onclick="copyCurrentStrategyCard(this)" class="shrink-0 flex items-center gap-1.5 px-3 py-1 rounded-xl font-bold text-xs bg-slate-800 hover:bg-slate-700 text-slate-200 hover:text-white border border-slate-700 active:scale-95 transition shadow-sm whitespace-nowrap" title="複製此審題快刀卡發問 GEM">
-            <span>📋</span><span>複製</span>
-          </button>
+          <!-- 主題名稱完整呈現 (允許自然折行，絕無 ... 截斷) -->
+          <div class="text-sm font-bold text-slate-300 leading-snug break-words">
+            ${card.theme}
+          </div>
         </div>
         
         <h3 class="text-xl md:text-2xl font-black text-white leading-snug tracking-wide pt-1">${card.title}</h3>
@@ -1733,7 +1744,7 @@
   <!-- 全域 Toast 提示元件 (支援 Gemini GEM 連動) -->
   <div id="global-toast" class="fixed bottom-20 left-1/2 -translate-x-1/2 z-[150] bg-slate-900/95 backdrop-blur-md text-emerald-300 border border-emerald-500/40 px-4 py-2.5 rounded-2xl shadow-2xl flex items-center gap-2.5 text-xs font-semibold pointer-events-auto transition-all duration-300 opacity-0 translate-y-4 max-w-[92vw]">
     <span id="toast-icon" class="text-base">📋</span>
-    <span id="toast-msg" class="truncate">已複製！</span>
+    <span id="toast-msg" class="break-words leading-tight">已複製！</span>
     <button id="toast-gem-btn" onclick="openGemWindow()" class="hidden ml-1 px-2.5 py-1 rounded-xl bg-gradient-to-r from-emerald-600 to-cyan-600 hover:from-emerald-500 hover:to-cyan-500 text-white font-bold text-xs shadow-md whitespace-nowrap active:scale-95 transition">
       開啟 GEM ↗
     </button>
