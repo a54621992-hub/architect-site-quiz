@@ -224,38 +224,44 @@
         <div id="num-card-inner" onclick="flipNumberCard()" class="transform-style-3d relative w-full h-full min-h-[300px] bg-slate-900 rounded-3xl border border-slate-800 p-6 shadow-2xl flex flex-col justify-between cursor-pointer transition-transform duration-500">
           <!-- 正面: 題目 -->
           <div class="backface-hidden flex flex-col justify-between h-full space-y-4">
-            <div class="flex justify-between items-center text-xs">
-              <span class="px-2.5 py-0.5 rounded-full bg-emerald-500/10 text-emerald-400 font-bold border border-emerald-500/20" id="num-card-cat">分類</span>
-              <span class="text-slate-500 font-mono text-xs" id="num-card-index">01 / 84</span>
+            <div class="flex justify-between items-center text-sm">
+              <span class="px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-300 font-bold border border-emerald-500/25" id="num-card-cat">分類</span>
+              <span class="text-slate-400 font-mono text-sm font-bold" id="num-card-index">01 / 84</span>
             </div>
-            <div class="my-auto py-4">
-              <p class="text-xs text-slate-400 mb-2 font-medium">請在腦中回想關鍵數字：</p>
-              <h3 class="text-lg font-black text-white leading-snug" id="num-card-question">題目內容</h3>
+            <div class="my-auto py-5">
+              <p class="text-sm text-slate-400 mb-2.5 font-semibold">請在腦中回想關鍵數字：</p>
+              <h3 class="text-xl md:text-2xl font-black text-white leading-snug tracking-wide" id="num-card-question">題目內容</h3>
             </div>
-            <div class="text-center pt-2 border-t border-slate-800/80 text-[11px] text-slate-500 flex items-center justify-center space-x-1">
+            <div class="text-center pt-2.5 border-t border-slate-800 text-xs font-medium text-slate-400 flex items-center justify-center space-x-1">
               <span>👆 點擊卡片翻面看數字</span>
             </div>
           </div>
 
           <!-- 背面: 答案與用法 -->
-          <div class="backface-hidden rotate-y-180 absolute inset-0 bg-slate-900 rounded-3xl border border-emerald-500/40 p-6 flex flex-col justify-between space-y-3">
-            <div class="flex justify-between items-center text-xs">
-              <span class="text-emerald-400 font-bold">✓ 關鍵數字答案</span>
-              <span class="text-[10px] text-slate-400" id="num-card-status">查證標記</span>
-            </div>
-            <div class="my-auto text-center space-y-3">
-              <div class="text-3xl font-black text-emerald-400 tracking-wide font-mono" id="num-card-answer">0.2 公頃</div>
-              <div class="bg-slate-950 p-3 rounded-2xl border border-slate-800 text-xs text-slate-200 text-left leading-relaxed">
-                <span class="text-slate-400 block text-[10px] mb-0.5 font-bold">考場一句用法：</span>
-                <span id="num-card-usage">用法說明</span>
+          <div class="backface-hidden rotate-y-180 absolute inset-0 bg-slate-900 rounded-3xl border border-emerald-500/50 p-6 flex flex-col justify-between space-y-3 shadow-2xl">
+            <div class="flex justify-between items-center">
+              <span class="text-emerald-400 font-black text-sm">✓ 關鍵數字答案</span>
+              <div class="flex items-center gap-2">
+                <button onclick="event.stopPropagation(); copyCurrentNumberCard(this)" class="flex items-center gap-1.5 px-3 py-1 rounded-xl font-bold text-xs bg-slate-800 hover:bg-slate-700 text-slate-200 hover:text-white border border-slate-700 active:scale-95 transition shadow-sm" title="複製此數字卡內容發問 GEM">
+                  <span>📋</span><span>複製</span>
+                </button>
+                <span class="text-xs text-slate-400 font-semibold" id="num-card-status">查證標記</span>
               </div>
-              <div class="text-[11px] text-slate-500 text-left font-mono" id="num-card-source">出處條號</div>
             </div>
-            <div class="text-center pt-2 border-t border-slate-800/80 text-[11px] text-slate-500 flex items-center justify-center space-x-1">
+            <div class="my-auto text-center space-y-3.5">
+              <div class="text-3xl md:text-4xl font-black text-emerald-400 tracking-wider font-mono drop-shadow-md" id="num-card-answer">0.2 公頃</div>
+              <div class="bg-slate-950/80 p-4 rounded-2xl border border-slate-800 text-sm md:text-base text-slate-100 text-left leading-relaxed">
+                <span class="text-slate-400 block text-xs mb-1 font-bold">考場一句用法：</span>
+                <span id="num-card-usage" class="font-medium">用法說明</span>
+              </div>
+              <div class="text-xs md:text-sm text-slate-400 text-left font-mono" id="num-card-source">出處條號</div>
+            </div>
+            <div class="text-center pt-2.5 border-t border-slate-800 text-xs text-slate-400 font-medium flex items-center justify-center space-x-1">
               <span>👆 點擊卡片翻回正面</span>
             </div>
           </div>
         </div>
+      </div>
       </div>
 
       <!-- 底部切換控制 -->
@@ -277,14 +283,14 @@
 
     <!-- 模組 4: 72 個單格快卡 (6-Grids Blitz) -->
     <section id="view-grids" class="view-panel hidden space-y-4">
-      <div class="flex space-x-1.5 p-1 bg-slate-900 rounded-xl border border-slate-800 text-xs font-semibold overflow-x-auto no-scrollbar">
-        <button onclick="filterGridFunc('all')" class="grid-func-btn flex-1 min-w-[45px] py-1.5 rounded-lg bg-purple-600 text-white font-bold" data-func="all">全部</button>
-        <button onclick="filterGridFunc('診')" class="grid-func-btn flex-1 min-w-[45px] py-1.5 rounded-lg text-slate-400 hover:text-white" data-func="診">診斷</button>
-        <button onclick="filterGridFunc('策')" class="grid-func-btn flex-1 min-w-[45px] py-1.5 rounded-lg text-slate-400 hover:text-white" data-func="策">策略</button>
-        <button onclick="filterGridFunc('制')" class="grid-func-btn flex-1 min-w-[45px] py-1.5 rounded-lg text-slate-400 hover:text-white" data-func="制">制度</button>
-        <button onclick="filterGridFunc('系')" class="grid-func-btn flex-1 min-w-[45px] py-1.5 rounded-lg text-slate-400 hover:text-white" data-func="系">系統</button>
-        <button onclick="filterGridFunc('界')" class="grid-func-btn flex-1 min-w-[45px] py-1.5 rounded-lg text-slate-400 hover:text-white" data-func="界">界面</button>
-        <button onclick="filterGridFunc('時')" class="grid-func-btn flex-1 min-w-[45px] py-1.5 rounded-lg text-slate-400 hover:text-white" data-func="時">時間</button>
+      <div class="flex space-x-1.5 p-1 bg-slate-900 rounded-xl border border-slate-800 text-sm font-bold overflow-x-auto no-scrollbar">
+        <button onclick="filterGridFunc('all')" class="grid-func-btn flex-1 min-w-[45px] py-2 rounded-xl bg-purple-600 text-white font-bold" data-func="all">全部</button>
+        <button onclick="filterGridFunc('診')" class="grid-func-btn flex-1 min-w-[45px] py-2 rounded-xl text-slate-400 hover:text-white" data-func="診">診斷</button>
+        <button onclick="filterGridFunc('策')" class="grid-func-btn flex-1 min-w-[45px] py-2 rounded-xl text-slate-400 hover:text-white" data-func="策">策略</button>
+        <button onclick="filterGridFunc('制')" class="grid-func-btn flex-1 min-w-[45px] py-2 rounded-xl text-slate-400 hover:text-white" data-func="制">制度</button>
+        <button onclick="filterGridFunc('系')" class="grid-func-btn flex-1 min-w-[45px] py-2 rounded-xl text-slate-400 hover:text-white" data-func="系">系統</button>
+        <button onclick="filterGridFunc('界')" class="grid-func-btn flex-1 min-w-[45px] py-2 rounded-xl text-slate-400 hover:text-white" data-func="界">界面</button>
+        <button onclick="filterGridFunc('時')" class="grid-func-btn flex-1 min-w-[45px] py-2 rounded-xl text-slate-400 hover:text-white" data-func="時">時間</button>
       </div>
       <div id="grid-cards-container" class="space-y-3"></div>
     </section>
@@ -295,10 +301,15 @@
       <div class="bg-slate-900 rounded-2xl border border-slate-800 p-4 shadow-xl space-y-4" id="diag-detail-card">
         <div class="flex justify-between items-start">
           <div>
-            <h3 class="text-base font-black text-white" id="diag-title">圖卡 01｜Lynch 五元素轉譯表</h3>
-            <p class="text-xs text-amber-400 mt-0.5" id="diag-used-for">跨題用途</p>
+            <h3 class="text-lg md:text-xl font-black text-white tracking-wide" id="diag-title">圖卡 01｜Lynch 五元素轉譯表</h3>
+            <p class="text-sm text-amber-400 font-semibold mt-1" id="diag-used-for">跨題用途</p>
           </div>
-          <span class="text-xs px-2 py-0.5 rounded bg-slate-800 text-slate-400" id="diag-id-badge">01/11</span>
+          <div class="flex items-center gap-2">
+            <button onclick="copyCurrentDiagramCard(this)" class="flex items-center gap-1.5 px-3 py-1 rounded-xl font-bold text-xs bg-slate-800 hover:bg-slate-700 text-slate-200 hover:text-white border border-slate-700 active:scale-95 transition shadow-sm" title="複製此圖卡重點發問 GEM">
+              <span>📋</span><span>複製</span>
+            </button>
+            <span class="text-xs font-bold px-2.5 py-1 rounded-xl bg-slate-800 text-slate-300 border border-slate-700" id="diag-id-badge">01/11</span>
+          </div>
         </div>
 
         <!-- 向量 SVG 圖像展示區 (點擊自動橫向放大) -->
@@ -458,6 +469,33 @@
           </button>
         </div>
       </div>
+
+      <!-- Gemini GEM 快速連動設定 -->
+      <div class="bg-slate-950/70 rounded-2xl p-3.5 border border-slate-800 text-xs space-y-2.5">
+        <div class="flex items-center justify-between">
+          <span class="text-slate-200 font-bold flex items-center gap-1.5 text-sm">
+            <span>✨</span><span>Gemini GEM 快速連動</span>
+          </span>
+          <span class="text-[10px] text-emerald-400 bg-emerald-950/60 px-2 py-0.5 rounded border border-emerald-800/40 font-semibold">已支援一鍵複製</span>
+        </div>
+        <p class="text-slate-400 text-xs leading-relaxed">
+          點擊任一小卡「📋 複製」會自動在內容最前方加上「<strong class="text-emerald-400">詳細說明：</strong>」，方便直接貼入您的 Gemini 客製化智能體 (GEM) 查詢知識庫。若填入 GEM 網址，複製時可一鍵直達開啟：
+        </p>
+        <div class="space-y-2 pt-1">
+          <input 
+            type="url" 
+            id="gem-url-input" 
+            placeholder="例如: https://gemini.google.com/gem/..." 
+            class="w-full bg-slate-900 border border-slate-700 rounded-xl px-3 py-2 text-xs text-slate-100 placeholder-slate-500 focus:outline-none focus:border-cyan-500"
+            onchange="saveGemUrl(this.value)"
+          />
+          <div class="flex justify-between items-center text-xs text-slate-500">
+            <span>未填寫時點擊將開啟 Gemini 首頁</span>
+            <button onclick="testOpenGem()" class="text-cyan-400 hover:underline font-medium">測試開啟 ↗</button>
+          </div>
+        </div>
+      </div>
+
 
       <!-- 進度管理與快取 -->
       <div class="space-y-2 pt-2 border-t border-slate-800">
@@ -1024,7 +1062,7 @@
       const categories = ['全部', '一、水與基地保水', '二、綠化・節能・淨零', '三、強度・容積・多目標', '四、動線・無障礙・尺度', '五、防災・救災空間', '六、人口・政策'];
       categories.forEach(cat => {
         const btn = document.createElement('button');
-        btn.className = "px-3 py-1.5 rounded-lg whitespace-nowrap bg-slate-900 border border-slate-800 text-slate-300 hover:text-white transition";
+        btn.className = "px-3 py-2 rounded-xl whitespace-nowrap bg-slate-900 border border-slate-800 text-slate-300 hover:text-white transition";
         btn.innerText = cat.replace(/[一二三四五六]、/, '');
         btn.onclick = () => {
           if (cat === '全部') {
@@ -1069,25 +1107,46 @@
       filtered.forEach(g => {
         const isRevealed = !!appState.gridRevealed[g.id];
         const card = document.createElement('div');
-        card.className = "bg-slate-900 p-4 rounded-2xl border border-slate-800 space-y-2 cursor-pointer active:scale-98 transition";
+        card.className = "bg-slate-900 p-4.5 sm:p-5 rounded-3xl border border-slate-750 hover:border-slate-600 shadow-xl space-y-3 cursor-pointer active:scale-98 transition";
         card.onclick = () => toggleGridReveal(g.id);
 
+        const cleanNumber = (g.number || '').replace(/^[▸\s]+/, '');
+
         card.innerHTML = `
-          <div class="flex justify-between items-center text-xs">
-            <span class="text-slate-400">${g.topic_header}</span>
-            <span class="px-2 py-0.5 rounded-md font-bold text-[10px] bg-purple-950 text-purple-300 border border-purple-800/50">
-              【${g.func_abbr}】格 ${g.grid_no}
-            </span>
+          <div class="flex justify-between items-center">
+            <span class="text-sm font-bold text-slate-300 tracking-wide">${g.topic_header}</span>
+            <div class="flex items-center gap-2">
+              <button 
+                onclick="event.stopPropagation(); copyGridCard('${g.id}', this)"
+                class="flex items-center gap-1.5 px-3 py-1 rounded-xl font-bold text-xs bg-slate-800 hover:bg-slate-700 text-slate-200 hover:text-white border border-slate-700 active:scale-95 transition shadow-sm"
+                title="複製小卡文字，最前方自動加上『詳細說明：』">
+                <span>📋</span><span>複製</span>
+              </button>
+              <span class="px-2.5 py-1 rounded-xl font-black text-xs bg-purple-900/70 text-purple-200 border border-purple-700/60 shadow-sm">
+                【${g.func_abbr}】格 ${g.grid_no}
+              </span>
+            </div>
           </div>
-          <div class="text-sm font-bold text-white">${g.title}</div>
+
+          <div class="text-lg md:text-xl font-black text-white leading-snug tracking-wide pt-0.5">${g.title}</div>
           
-          <div id="grid-content-${g.id}" class="${isRevealed ? '' : 'hidden'} pt-2 border-t border-slate-800 space-y-1.5 text-xs">
-            <div class="text-emerald-400 font-medium">▸ 關鍵數字：${g.number}</div>
-            <div class="text-slate-300">🔑 關鍵詞：${g.keywords}</div>
-            <div class="text-slate-400 text-[11px] font-mono">▢ 配圖：${g.diagram}</div>
+          <div id="grid-content-${g.id}" class="${isRevealed ? '' : 'hidden'} pt-3 border-t border-slate-800 space-y-2.5">
+            <div class="text-emerald-400 font-bold text-base leading-snug flex items-start gap-2">
+              <span class="shrink-0 text-emerald-500 text-lg leading-none">▸</span>
+              <span>關鍵數字：<span class="text-emerald-300 font-black">${cleanNumber}</span></span>
+            </div>
+            <div class="text-slate-100 text-sm md:text-base leading-relaxed flex items-start gap-2">
+              <span class="shrink-0 leading-none">🔑</span>
+              <span><span class="text-slate-400 font-medium">關鍵詞：</span><span class="font-bold text-amber-200">${g.keywords}</span></span>
+            </div>
+            <div class="text-slate-300 text-xs md:text-sm font-medium flex items-start gap-2 bg-slate-950/70 p-2.5 rounded-2xl border border-slate-800/90">
+              <span class="shrink-0 text-cyan-400 leading-none">▢</span>
+              <span><span class="text-slate-400">配圖建議：</span><span class="text-cyan-200 font-semibold">${g.diagram}</span></span>
+            </div>
           </div>
-          <div class="text-[10px] text-slate-500 text-center ${isRevealed ? 'hidden' : ''}">
-            👆 點擊展開數字與 3 關鍵詞
+
+          <div class="text-xs font-semibold text-slate-400 bg-slate-950/60 py-2 rounded-xl border border-slate-800/80 text-center tracking-wide ${isRevealed ? 'hidden' : ''}">
+            👆 點擊展開 關鍵數字 ＆ 3 關鍵詞
           </div>
         `;
         container.appendChild(card);
@@ -1162,55 +1221,60 @@
       // 渲染單題卡片
       const container = document.getElementById('strategy-single-card');
       container.innerHTML = `
-        <div class="flex justify-between items-center text-xs">
-          <span class="px-2.5 py-0.5 rounded-full bg-blue-900/40 text-blue-300 font-bold border border-blue-800/40">${card.year}</span>
-          <span class="text-slate-400 font-medium">${card.theme}</span>
+        <div class="flex justify-between items-center">
+          <div class="flex items-center gap-2">
+            <span class="px-3 py-1 rounded-full bg-blue-900/50 text-blue-200 font-black text-xs border border-blue-700/50">${card.year}</span>
+            <span class="text-slate-300 font-bold text-sm">${card.theme}</span>
+          </div>
+          <button onclick="copyCurrentStrategyCard(this)" class="flex items-center gap-1.5 px-3 py-1 rounded-xl font-bold text-xs bg-slate-800 hover:bg-slate-700 text-slate-200 hover:text-white border border-slate-700 active:scale-95 transition shadow-sm" title="複製此審題快刀卡發問 GEM">
+            <span>📋</span><span>複製</span>
+          </button>
         </div>
         
-        <h3 class="text-lg font-black text-white leading-snug">${card.title}</h3>
+        <h3 class="text-xl md:text-2xl font-black text-white leading-snug tracking-wide pt-1">${card.title}</h3>
 
-        <!-- 官方原卷基地現況圖 (可點擊自動橫向放大，支援雙指縮放) -->
+        <!-- 官方原卷基地現況圖 (可點擊直向放大，支援雙指縮放) -->
         <div class="space-y-1.5">
           <div class="flex justify-between items-center text-xs">
-            <span class="text-emerald-400 font-bold flex items-center space-x-1">
+            <span class="text-emerald-400 font-bold flex items-center space-x-1.5 text-sm">
               <span>📐</span><span>官方原卷基地現況圖</span>
             </span>
-            <span class="text-[11px] text-cyan-400 cursor-pointer" onclick="window.openImageLightbox('${card.map_image}', '${card.title}')">
+            <span class="text-xs text-cyan-400 font-semibold cursor-pointer" onclick="window.openImageLightbox('${card.map_image}', '${card.title}')">
               🔍 點擊手勢縮放 (Pinch)
             </span>
           </div>
           <div onclick="window.openImageLightbox('${card.map_image}', '${card.title}')" class="bg-white rounded-2xl p-2 border border-slate-700 shadow-inner flex items-center justify-center min-h-[220px] max-h-[300px] overflow-hidden cursor-pointer relative group">
             <img src="${card.map_image}" class="w-full h-full object-contain max-h-[280px]" alt="${card.title} 基地圖" onerror="this.src='apple-touch-icon.png'">
-            <div class="absolute bottom-2 right-2 bg-slate-900/85 backdrop-blur-sm text-cyan-300 text-[10px] px-2.5 py-1 rounded-full border border-cyan-500/30 flex items-center space-x-1 shadow-lg">
-              <span>🔍 雙指捏合縮放</span>
+            <div class="absolute bottom-2 right-2 bg-slate-900/85 backdrop-blur-sm text-cyan-300 text-xs px-3 py-1 rounded-full border border-cyan-500/30 flex items-center space-x-1 shadow-lg font-bold">
+              <span>🔍 雙擊/捏合縮放</span>
             </div>
           </div>
         </div>
 
         <!-- 2 分鐘大腦自問課題 -->
-        <div class="bg-slate-950/80 p-3.5 rounded-2xl border border-slate-800 text-xs space-y-1.5">
-          <span class="text-amber-400 font-bold block flex items-center space-x-1">
+        <div class="bg-slate-950/80 p-4 rounded-2xl border border-slate-800 text-sm space-y-2">
+          <span class="text-amber-400 font-bold block flex items-center space-x-1 text-base">
             <span>⚡</span><span>2 分鐘大腦自問課題：</span>
           </span>
-          ${card.challenges.map(c => `<div class="text-slate-300 leading-relaxed">• ${c}</div>`).join('')}
+          ${card.challenges.map(c => `<div class="text-slate-200 leading-relaxed font-medium">• ${c}</div>`).join('')}
         </div>
 
         <!-- 專家破局黃金決策 -->
-        <div class="bg-slate-850 p-4 rounded-2xl border border-slate-750 text-xs space-y-2">
-          <span class="text-cyan-400 font-bold block flex items-center space-x-1">
+        <div class="bg-slate-850 p-4.5 rounded-2xl border border-slate-750 text-sm md:text-base space-y-2.5">
+          <span class="text-cyan-400 font-bold block flex items-center space-x-1 text-base">
             <span>💡</span><span>專家破局黃金決策（車道/盲邊/量體/退縮）：</span>
           </span>
-          ${card.expert_decisions.map(d => `<div class="text-slate-200 leading-relaxed">${d}</div>`).join('')}
+          ${card.expert_decisions.map(d => `<div class="text-slate-100 leading-relaxed font-medium">${d}</div>`).join('')}
         </div>
 
         <!-- 原汁原味官方題目正文 (可折疊/展開) -->
         <div class="pt-2 border-t border-slate-800">
-          <button onclick="toggleStrategyFullText()" class="w-full py-2.5 px-3 rounded-xl bg-slate-800/80 hover:bg-slate-800 text-slate-300 hover:text-white text-xs font-semibold flex items-center justify-between transition">
-            <span>📄 查看官方原卷題目正文</span>
-            <span id="strategy-expand-icon">▼</span>
+          <button onclick="toggleStrategyFullText()" class="w-full py-2.5 text-xs font-bold text-slate-400 hover:text-slate-200 flex items-center justify-center space-x-1 rounded-xl bg-slate-950/50 border border-slate-800">
+            <span id="strat-toggle-icon">▼</span>
+            <span id="strat-toggle-label">展開歷屆官方題目完整原話</span>
           </button>
-          <div id="strategy-fulltext-box" class="hidden mt-2 p-3.5 rounded-xl bg-slate-950/90 border border-slate-800 text-[11px] text-slate-300 leading-relaxed max-h-72 overflow-y-auto whitespace-pre-line font-mono">
-            ${card.full_text || '無題目正文'}
+          <div id="strat-full-text" class="hidden mt-3 p-4 bg-slate-950 rounded-2xl border border-slate-800 text-sm text-slate-300 font-mono leading-relaxed max-h-[300px] overflow-y-auto whitespace-pre-line">
+            ${card.full_text || '無題目完整原話資料'}
           </div>
         </div>
       `;
@@ -1503,10 +1567,168 @@
       location.reload(true);
     }
 
+    
+    // ==========================================
+    // 剪貼簿與 Gemini GEM 連動支援模組
+    // ==========================================
+    let toastTimer = null;
+
+    function showToast(msg, icon = '📋', showGemBtn = true) {
+      const toast = document.getElementById('global-toast');
+      const msgEl = document.getElementById('toast-msg');
+      const iconEl = document.getElementById('toast-icon');
+      const gemBtn = document.getElementById('toast-gem-btn');
+      if (!toast || !msgEl) return;
+
+      msgEl.innerText = msg;
+      if (iconEl) iconEl.innerText = icon;
+
+      if (gemBtn) {
+        if (showGemBtn) {
+          gemBtn.classList.remove('hidden');
+        } else {
+          gemBtn.classList.add('hidden');
+        }
+      }
+
+      toast.classList.remove('opacity-0', 'translate-y-4');
+      toast.classList.add('opacity-100', 'translate-y-0');
+
+      if (toastTimer) clearTimeout(toastTimer);
+      toastTimer = setTimeout(() => {
+        toast.classList.remove('opacity-100', 'translate-y-0');
+        toast.classList.add('opacity-0', 'translate-y-4');
+      }, 2500);
+    }
+
+    function copyTextToClipboard(text, successMsg = '已複製！', options = {}) {
+      const showGem = options.showGemBtn !== false;
+      const onDone = () => {
+        showToast(successMsg, '📋', showGem);
+        if (navigator.vibrate) {
+          try { navigator.vibrate(40); } catch(e) {}
+        }
+      };
+
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(onDone).catch(() => {
+          fallbackCopyText(text, onDone);
+        });
+      } else {
+        fallbackCopyText(text, onDone);
+      }
+    }
+
+    function fallbackCopyText(text, callback) {
+      const textArea = document.createElement("textarea");
+      textArea.value = text;
+      textArea.style.position = "fixed";
+      textArea.style.left = "-9999px";
+      textArea.style.top = "0";
+      document.body.appendChild(textArea);
+      textArea.focus();
+      textArea.select();
+      try {
+        document.execCommand('copy');
+        if (callback) callback();
+      } catch (err) {
+        alert("複製失敗，請手動選取文字");
+      }
+      document.body.removeChild(textArea);
+    }
+
+    function flashCopyBtn(btn) {
+      if (!btn) return;
+      const originalHtml = btn.innerHTML;
+      btn.innerHTML = `<span>✓</span><span>已複製</span>`;
+      btn.classList.add('!bg-emerald-700', '!text-white', '!border-emerald-500');
+      setTimeout(() => {
+        btn.innerHTML = originalHtml;
+        btn.classList.remove('!bg-emerald-700', '!text-white', '!border-emerald-500');
+      }, 1600);
+    }
+
+    function copyGridCard(id, btnElement) {
+      const g = SITE_DATA.single_grids.find(item => item.id === id);
+      if (!g) return;
+
+      const text = `詳細說明：\n${g.topic_header} 【${g.func_abbr}】格 ${g.grid_no}\n${g.title}\n▸ 關鍵數字：${g.number}\n🔑 關鍵詞：${g.keywords}\n▢ 配圖：${g.diagram}`;
+
+      copyTextToClipboard(text, '已複製小卡！已加上「詳細說明：」', { showGemBtn: true });
+      flashCopyBtn(btnElement);
+    }
+
+    function copyCurrentNumberCard(btnElement) {
+      const nums = SITE_DATA.numbers;
+      const idx = appState.numberIndex % nums.length;
+      const item = nums[idx];
+      if (!item) return;
+
+      const text = `詳細說明：\n【數字閃卡】類別：${item.category}（第 ${idx + 1}/${nums.length} 題）\n題目：${item.content}\n數字答案：${item.number}\n考點用途：${item.usage}\n法規出處：${item.source}`;
+
+      copyTextToClipboard(text, '已複製數字卡！已加上「詳細說明：」', { showGemBtn: true });
+      flashCopyBtn(btnElement);
+    }
+
+    function copyCurrentStrategyCard(btnElement) {
+      const cards = SITE_DATA.strategy_cards;
+      const idx = (appState.strategyIndex || 0) % cards.length;
+      const card = cards[idx];
+      if (!card) return;
+
+      const text = `詳細說明：\n【審題快刀】年份：${card.year}｜主題：${card.theme}\n題目：${card.title}\n破題套路：${card.logic || ''}\n關鍵字：${card.keywords || ''}\n重要法條：${card.laws || ''}`;
+
+      copyTextToClipboard(text, '已複製審題卡！已加上「詳細說明：」', { showGemBtn: true });
+      flashCopyBtn(btnElement);
+    }
+
+    function copyCurrentDiagramCard(btnElement) {
+      const diag = SITE_DATA.diagrams[appState.diagramIndex || 0];
+      if (!diag) return;
+
+      const checkStr = (diag.checklist && diag.checklist.length > 0) ? diag.checklist.join('、') : '無';
+      const text = `詳細說明：\n【萬用圖卡】圖名：${diag.header}\n跨題用途：${diag.used_for}\n作圖步驟：${diag.draw_step}\n易犯陷阱：${diag.pitfall}\n必備檢核：${checkStr}`;
+
+      copyTextToClipboard(text, '已複製圖卡！已加上「詳細說明：」', { showGemBtn: true });
+      flashCopyBtn(btnElement);
+    }
+
+    function openGemWindow() {
+      const url = localStorage.getItem('USER_GEM_URL') || 'https://gemini.google.com/app';
+      window.open(url, '_blank');
+    }
+
+    function loadGemUrl() {
+      const url = localStorage.getItem('USER_GEM_URL') || '';
+      const input = document.getElementById('gem-url-input');
+      if (input) input.value = url;
+    }
+
+    function saveGemUrl(url) {
+      localStorage.setItem('USER_GEM_URL', url.trim());
+      showToast('GEM 網址已儲存！', '💾', false);
+    }
+
+    function testOpenGem() {
+      openGemWindow();
+    }
+
+
     window.addEventListener('DOMContentLoaded', () => {
       loadState();
+      loadGemUrl();
       switchView(appState.currentView || 'capsule');
     });
   </script>
+
+  <!-- 全域 Toast 提示元件 (支援 Gemini GEM 連動) -->
+  <div id="global-toast" class="fixed bottom-20 left-1/2 -translate-x-1/2 z-[150] bg-slate-900/95 backdrop-blur-md text-emerald-300 border border-emerald-500/40 px-4 py-2.5 rounded-2xl shadow-2xl flex items-center gap-2.5 text-xs font-semibold pointer-events-auto transition-all duration-300 opacity-0 translate-y-4 max-w-[92vw]">
+    <span id="toast-icon" class="text-base">📋</span>
+    <span id="toast-msg" class="truncate">已複製！</span>
+    <button id="toast-gem-btn" onclick="openGemWindow()" class="hidden ml-1 px-2.5 py-1 rounded-xl bg-gradient-to-r from-emerald-600 to-cyan-600 hover:from-emerald-500 hover:to-cyan-500 text-white font-bold text-xs shadow-md whitespace-nowrap active:scale-95 transition">
+      開啟 GEM ↗
+    </button>
+  </div>
+
 </body>
 </html>
