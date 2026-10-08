@@ -171,11 +171,11 @@
 
     <!-- 模組 2: 作圖 SOP 肌肉記憶專章 (SOP Blitz) -->
     <section id="view-sop" class="view-panel hidden space-y-4">
-      <div class="flex space-x-2 p-1.5 bg-slate-900 rounded-2xl border border-slate-800 text-sm font-bold">
-        <button onclick="switchSopTab('blitz')" id="sop-tab-blitz" class="flex-1 py-2.5 rounded-xl bg-emerald-500 text-slate-950 font-black transition">下一步盲測</button>
-        <button onclick="switchSopTab('rules')" id="sop-tab-rules" class="flex-1 py-2.5 rounded-xl text-slate-400 hover:text-white transition">三條鐵律</button>
-        <button onclick="switchSopTab('colors')" id="sop-tab-colors" class="flex-1 py-2.5 rounded-xl text-slate-400 hover:text-white transition">色筆標記</button>
-        <button onclick="switchSopTab('list')" id="sop-tab-list" class="flex-1 py-2.5 rounded-xl text-slate-400 hover:text-white transition">11 步驟</button>
+      <div class="flex items-center gap-1.5 p-1.5 bg-slate-900 rounded-2xl border border-slate-800 text-xs sm:text-sm font-bold overflow-x-auto no-scrollbar scroll-smooth">
+        <button onclick="switchSopTab('blitz')" id="sop-tab-blitz" class="shrink-0 flex-1 min-w-[70px] py-2 rounded-xl bg-emerald-500 text-slate-950 font-black whitespace-nowrap transition shadow-sm">下一步盲測</button>
+        <button onclick="switchSopTab('rules')" id="sop-tab-rules" class="shrink-0 flex-1 min-w-[65px] py-2 rounded-xl text-slate-400 hover:text-white font-bold whitespace-nowrap transition">三條鐵律</button>
+        <button onclick="switchSopTab('colors')" id="sop-tab-colors" class="shrink-0 flex-1 min-w-[65px] py-2 rounded-xl text-slate-400 hover:text-white font-bold whitespace-nowrap transition">色筆標記</button>
+        <button onclick="switchSopTab('list')" id="sop-tab-list" class="shrink-0 flex-1 min-w-[65px] py-2 rounded-xl text-slate-400 hover:text-white font-bold whitespace-nowrap transition">11 步驟</button>
       </div>
 
       <!-- SOP 子頁面 1: 下一步盲測 -->
@@ -224,9 +224,9 @@
         <div id="num-card-inner" onclick="flipNumberCard()" class="transform-style-3d relative w-full h-full min-h-[300px] bg-slate-900 rounded-3xl border border-slate-800 p-6 shadow-2xl flex flex-col justify-between cursor-pointer transition-transform duration-500">
           <!-- 正面: 題目 -->
           <div class="backface-hidden flex flex-col justify-between h-full space-y-4">
-            <div class="flex justify-between items-center text-sm">
-              <span class="px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-300 font-bold border border-emerald-500/25" id="num-card-cat">分類</span>
-              <span class="text-slate-400 font-mono text-sm font-bold" id="num-card-index">01 / 84</span>
+            <div class="flex justify-between items-center gap-2 border-b border-slate-800/80 pb-2">
+              <span class="shrink-0 px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-300 font-bold border border-emerald-500/25 text-xs sm:text-sm whitespace-nowrap" id="num-card-cat">分類</span>
+              <span class="shrink-0 text-slate-400 font-mono text-xs sm:text-sm font-bold whitespace-nowrap" id="num-card-index">01 / 84</span>
             </div>
             <div class="my-auto py-5">
               <p class="text-sm text-slate-400 mb-2.5 font-semibold">請在腦中回想關鍵數字：</p>
@@ -239,13 +239,13 @@
 
           <!-- 背面: 答案與用法 -->
           <div class="backface-hidden rotate-y-180 absolute inset-0 bg-slate-900 rounded-3xl border border-emerald-500/50 p-6 flex flex-col justify-between space-y-3 shadow-2xl">
-            <div class="flex justify-between items-center">
-              <span class="text-emerald-400 font-black text-sm">✓ 關鍵數字答案</span>
-              <div class="flex items-center gap-2">
-                <button onclick="event.stopPropagation(); copyCurrentNumberCard(this)" class="flex items-center gap-1.5 px-3 py-1 rounded-xl font-bold text-xs bg-slate-800 hover:bg-slate-700 text-slate-200 hover:text-white border border-slate-700 active:scale-95 transition shadow-sm" title="複製此數字卡內容發問 GEM">
+            <div class="flex justify-between items-center gap-2 border-b border-slate-800/80 pb-2">
+              <span class="text-emerald-400 font-black text-sm shrink-0 whitespace-nowrap">✓ 關鍵數字答案</span>
+              <div class="flex items-center gap-2 shrink-0">
+                <button onclick="event.stopPropagation(); copyCurrentNumberCard(this)" class="shrink-0 flex items-center gap-1.5 px-3 py-1 rounded-xl font-bold text-xs bg-slate-800 hover:bg-slate-700 text-slate-200 hover:text-white border border-slate-700 active:scale-95 transition shadow-sm whitespace-nowrap" title="複製此數字卡內容發問 GEM">
                   <span>📋</span><span>複製</span>
                 </button>
-                <span class="text-xs text-slate-400 font-semibold" id="num-card-status">查證標記</span>
+                <span class="text-xs text-slate-400 font-semibold shrink-0 whitespace-nowrap" id="num-card-status">查證標記</span>
               </div>
             </div>
             <div class="my-auto text-center space-y-3.5">
@@ -283,14 +283,14 @@
 
     <!-- 模組 4: 72 個單格快卡 (6-Grids Blitz) -->
     <section id="view-grids" class="view-panel hidden space-y-4">
-      <div class="flex space-x-1.5 p-1 bg-slate-900 rounded-xl border border-slate-800 text-sm font-bold overflow-x-auto no-scrollbar">
-        <button onclick="filterGridFunc('all')" class="grid-func-btn flex-1 min-w-[45px] py-2 rounded-xl bg-purple-600 text-white font-bold" data-func="all">全部</button>
-        <button onclick="filterGridFunc('診')" class="grid-func-btn flex-1 min-w-[45px] py-2 rounded-xl text-slate-400 hover:text-white" data-func="診">診斷</button>
-        <button onclick="filterGridFunc('策')" class="grid-func-btn flex-1 min-w-[45px] py-2 rounded-xl text-slate-400 hover:text-white" data-func="策">策略</button>
-        <button onclick="filterGridFunc('制')" class="grid-func-btn flex-1 min-w-[45px] py-2 rounded-xl text-slate-400 hover:text-white" data-func="制">制度</button>
-        <button onclick="filterGridFunc('系')" class="grid-func-btn flex-1 min-w-[45px] py-2 rounded-xl text-slate-400 hover:text-white" data-func="系">系統</button>
-        <button onclick="filterGridFunc('界')" class="grid-func-btn flex-1 min-w-[45px] py-2 rounded-xl text-slate-400 hover:text-white" data-func="界">界面</button>
-        <button onclick="filterGridFunc('時')" class="grid-func-btn flex-1 min-w-[45px] py-2 rounded-xl text-slate-400 hover:text-white" data-func="時">時間</button>
+      <div class="flex items-center gap-1.5 p-1.5 bg-slate-900/90 rounded-2xl border border-slate-800 overflow-x-auto no-scrollbar scroll-smooth">
+        <button onclick="filterGridFunc('all')" class="grid-func-btn shrink-0 px-3.5 py-1.5 rounded-xl bg-purple-600 text-white font-black text-xs sm:text-sm whitespace-nowrap shadow-sm" data-func="all">全部 (72)</button>
+        <button onclick="filterGridFunc('診')" class="grid-func-btn shrink-0 px-3 py-1.5 rounded-xl text-slate-300 hover:text-white font-bold text-xs sm:text-sm whitespace-nowrap" data-func="診">診斷</button>
+        <button onclick="filterGridFunc('策')" class="grid-func-btn shrink-0 px-3 py-1.5 rounded-xl text-slate-300 hover:text-white font-bold text-xs sm:text-sm whitespace-nowrap" data-func="策">策略</button>
+        <button onclick="filterGridFunc('制')" class="grid-func-btn shrink-0 px-3 py-1.5 rounded-xl text-slate-300 hover:text-white font-bold text-xs sm:text-sm whitespace-nowrap" data-func="制">制度</button>
+        <button onclick="filterGridFunc('系')" class="grid-func-btn shrink-0 px-3 py-1.5 rounded-xl text-slate-300 hover:text-white font-bold text-xs sm:text-sm whitespace-nowrap" data-func="系">系統</button>
+        <button onclick="filterGridFunc('界')" class="grid-func-btn shrink-0 px-3 py-1.5 rounded-xl text-slate-300 hover:text-white font-bold text-xs sm:text-sm whitespace-nowrap" data-func="界">界面</button>
+        <button onclick="filterGridFunc('時')" class="grid-func-btn shrink-0 px-3 py-1.5 rounded-xl text-slate-300 hover:text-white font-bold text-xs sm:text-sm whitespace-nowrap" data-func="時">時序</button>
       </div>
       <div id="grid-cards-container" class="space-y-3"></div>
     </section>
@@ -299,16 +299,16 @@
     <section id="view-diagrams" class="view-panel hidden space-y-4">
       <div class="flex space-x-2 overflow-x-auto no-scrollbar py-1" id="diag-nav-chips"></div>
       <div class="bg-slate-900 rounded-2xl border border-slate-800 p-4 shadow-xl space-y-4" id="diag-detail-card">
-        <div class="flex justify-between items-start">
-          <div>
-            <h3 class="text-lg md:text-xl font-black text-white tracking-wide" id="diag-title">圖卡 01｜Lynch 五元素轉譯表</h3>
-            <p class="text-sm text-amber-400 font-semibold mt-1" id="diag-used-for">跨題用途</p>
+        <div class="flex justify-between items-start gap-2 border-b border-slate-800/80 pb-2.5">
+          <div class="min-w-0">
+            <h3 class="text-lg md:text-xl font-black text-white tracking-wide truncate" id="diag-title">圖卡 01｜Lynch 五元素轉譯表</h3>
+            <p class="text-sm text-amber-400 font-semibold mt-1 truncate" id="diag-used-for">跨題用途</p>
           </div>
-          <div class="flex items-center gap-2">
-            <button onclick="copyCurrentDiagramCard(this)" class="flex items-center gap-1.5 px-3 py-1 rounded-xl font-bold text-xs bg-slate-800 hover:bg-slate-700 text-slate-200 hover:text-white border border-slate-700 active:scale-95 transition shadow-sm" title="複製此圖卡重點發問 GEM">
+          <div class="flex items-center gap-2 shrink-0">
+            <button onclick="copyCurrentDiagramCard(this)" class="shrink-0 flex items-center gap-1.5 px-3 py-1 rounded-xl font-bold text-xs bg-slate-800 hover:bg-slate-700 text-slate-200 hover:text-white border border-slate-700 active:scale-95 transition shadow-sm whitespace-nowrap" title="複製此圖卡重點發問 GEM">
               <span>📋</span><span>複製</span>
             </button>
-            <span class="text-xs font-bold px-2.5 py-1 rounded-xl bg-slate-800 text-slate-300 border border-slate-700" id="diag-id-badge">01/11</span>
+            <span class="text-xs font-bold px-2.5 py-1 rounded-xl bg-slate-800 text-slate-300 border border-slate-700 shrink-0 whitespace-nowrap" id="diag-id-badge">01/11</span>
           </div>
         </div>
 
@@ -1107,44 +1107,53 @@
       filtered.forEach(g => {
         const isRevealed = !!appState.gridRevealed[g.id];
         const card = document.createElement('div');
-        card.className = "bg-slate-900 p-4.5 sm:p-5 rounded-3xl border border-slate-750 hover:border-slate-600 shadow-xl space-y-3 cursor-pointer active:scale-98 transition";
+        // 加入 overflow-hidden 徹底防溢出，邊距與層次清晰
+        card.className = "bg-slate-900 p-4 sm:p-5 rounded-3xl border border-slate-750 hover:border-slate-600 shadow-xl space-y-3 cursor-pointer active:scale-98 transition overflow-hidden";
         card.onclick = () => toggleGridReveal(g.id);
 
         const cleanNumber = (g.number || '').replace(/^[▸\s]+/, '');
 
         card.innerHTML = `
-          <div class="flex justify-between items-center">
-            <span class="text-sm font-bold text-slate-300 tracking-wide">${g.topic_header}</span>
-            <div class="flex items-center gap-2">
-              <button 
-                onclick="event.stopPropagation(); copyGridCard('${g.id}', this)"
-                class="flex items-center gap-1.5 px-3 py-1 rounded-xl font-bold text-xs bg-slate-800 hover:bg-slate-700 text-slate-200 hover:text-white border border-slate-700 active:scale-95 transition shadow-sm"
-                title="複製小卡文字，最前方自動加上『詳細說明：』">
-                <span>📋</span><span>複製</span>
-              </button>
-              <span class="px-2.5 py-1 rounded-xl font-black text-xs bg-purple-900/70 text-purple-200 border border-purple-700/60 shadow-sm">
+          <!-- 頂部資訊列：左側機能徽章 + 主題分類，右側複製按鈕 (防止擠壓折行) -->
+          <div class="flex items-center justify-between gap-2 border-b border-slate-800/80 pb-2.5">
+            <div class="flex items-center gap-2 min-w-0">
+              <span class="shrink-0 px-2.5 py-1 rounded-xl font-black text-xs bg-purple-950 text-purple-300 border border-purple-800/60 whitespace-nowrap shadow-sm">
                 【${g.func_abbr}】格 ${g.grid_no}
               </span>
+              <span class="text-xs sm:text-sm font-bold text-slate-400 truncate">
+                ${g.topic_header}
+              </span>
             </div>
+            <button 
+              onclick="event.stopPropagation(); copyGridCard('${g.id}', this)"
+              class="shrink-0 flex items-center gap-1.5 px-3 py-1 rounded-xl font-bold text-xs bg-slate-800 hover:bg-slate-700 text-slate-200 hover:text-white border border-slate-700 active:scale-95 transition shadow-sm whitespace-nowrap"
+              title="複製小卡文字，最前方自動加上『詳細說明：』">
+              <span class="text-xs">📋</span><span>複製</span>
+            </button>
           </div>
 
-          <div class="text-lg md:text-xl font-black text-white leading-snug tracking-wide pt-0.5">${g.title}</div>
+          <!-- 卡片核心考點標題 (獨佔一行，大氣醒目不被按鈕擠壓) -->
+          <div class="text-lg sm:text-xl font-black text-white leading-snug tracking-wide pt-0.5">
+            ${g.title}
+          </div>
           
-          <div id="grid-content-${g.id}" class="${isRevealed ? '' : 'hidden'} pt-3 border-t border-slate-800 space-y-2.5">
-            <div class="text-emerald-400 font-bold text-base leading-snug flex items-start gap-2">
-              <span class="shrink-0 text-emerald-500 text-lg leading-none">▸</span>
-              <span>關鍵數字：<span class="text-emerald-300 font-black">${cleanNumber}</span></span>
+          <!-- 展開內容區塊 (增加 break-words 防止長文字溢出) -->
+          <div id="grid-content-${g.id}" class="${isRevealed ? '' : 'hidden'} pt-3 border-t border-slate-800/80 space-y-2.5 text-sm sm:text-base">
+            <div class="text-emerald-400 font-bold leading-relaxed flex items-start gap-2">
+              <span class="shrink-0 text-emerald-500 font-black text-base leading-none pt-0.5">▸</span>
+              <span class="break-words">關鍵數字：<span class="text-emerald-300 font-black">${cleanNumber}</span></span>
             </div>
-            <div class="text-slate-100 text-sm md:text-base leading-relaxed flex items-start gap-2">
-              <span class="shrink-0 leading-none">🔑</span>
-              <span><span class="text-slate-400 font-medium">關鍵詞：</span><span class="font-bold text-amber-200">${g.keywords}</span></span>
+            <div class="text-slate-100 leading-relaxed flex items-start gap-2">
+              <span class="shrink-0 text-base leading-none pt-0.5">🔑</span>
+              <span class="break-words"><span class="text-slate-400 font-medium">關鍵詞：</span><span class="font-bold text-amber-200">${g.keywords}</span></span>
             </div>
-            <div class="text-slate-300 text-xs md:text-sm font-medium flex items-start gap-2 bg-slate-950/70 p-2.5 rounded-2xl border border-slate-800/90">
-              <span class="shrink-0 text-cyan-400 leading-none">▢</span>
-              <span><span class="text-slate-400">配圖建議：</span><span class="text-cyan-200 font-semibold">${g.diagram}</span></span>
+            <div class="text-slate-300 text-xs sm:text-sm font-medium flex items-start gap-2 bg-slate-950/70 p-3 rounded-2xl border border-slate-800/90 leading-relaxed">
+              <span class="shrink-0 text-cyan-400 font-bold text-sm leading-none pt-0.5">▢</span>
+              <span class="break-words"><span class="text-slate-400">配圖建議：</span><span class="text-cyan-200 font-semibold">${g.diagram}</span></span>
             </div>
           </div>
 
+          <!-- 未展開提示條 -->
           <div class="text-xs font-semibold text-slate-400 bg-slate-950/60 py-2 rounded-xl border border-slate-800/80 text-center tracking-wide ${isRevealed ? 'hidden' : ''}">
             👆 點擊展開 關鍵數字 ＆ 3 關鍵詞
           </div>
@@ -1221,12 +1230,12 @@
       // 渲染單題卡片
       const container = document.getElementById('strategy-single-card');
       container.innerHTML = `
-        <div class="flex justify-between items-center">
-          <div class="flex items-center gap-2">
-            <span class="px-3 py-1 rounded-full bg-blue-900/50 text-blue-200 font-black text-xs border border-blue-700/50">${card.year}</span>
-            <span class="text-slate-300 font-bold text-sm">${card.theme}</span>
+        <div class="flex justify-between items-center gap-2 border-b border-slate-800/80 pb-2.5">
+          <div class="flex items-center gap-2 min-w-0">
+            <span class="shrink-0 px-2.5 py-0.5 rounded-full bg-blue-900/50 text-blue-200 font-black text-xs border border-blue-700/50 whitespace-nowrap">${card.year}</span>
+            <span class="text-slate-300 font-bold text-sm truncate">${card.theme}</span>
           </div>
-          <button onclick="copyCurrentStrategyCard(this)" class="flex items-center gap-1.5 px-3 py-1 rounded-xl font-bold text-xs bg-slate-800 hover:bg-slate-700 text-slate-200 hover:text-white border border-slate-700 active:scale-95 transition shadow-sm" title="複製此審題快刀卡發問 GEM">
+          <button onclick="copyCurrentStrategyCard(this)" class="shrink-0 flex items-center gap-1.5 px-3 py-1 rounded-xl font-bold text-xs bg-slate-800 hover:bg-slate-700 text-slate-200 hover:text-white border border-slate-700 active:scale-95 transition shadow-sm whitespace-nowrap" title="複製此審題快刀卡發問 GEM">
             <span>📋</span><span>複製</span>
           </button>
         </div>
