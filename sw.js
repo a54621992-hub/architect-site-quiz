@@ -1,5 +1,5 @@
 // Service Worker - 敷地速刷 PWA 離線快取
-const CACHE_NAME = 'site-planning-quiz-v5.1';
+const CACHE_NAME = 'site-planning-quiz-v5.2';
 const ASSETS = [
   './',
   './index.html',
