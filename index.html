@@ -160,7 +160,7 @@
         <div onclick="switchView('diagrams')" class="bg-slate-900/90 p-4 rounded-2xl border border-slate-800 active:scale-95 transition cursor-pointer space-y-2">
           <div class="text-2xl">🖼️</div>
           <div class="text-sm font-bold text-white">12 張萬用圖卡</div>
-          <div class="text-[11px] text-slate-400">向量圖 ＋ 騏華手繪臨摹</div>
+          <div class="text-[11px] text-slate-400">向量圖 ＋ 建築師手繪臨摹</div>
         </div>
         <div onclick="openModulesModal()" class="bg-slate-900/90 p-4 rounded-2xl border border-teal-800/50 active:scale-95 transition cursor-pointer space-y-2 bg-gradient-to-br from-teal-950/30 to-slate-900">
           <div class="flex justify-between items-center">
@@ -222,11 +222,17 @@
       </div>
 
       <!-- SOP 子頁面 2: 三條鐵律 -->
-      <div id="sop-sub-rules" class="hidden space-y-3" id="sop-rules-container"></div>
+      <div id="sop-sub-rules" class="hidden space-y-3">
+        <div id="sop-rules-container" class="space-y-3"></div>
+      </div>
       <!-- SOP 子頁面 3: 色筆標記法 -->
-      <div id="sop-sub-colors" class="hidden space-y-3" id="sop-colors-container"></div>
+      <div id="sop-sub-colors" class="hidden space-y-3">
+        <div id="sop-colors-container" class="space-y-3"></div>
+      </div>
       <!-- SOP 子頁面 4: 11 步驟總覽 -->
-      <div id="sop-sub-list" class="hidden space-y-3" id="sop-list-container"></div>
+      <div id="sop-sub-list" class="hidden space-y-3">
+        <div id="sop-list-container" class="space-y-3"></div>
+      </div>
     </section>
 
     <!-- 模組 3: 84 項審題關鍵字反射卡 ＆ 數字閃卡 (Reflex Blitz & Number Cards) -->
@@ -308,7 +314,7 @@
                 </div>
                 <div class="text-right max-w-[50%]">
                   <span class="text-[10px] text-slate-500 block">法規依據：</span>
-                  <div class="text-[11px] text-slate-300 font-mono truncate" id="num-card-source">出處條號</div>
+                  <div class="text-[11px] text-slate-300 font-mono break-words" id="num-card-source">出處條號</div>
                 </div>
               </div>
 
@@ -381,13 +387,13 @@
           </div>
         </div>
 
-        <!-- 顯示模式切換：向量 SVG vs 騏華手繪臨摹 -->
+        <!-- 顯示模式切換：向量 SVG vs 手繪臨摹 -->
         <div class="flex items-center justify-between gap-2 bg-slate-950 p-1.5 rounded-xl border border-slate-800">
           <button id="diag-btn-svg" onclick="switchDiagMode('svg')" class="flex-1 py-1.5 rounded-lg text-xs font-bold bg-amber-500 text-slate-950 transition">
             🖼️ 原生向量圖解 (SVG)
           </button>
           <button id="diag-btn-sketch" onclick="switchDiagMode('sketch')" class="flex-1 py-1.5 rounded-lg text-xs font-bold text-slate-400 hover:text-white transition">
-            ✏️ 騏華手繪臨摹
+            ✏️ 建築師手繪臨摹
           </button>
         </div>
 
@@ -398,10 +404,10 @@
           <span>🔍 點擊圖片進入【手勢縮放 ＆ 橫向滿版臨摹】</span>
         </div>
 
-        <!-- 騏華手繪技法標籤提示 -->
+        <!-- 手繪技法標籤提示 -->
         <div id="diag-techniques-banner" class="hidden bg-emerald-950/40 p-3 rounded-xl border border-emerald-800/40 text-xs space-y-1">
           <span class="font-bold text-emerald-300 flex items-center space-x-1">
-            <span>✨</span><span>騏華考場技法與臨摹重點：</span>
+            <span>✨</span><span>考場實戰手繪技法與臨摹重點：</span>
           </span>
           <p class="text-emerald-200/90 leading-relaxed text-[11px]" id="diag-techniques-text"></p>
         </div>
@@ -479,24 +485,33 @@
     </button>
   </nav>
 
-  <!-- 3分鐘隨機微膠囊彈窗 -->
-  <div id="capsule-modal" class="fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-md flex items-center justify-center p-4 hidden">
-    <div class="bg-slate-900 border border-slate-800 w-full max-w-md rounded-3xl p-5 shadow-2xl flex flex-col justify-between max-h-[90vh] overflow-y-auto">
-      <div>
-        <div class="flex justify-between items-center pb-3 border-b border-slate-800">
-          <span class="text-xs font-bold text-emerald-400 tracking-wider">⚡ 3 分鐘微膠囊進度</span>
-          <span class="text-xs text-slate-400 font-mono" id="capsule-step-text">1 / 4</span>
-        </div>
-        <div class="py-4" id="capsule-body"></div>
+  <!-- 3分鐘隨機微膠囊 (法規速刷滿版大字體風格) -->
+  <div id="capsule-modal" class="fixed inset-0 z-50 bg-slate-950 flex flex-col hidden overflow-hidden">
+    <!-- 頂部固定狀態列 -->
+    <div class="sticky top-0 z-20 bg-slate-900/95 backdrop-blur-md border-b border-slate-800 px-4 py-3 flex justify-between items-center max-w-xl mx-auto w-full shadow-md">
+      <div class="flex items-center space-x-2">
+        <span class="text-base font-black text-emerald-400">⚡ 3 分鐘微膠囊</span>
+        <span class="text-xs px-2.5 py-0.5 rounded-full bg-slate-800 text-slate-300 font-mono font-bold" id="capsule-step-text">1 / 4</span>
       </div>
-      <div class="pt-3 border-t border-slate-800 flex space-x-2">
-        <button onclick="closeCapsuleModal()" class="py-2.5 px-4 rounded-xl bg-slate-800 text-slate-300 text-xs font-bold">
-          關閉退出
-        </button>
-        <button onclick="nextCapsuleStep()" id="capsule-next-btn" class="flex-1 py-2.5 rounded-xl bg-emerald-500 text-slate-950 text-xs font-bold active:scale-95 transition">
-          下一步 (Next) →
-        </button>
-      </div>
+      <button onclick="closeCapsuleModal()" class="px-3 py-1 rounded-xl bg-slate-800 text-slate-300 hover:text-white text-xs font-bold active:scale-95 transition">
+        ✕ 退出
+      </button>
+    </div>
+
+    <!-- 中間主內容區 (全版面自然上下滾動) -->
+    <div class="flex-1 overflow-y-auto px-4 pt-4 pb-32 max-w-xl mx-auto w-full" id="capsule-scroll-area">
+      <div id="capsule-body" class="space-y-4"></div>
+    </div>
+
+    <!-- 底部固定操作列 -->
+    <div class="fixed bottom-0 left-0 right-0 z-20 bg-slate-900/95 backdrop-blur-lg border-t border-slate-800 px-4 py-3 max-w-xl mx-auto flex items-center justify-between space-x-3 shadow-2xl safe-bottom">
+      <button onclick="closeCapsuleModal()" class="py-3 px-5 rounded-2xl bg-slate-800 text-slate-300 font-bold text-sm active:scale-95 transition">
+        退出
+      </button>
+      <button onclick="nextCapsuleStep()" id="capsule-next-btn" class="flex-1 py-3.5 px-6 rounded-2xl bg-gradient-to-r from-emerald-500 to-teal-500 text-slate-950 font-black text-base shadow-lg shadow-emerald-500/20 active:scale-95 transition flex items-center justify-center space-x-2">
+        <span>下一步 (Next)</span>
+        <span>→</span>
+      </button>
     </div>
   </div>
 
@@ -1374,7 +1389,7 @@ ${g.title}
 
       options.forEach(opt => {
         const btn = document.createElement('button');
-        btn.className = "w-full py-3.5 px-4 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-800 text-left text-xs font-semibold text-slate-200 active:scale-98 transition flex items-center justify-between";
+        btn.className = "w-full py-4 px-5 rounded-2xl bg-slate-900 hover:bg-slate-850 active:scale-[0.99] border border-slate-800 text-left text-sm md:text-base font-bold text-slate-200 transition shadow-sm leading-relaxed flex items-center justify-between";
         btn.innerHTML = `<span>${opt}</span><span class="text-slate-500">→</span>`;
         btn.onclick = () => handleSopAnswer(opt, btn);
         container.appendChild(btn);
@@ -1414,13 +1429,13 @@ ${g.title}
       container.innerHTML = '';
       SITE_DATA.sop.iron_rules.forEach(r => {
         container.innerHTML += `
-          <div class="bg-slate-900 p-4 rounded-2xl border border-slate-800 space-y-2">
-            <span class="text-amber-400 font-bold text-sm block">🛡️ ${r.title}</span>
-            <div class="text-xs text-white font-medium bg-slate-950/80 p-2.5 rounded-xl border border-slate-850">
+          <div class="bg-slate-900 p-5 rounded-2xl border border-slate-800 space-y-3 shadow-lg">
+            <span class="text-amber-400 font-black text-base md:text-lg block">🛡️ ${r.title}</span>
+            <div class="text-sm md:text-base text-white font-bold bg-slate-950 p-3 rounded-xl border border-slate-800">
               👉 ${r.key_action}
             </div>
-            <p class="text-xs text-slate-300 leading-relaxed italic">"${r.quote}"</p>
-            <p class="text-[11px] text-slate-400 leading-relaxed">💡 核心理由：${r.why}</p>
+            <p class="text-sm md:text-base text-slate-200 leading-relaxed italic">"${r.quote}"</p>
+            <p class="text-xs md:text-sm text-slate-400 leading-relaxed pt-1 border-t border-slate-800/80">💡 核心理由：${r.why}</p>
           </div>
         `;
       });
@@ -1431,12 +1446,12 @@ ${g.title}
       container.innerHTML = '';
       SITE_DATA.sop.color_markings.forEach(c => {
         container.innerHTML += `
-          <div class="bg-slate-900 p-3.5 rounded-2xl border border-slate-800 space-y-2">
+          <div class="bg-slate-900 p-4 rounded-2xl border border-slate-800 space-y-2.5 shadow-md">
             <div class="flex items-center justify-between">
-              <span class="px-2.5 py-0.5 rounded-md text-xs font-black ${c.css_class}">${c.color}色標記</span>
-              <span class="text-xs font-bold text-slate-300">${c.target}</span>
+              <span class="px-3 py-1 rounded-lg text-sm font-black ${c.css_class}">${c.color}色標記</span>
+              <span class="text-sm font-bold text-slate-200">${c.target}</span>
             </div>
-            <div class="text-[11px] text-slate-400 space-y-1">
+            <div class="text-xs md:text-sm text-slate-300 space-y-1.5 pt-1 border-t border-slate-800/60">
               ${c.examples.map(ex => `<div>• ${ex}</div>`).join('')}
             </div>
           </div>
@@ -1449,17 +1464,17 @@ ${g.title}
       container.innerHTML = '';
       SITE_DATA.sop.steps.forEach(s => {
         container.innerHTML += `
-          <div class="bg-slate-900 p-3 rounded-xl border border-slate-800 flex items-start space-x-3">
-            <div class="w-7 h-7 rounded-lg bg-slate-800 flex items-center justify-center font-bold text-xs text-cyan-400 flex-shrink-0">
+          <div class="bg-slate-900 p-4 rounded-2xl border border-slate-800 flex items-start space-x-3.5 shadow-sm">
+            <div class="w-8 h-8 rounded-xl bg-slate-800 border border-slate-700 flex items-center justify-center font-black text-sm text-cyan-400 flex-shrink-0">
               ${s.step}
             </div>
-            <div class="flex-1 text-xs">
+            <div class="flex-1 text-xs md:text-sm">
               <div class="flex justify-between items-center">
-                <span class="font-bold text-white">${s.name}</span>
-                <span class="text-[10px] text-slate-500 font-mono">${s.ratio}</span>
+                <span class="font-bold text-white text-sm md:text-base">${s.name}</span>
+                <span class="text-xs text-slate-400 font-mono font-bold">${s.ratio}</span>
               </div>
-              <p class="text-slate-300 mt-1 leading-relaxed">${s.key_points}</p>
-              <p class="text-[10px] text-slate-400 mt-0.5 font-mono">下一動作：${s.next_step_name}</p>
+              <p class="text-slate-200 mt-1.5 leading-relaxed text-xs md:text-sm">${s.key_points}</p>
+              <p class="text-xs text-slate-400 mt-1 font-mono font-medium">下一動作：${s.next_step_name}</p>
             </div>
           </div>
         `;
@@ -1649,30 +1664,53 @@ ${g.title}
       filtered.forEach(g => {
         const isRevealed = !!appState.gridRevealed[g.id];
         const card = document.createElement('div');
-        card.className = "bg-slate-900 p-4 rounded-2xl border border-slate-800 space-y-2 cursor-pointer active:scale-98 transition";
+        card.className = "bg-slate-900 p-4 sm:p-5 rounded-3xl border border-slate-750 hover:border-slate-600 shadow-xl space-y-3 cursor-pointer active:scale-98 transition overflow-hidden";
         card.onclick = () => toggleGridReveal(g.id);
 
+        const cleanNumber = (g.number || '').replace(/^[▸\s]+/, '');
+
         card.innerHTML = `
-          <div class="flex justify-between items-center text-xs">
-            <span class="text-slate-400">${g.topic_header}</span>
-            <span class="px-2 py-0.5 rounded-md font-bold text-[10px] bg-purple-950 text-purple-300 border border-purple-800/50">
-              【${g.func_abbr}】格 ${g.grid_no}
-            </span>
-          </div>
-          <div class="text-sm font-bold text-white">${g.title}</div>
-          
-          <div id="grid-content-${g.id}" class="${isRevealed ? '' : 'hidden'} pt-2 border-t border-slate-800 space-y-1.5 text-xs">
-            <div class="flex justify-between items-center">
-              <div class="text-emerald-400 font-medium">▸ 關鍵數字：${g.number}</div>
-              <button onclick="event.stopPropagation(); copyGridCard('${g.id}', this)" class="px-2 py-0.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 text-[10px] font-bold border border-slate-700 active:scale-95 transition flex items-center space-x-1" title="複製小卡">
-                <span>📋</span><span>複製</span>
+          <!-- 頂部資訊列：左側機能徽章，右側複製按鈕；主題名稱獨立完整呈現 -->
+          <div class="border-b border-slate-800/80 pb-2 space-y-1.5">
+            <div class="flex items-center justify-between gap-2">
+              <span class="shrink-0 px-2.5 py-1 rounded-xl font-black text-xs bg-purple-950 text-purple-300 border border-purple-800/60 whitespace-nowrap shadow-sm">
+                【${g.func_abbr}】格 ${g.grid_no}
+              </span>
+              <button 
+                onclick="event.stopPropagation(); copyGridCard('${g.id}', this)"
+                class="shrink-0 flex items-center gap-1.5 px-3 py-1 rounded-xl font-bold text-xs bg-slate-800 hover:bg-slate-700 text-slate-200 hover:text-white border border-slate-700 active:scale-95 transition shadow-sm whitespace-nowrap"
+                title="複製小卡文字，最前方自動加上『詳細說明：』">
+                <span class="text-xs">📋</span><span>複製</span>
               </button>
             </div>
-            <div class="text-slate-300">🔑 關鍵詞：${g.keywords}</div>
-            <div class="text-slate-400 text-[11px] font-mono">▢ 配圖：${g.diagram}</div>
+            <!-- 主題分類完整字串 (允許換行，絕無 ... 截斷) -->
+            <div class="text-xs sm:text-sm font-bold text-slate-400 leading-snug break-words">
+              ${g.topic_header}
+            </div>
           </div>
-          <div class="text-[10px] text-slate-500 text-center ${isRevealed ? 'hidden' : ''}">
-            👆 點擊展開數字與 3 關鍵詞
+
+          <!-- 卡片核心考點標題 (獨佔一行，完整呈現) -->
+          <div class="text-lg sm:text-xl font-black text-white leading-snug tracking-wide pt-0.5 break-words">
+            ${g.title}
+          </div>
+          
+          <!-- 展開內容區塊 (完整呈現，防止溢出) -->
+          <div id="grid-content-${g.id}" class="${isRevealed ? '' : 'hidden'} pt-3 border-t border-slate-800/80 space-y-2.5 text-sm sm:text-base">
+            <div class="text-emerald-400 font-bold leading-relaxed flex items-start gap-2">
+              <span class="shrink-0 text-emerald-500 font-black text-base leading-none pt-0.5">▸</span>
+              <span class="break-words">關鍵數字：<span class="text-emerald-300 font-mono font-black">${cleanNumber}</span></span>
+            </div>
+            <div class="text-slate-200 leading-relaxed flex items-start gap-2 bg-slate-950/70 p-3 rounded-2xl border border-slate-800/80">
+              <span class="shrink-0 text-amber-400 font-black text-sm pt-0.5">🔑</span>
+              <div class="break-words font-medium">關鍵詞：<span class="text-white">${g.keywords}</span></div>
+            </div>
+            <div class="text-slate-400 text-xs sm:text-sm font-mono flex items-start gap-2 pt-1">
+              <span class="shrink-0">📐</span>
+              <span class="break-words">配圖：${g.diagram}</span>
+            </div>
+          </div>
+          <div class="text-xs font-bold text-slate-400 text-center pt-1 ${isRevealed ? 'hidden' : ''}">
+            👆 點擊展開考點核心與關鍵詞
           </div>
         `;
         container.appendChild(card);
@@ -1703,7 +1741,7 @@ ${g.title}
           <div class="w-full flex flex-col items-center">
             <img src="${diag.sketch_image}" class="w-full max-h-[360px] object-contain rounded-lg" alt="${diag.header} 手繪臨摹" onerror="this.src='apple-touch-icon.png'">
             <div class="w-full mt-2 pt-2 border-t border-slate-200/50 flex justify-between items-center text-[11px] text-slate-600 px-1">
-              <span class="font-bold text-emerald-800">📖 《絕機筆記》${diag.sketch_source_page}：${diag.sketch_title}</span>
+              <span class="font-bold text-emerald-800">📖 《實戰手繪圖解》${diag.sketch_source_page}：${diag.sketch_title}</span>
               <span class="text-slate-500 font-mono">1:1 手繪臨摹原件</span>
             </div>
           </div>
@@ -1715,7 +1753,7 @@ ${g.title}
           <div class="w-full flex flex-col items-center">
             <img src="${diag.sketch_image}" class="w-full max-h-[360px] object-contain rounded-lg" alt="${diag.header} 手繪臨摹" onerror="this.src='apple-touch-icon.png'">
             <div class="w-full mt-2 pt-2 border-t border-slate-200/50 flex justify-between items-center text-[11px] text-slate-600 px-1">
-              <span class="font-bold text-emerald-800">📖 《絕機筆記》${diag.sketch_source_page}：${diag.sketch_title}</span>
+              <span class="font-bold text-emerald-800">📖 《實戰手繪圖解》${diag.sketch_source_page}：${diag.sketch_title}</span>
               <span class="text-slate-500 font-mono">純手繪考場必背</span>
             </div>
           </div>
@@ -1724,7 +1762,7 @@ ${g.title}
         box.innerHTML = `<div class="text-slate-400 text-xs py-8">暫無圖檔</div>`;
       }
 
-      // 騏華手繪技法提示
+      // 考場手繪技法提示
       const techBanner = document.getElementById('diag-techniques-banner');
       const techText = document.getElementById('diag-techniques-text');
       if (techBanner && techText) {
@@ -1797,7 +1835,7 @@ ${g.title}
           </div>
         </div>
         
-        <h3 class="text-lg font-black text-white leading-snug">${card.title}</h3>
+        <h3 class="text-xl md:text-2xl font-black text-white leading-snug break-words">${card.title}</h3>
 
         <!-- 官方原卷基地現況圖 (可點擊自動橫向放大，支援雙指縮放) -->
         <div class="space-y-1.5">
@@ -1811,36 +1849,43 @@ ${g.title}
           </div>
           <div onclick="window.openImageLightbox('${card.map_image}', '${card.title}')" class="bg-white rounded-2xl p-2 border border-slate-700 shadow-inner flex items-center justify-center min-h-[220px] max-h-[300px] overflow-hidden cursor-pointer relative group">
             <img src="${card.map_image}" class="w-full h-full object-contain max-h-[280px]" alt="${card.title} 基地圖" onerror="this.src='apple-touch-icon.png'">
-            <div class="absolute bottom-2 right-2 bg-slate-900/85 backdrop-blur-sm text-cyan-300 text-[10px] px-2.5 py-1 rounded-full border border-cyan-500/30 flex items-center space-x-1 shadow-lg">
+            <div class="absolute bottom-2 right-2 bg-slate-900/85 backdrop-blur-sm text-cyan-300 text-[10px] px-2.5 py-1 rounded-full border border-cyan-500/30 flex items-center space-x-1 shadow-lg font-bold">
               <span>🔍 雙指捏合縮放</span>
             </div>
           </div>
         </div>
 
         <!-- 2 分鐘大腦自問課題 -->
-        <div class="bg-slate-950/80 p-3.5 rounded-2xl border border-slate-800 text-xs space-y-1.5">
-          <span class="text-amber-400 font-bold block flex items-center space-x-1">
+        <div class="bg-slate-950/80 p-4 rounded-2xl border border-slate-800 text-sm space-y-2">
+          <span class="text-amber-400 font-bold block flex items-center space-x-1 text-base">
             <span>⚡</span><span>2 分鐘大腦自問課題：</span>
           </span>
-          ${card.challenges.map(c => `<div class="text-slate-300 leading-relaxed">• ${c}</div>`).join('')}
+          ${card.challenges.map(c => `<div class="text-slate-200 leading-relaxed font-medium">• ${c}</div>`).join('')}
         </div>
 
         <!-- 專家破局黃金決策 -->
-        <div class="bg-slate-850 p-4 rounded-2xl border border-slate-750 text-xs space-y-2">
-          <span class="text-cyan-400 font-bold block flex items-center space-x-1">
+        <div class="bg-slate-850 p-4.5 rounded-2xl border border-slate-750 text-sm md:text-base space-y-2.5">
+          <span class="text-cyan-400 font-bold block flex items-center space-x-1 text-base">
             <span>💡</span><span>專家破局黃金決策（車道/盲邊/量體/退縮）：</span>
           </span>
-          ${card.expert_decisions.map(d => `<div class="text-slate-200 leading-relaxed">${d}</div>`).join('')}
+          ${card.expert_decisions.map(d => `<div class="text-slate-100 leading-relaxed font-medium">${d}</div>`).join('')}
         </div>
 
         <!-- 原汁原味官方題目正文 (可折疊/展開) -->
-        <div class="pt-2 border-t border-slate-800">
-          <button onclick="toggleStrategyFullText()" class="w-full py-2.5 px-3 rounded-xl bg-slate-800/80 hover:bg-slate-800 text-slate-300 hover:text-white text-xs font-semibold flex items-center justify-between transition">
-            <span>📄 查看官方原卷題目正文</span>
-            <span id="strategy-expand-icon">▼</span>
+        <div class="pt-2 border-t border-slate-800/80">
+          <button 
+            onclick="toggleStrategyFullText()" 
+            class="w-full py-3 px-4 text-sm font-bold text-slate-200 hover:text-white flex items-center justify-center gap-2 rounded-2xl bg-slate-850 hover:bg-slate-800 border border-slate-700 active:scale-98 transition shadow-sm"
+          >
+            <span id="strat-toggle-icon" class="text-xs text-cyan-400 font-mono transition-transform">▼</span>
+            <span id="strat-toggle-label">展開歷屆官方題目完整原話</span>
           </button>
-          <div id="strategy-fulltext-box" class="hidden mt-2 p-3.5 rounded-xl bg-slate-950/90 border border-slate-800 text-[11px] text-slate-300 leading-relaxed max-h-72 overflow-y-auto whitespace-pre-line font-mono">
-            ${card.full_text || '無題目正文'}
+          <!-- 官方題目全文展開容器：字級與專家決策一致 (text-sm md:text-base)，高對比不費眼，滑動順暢 -->
+          <div 
+            id="strat-full-text" 
+            class="hidden mt-3 p-4.5 sm:p-5 bg-slate-950/90 rounded-2xl border border-slate-750 text-sm md:text-base text-slate-100 leading-relaxed max-h-[420px] overflow-y-auto whitespace-pre-line shadow-inner select-text"
+          >
+            ${card.full_text || '無題目完整原話資料'}
           </div>
         </div>
       `;
@@ -1888,14 +1933,20 @@ ${g.title}
     }
 
     function toggleStrategyFullText() {
-      const box = document.getElementById('strategy-fulltext-box');
-      const icon = document.getElementById('strategy-expand-icon');
-      if (box.classList.contains('hidden')) {
+      const box = document.getElementById('strat-full-text');
+      const icon = document.getElementById('strat-toggle-icon');
+      const label = document.getElementById('strat-toggle-label');
+      if (!box) return;
+
+      const isHidden = box.classList.contains('hidden');
+      if (isHidden) {
         box.classList.remove('hidden');
-        icon.innerText = '▲';
+        if (icon) icon.innerText = '▲';
+        if (label) label.innerText = '收起官方原卷題目正文';
       } else {
         box.classList.add('hidden');
-        icon.innerText = '▼';
+        if (icon) icon.innerText = '▼';
+        if (label) label.innerText = '展開歷屆官方題目完整原話';
       }
     }
 
@@ -1956,62 +2007,130 @@ ${g.title}
     function renderCapsuleStep() {
       const item = capsuleQueue[capsuleStep];
       const body = document.getElementById('capsule-body');
+      const scrollArea = document.getElementById('capsule-scroll-area');
+      if (scrollArea) scrollArea.scrollTop = 0;
       document.getElementById('capsule-step-text').innerText = `${capsuleStep + 1} / 4`;
 
       if (item.type === 'num') {
         const kws = (item.data.keywords && item.data.keywords.length > 0)
-          ? item.data.keywords.map(k => `<span class="px-2 py-0.5 rounded-lg bg-cyan-950 text-cyan-300 font-bold border border-cyan-800 text-[10px]">#${k}</span>`).join(' ')
+          ? `<div class="flex flex-wrap gap-1.5 my-2">` + item.data.keywords.map(k => `<span class="px-2.5 py-1 rounded-xl bg-cyan-950/80 text-cyan-300 font-bold border border-cyan-700/50 text-xs shadow-sm">#${k}</span>`).join('') + `</div>`
           : '';
         body.innerHTML = `
-          <div class="space-y-2.5 text-center">
-            <span class="px-2 py-0.5 rounded-full bg-cyan-500/20 text-cyan-300 text-xs font-bold">1. 審題關鍵字反射 ＆ 速記</span>
-            <div class="flex flex-wrap gap-1 justify-center my-1">${kws}</div>
-            <div class="text-xs font-bold text-white mt-1">${item.data.scenario || item.data.content}</div>
-            <div class="p-3 bg-slate-950 rounded-2xl border border-slate-800 my-2 text-left">
-              <div class="text-xl font-black text-emerald-400 text-center font-mono">${item.data.number}</div>
-              <div class="text-xs text-cyan-200 mt-2 bg-slate-900/60 p-2 rounded-xl border border-slate-800 leading-relaxed">${item.data.reflex || item.data.usage}</div>
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <span class="px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-400 text-xs font-bold border border-emerald-500/30">
+                關卡 1/4 ・ 審題關鍵字反射 ＆ 數字速記
+              </span>
+              <span class="text-xs text-slate-400 font-medium">${item.data.category}</span>
             </div>
-            <p class="text-[10px] text-slate-500 font-mono">出處：${item.data.source}</p>
+            <div class="bg-slate-900 p-5 rounded-3xl border border-slate-800 shadow-xl space-y-4">
+              ${kws}
+              <h3 class="text-lg md:text-xl font-bold text-white leading-relaxed">
+                ${item.data.scenario || item.data.content}
+              </h3>
+              <div class="p-5 bg-slate-950 rounded-2xl border border-emerald-500/30 text-center space-y-2">
+                <span class="text-xs text-slate-400 block font-bold">法規標準數值：</span>
+                <div class="text-3xl md:text-4xl font-black text-emerald-400 font-mono tracking-wider">
+                  ${item.data.number}
+                </div>
+              </div>
+              <div class="bg-slate-950/80 p-4 rounded-2xl border border-slate-800 space-y-1.5 text-sm">
+                <span class="text-amber-400 font-bold block text-xs">💡 考場審題反射／用法：</span>
+                <p class="text-slate-200 leading-relaxed">${item.data.reflex || item.data.usage}</p>
+              </div>
+              <div class="text-xs text-slate-500 font-mono text-right">
+                出處：${item.data.source} (${item.data.status || '最新查證'})
+              </div>
+            </div>
           </div>
         `;
       } else if (item.type === 'sop') {
         body.innerHTML = `
-          <div class="space-y-3 text-center">
-            <span class="px-2 py-0.5 rounded-full bg-cyan-500/20 text-cyan-400 text-xs font-bold">2. 作圖 SOP 下一步反射</span>
-            <div class="text-sm font-bold text-white mt-2">${item.data.question}</div>
-            <div class="p-3 bg-slate-950 rounded-2xl border border-slate-800 text-left my-3 space-y-1 text-xs">
-              <div class="text-cyan-400 font-bold">👉 正確下一步：${item.data.correct}</div>
-              <div class="text-slate-400">${item.data.explanation}</div>
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <span class="px-3 py-1 rounded-full bg-cyan-500/20 text-cyan-400 text-xs font-bold border border-cyan-500/30">
+                關卡 2/4 ・ 作圖 SOP 肌肉記憶
+              </span>
+              <span class="text-xs text-cyan-300 font-bold">11 步驟無腦接</span>
+            </div>
+            <div class="bg-slate-900 p-5 rounded-3xl border border-slate-800 shadow-xl space-y-4">
+              <h3 class="text-lg md:text-xl font-bold text-white leading-relaxed">
+                ${item.data.question}
+              </h3>
+              <div class="p-5 bg-slate-950 rounded-2xl border border-cyan-500/30 space-y-2">
+                <div class="flex items-center space-x-2 text-cyan-400 font-black text-base md:text-lg">
+                  <span>👉</span>
+                  <span>正確下一步：${item.data.correct}</span>
+                </div>
+                <p class="text-sm md:text-base text-slate-200 leading-relaxed pt-2 border-t border-slate-800/80">
+                  ${item.data.explanation}
+                </p>
+              </div>
+              <div class="p-3.5 bg-slate-950/70 rounded-2xl border border-slate-800 text-xs text-slate-400 leading-relaxed space-y-1">
+                <div class="text-amber-400 font-bold">⚡ 作圖三鐵律心法：</div>
+                <div>• <b>停損</b>：卡關超過 3 分鐘立刻換題。</div>
+                <div>• <b>定案</b>：構想夠好就定案，限 5 分鐘。</div>
+                <div>• <b>推進</b>：由粗到細，全圖先畫到 60% 再加深。</div>
+              </div>
             </div>
           </div>
         `;
       } else if (item.type === 'grid') {
         body.innerHTML = `
-          <div class="space-y-3 text-center">
-            <span class="px-2 py-0.5 rounded-full bg-purple-500/20 text-purple-400 text-xs font-bold">3. 申論單格秒殺</span>
-            <div class="text-xs text-slate-400">${item.data.topic_header}</div>
-            <div class="text-sm font-bold text-white">${item.data.title}</div>
-            <div class="p-3 bg-slate-950 rounded-2xl border border-slate-800 text-left my-2 space-y-1.5 text-xs">
-              <div class="text-emerald-400 font-bold">▸ 數字：${item.data.number}</div>
-              <div class="text-slate-300">🔑 關鍵詞：${item.data.keywords}</div>
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <span class="px-3 py-1 rounded-full bg-purple-500/20 text-purple-400 text-xs font-bold border border-purple-500/30">
+                關卡 3/4 ・ 申論單格秒殺
+              </span>
+              <span class="text-xs text-purple-300 font-mono font-bold">${item.data.func_name}</span>
+            </div>
+            <div class="bg-slate-900 p-5 rounded-3xl border border-slate-800 shadow-xl space-y-4">
+              <div class="text-xs text-slate-400 font-medium">${item.data.topic_header}</div>
+              <h3 class="text-lg md:text-xl font-bold text-white leading-relaxed">
+                ${item.data.title}
+              </h3>
+              <div class="p-5 bg-slate-950 rounded-2xl border border-purple-500/30 space-y-3">
+                <div class="flex items-start space-x-2 text-sm md:text-base">
+                  <span class="text-emerald-400 font-black flex-shrink-0">▸ 核心判準：</span>
+                  <span class="text-emerald-300 font-bold">${item.data.number}</span>
+                </div>
+                <div class="pt-3 border-t border-slate-800/80 text-sm text-slate-200 leading-relaxed">
+                  <span class="text-amber-400 font-bold block mb-1.5">🔑 考場 3 關鍵詞：</span>
+                  <div class="bg-slate-900 p-3.5 rounded-xl border border-slate-800 text-white font-medium">
+                    ${item.data.keywords}
+                  </div>
+                </div>
+              </div>
+              <div class="text-xs text-slate-400 font-mono">
+                📐 搭配圖說：${item.data.diagram_ref || '萬用圖卡對應圖例'}
+              </div>
             </div>
           </div>
         `;
       } else if (item.type === 'diag') {
         body.innerHTML = `
-          <div class="space-y-2 text-center">
-            <span class="px-2 py-0.5 rounded-full bg-amber-500/20 text-amber-400 text-xs font-bold">4. 萬用圖卡大腦心像</span>
-            <div class="text-sm font-bold text-white">${item.data.header}</div>
-            <div onclick="window.openDiagramLightbox(capsuleQueue[capsuleStep].data.svg_code, capsuleQueue[capsuleStep].data.header)" class="bg-white rounded-xl p-2 max-h-[170px] overflow-hidden flex items-center justify-center my-2 cursor-pointer relative group border border-slate-700 shadow-inner">
-              ${item.data.svg_code}
-              <div class="absolute bottom-1 right-2 bg-slate-900/85 backdrop-blur-sm text-emerald-400 text-[10px] px-2 py-0.5 rounded-full border border-emerald-500/30 flex items-center space-x-1">
-                <span>🔍</span><span>手勢縮放 ＆ 橫向滿版</span>
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <span class="px-3 py-1 rounded-full bg-amber-500/20 text-amber-400 text-xs font-bold border border-amber-500/30">
+                關卡 4/4 ・ 萬用圖卡大腦心像
+              </span>
+              <span class="text-xs text-slate-400">大腦心像速覽</span>
+            </div>
+            <div class="bg-slate-900 p-5 rounded-3xl border border-slate-800 shadow-xl space-y-4">
+              <h3 class="text-lg md:text-xl font-bold text-white leading-relaxed">
+                ${item.data.header}
+              </h3>
+              <div onclick="window.openDiagramLightbox(capsuleQueue[capsuleStep].data.svg_code, capsuleQueue[capsuleStep].data.header)" class="bg-white rounded-2xl p-3 min-h-[200px] max-h-[320px] overflow-hidden flex items-center justify-center cursor-pointer relative group border border-slate-700 shadow-inner">
+                ${item.data.svg_code}
+                <div class="absolute bottom-2 right-2 bg-slate-900/90 backdrop-blur-sm text-emerald-400 text-xs px-3 py-1 rounded-full border border-emerald-500/30 flex items-center space-x-1.5 shadow-md">
+                  <span>🔍</span><span>點擊滿版手勢放大</span>
+                </div>
+              </div>
+              <div class="p-4 bg-slate-950 rounded-2xl border border-slate-800 space-y-1.5 text-sm text-slate-200">
+                <span class="text-cyan-400 font-bold block text-xs">✅ 考場必標元素：</span>
+                <p class="leading-relaxed">${item.data.must_mark}</p>
               </div>
             </div>
-            <div class="text-[10px] text-emerald-400 cursor-pointer" onclick="window.openDiagramLightbox(capsuleQueue[capsuleStep].data.svg_code, capsuleQueue[capsuleStep].data.header)">
-              👆 點擊圖片進入手勢放大
-            </div>
-            <p class="text-xs text-slate-300 mt-1">必標：${item.data.must_mark}</p>
           </div>
         `;
       }
