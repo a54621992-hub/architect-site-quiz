@@ -3587,10 +3587,10 @@
       ],
       "pitfall": "只列名詞不轉譯；WHO 八面向畫成八格太碎，只在文字中引一句",
       "svg_code": "<svg viewBox=\"0 0 360 230\" xmlns=\"http://www.w3.org/2000/svg\" font-family=\"Noto Sans CJK TC, sans-serif\"><defs><pattern id=\"c1h\" width=\"5\" height=\"5\" patternUnits=\"userSpaceOnUse\" patternTransform=\"rotate(45)\"><line x1=\"0\" y1=\"0\" x2=\"0\" y2=\"5\" stroke=\"#1e8449\" stroke-width=\"1.1\"/></pattern></defs><rect x=\"0.5\" y=\"0.5\" width=\"359\" height=\"229\" fill=\"#fff\" stroke=\"#ccc\"/><text x=\"14\" y=\"17\" font-size=\"10\" font-weight=\"700\">符號</text><text x=\"92\" y=\"17\" font-size=\"10\" font-weight=\"700\">元素</text><text x=\"170\" y=\"17\" font-size=\"10\" font-weight=\"700\">高齡化轉譯（寫一句）</text><line x1=\"8\" y1=\"23\" x2=\"352\" y2=\"23\" stroke=\"#222\"/><text x=\"92\" y=\"48\" font-size=\"10\" font-weight=\"700\">路徑 Path</text><text x=\"170\" y=\"48\" font-size=\"10\">連續・無高差・有遮蔽的步行路徑</text><line x1=\"8\" y1=\"62\" x2=\"352\" y2=\"62\" stroke=\"#ddd\"/><text x=\"92\" y=\"85\" font-size=\"10\" font-weight=\"700\">邊界 Edge</text><text x=\"170\" y=\"85\" font-size=\"10\">可辨識、不致迷路的軟性邊界</text><line x1=\"8\" y1=\"99\" x2=\"352\" y2=\"99\" stroke=\"#ddd\"/><text x=\"92\" y=\"122\" font-size=\"10\" font-weight=\"700\">節點 Node</text><text x=\"170\" y=\"122\" font-size=\"10\">可坐下的休憩與社交節點</text><line x1=\"8\" y1=\"136\" x2=\"352\" y2=\"136\" stroke=\"#ddd\"/><text x=\"92\" y=\"159\" font-size=\"10\" font-weight=\"700\">地標 Landmark</text><text x=\"170\" y=\"159\" font-size=\"10\">可記憶的定位物（利失智者）</text><line x1=\"8\" y1=\"173\" x2=\"352\" y2=\"173\" stroke=\"#ddd\"/><text x=\"92\" y=\"196\" font-size=\"10\" font-weight=\"700\">區域 District</text><text x=\"170\" y=\"196\" font-size=\"10\">有歸屬感的鄰里＝照顧圈</text><line x1=\"14\" y1=\"44\" x2=\"76\" y2=\"44\" stroke=\"#222\" stroke-width=\"4\"/><circle cx=\"30\" cy=\"44\" r=\"3.2\" fill=\"#fff\" stroke=\"#222\" stroke-width=\"1.4\"/><circle cx=\"60\" cy=\"44\" r=\"3.2\" fill=\"#fff\" stroke=\"#222\" stroke-width=\"1.4\"/><line x1=\"14\" y1=\"81\" x2=\"76\" y2=\"81\" stroke=\"#222\" stroke-width=\"1.6\" stroke-dasharray=\"5 3\"/><circle cx=\"22\" cy=\"74\" r=\"4\" fill=\"none\" stroke=\"#1e8449\" stroke-width=\"1.3\"/><circle cx=\"45\" cy=\"74\" r=\"4\" fill=\"none\" stroke=\"#1e8449\" stroke-width=\"1.3\"/><circle cx=\"68\" cy=\"74\" r=\"4\" fill=\"none\" stroke=\"#1e8449\" stroke-width=\"1.3\"/><circle cx=\"45\" cy=\"118\" r=\"13\" fill=\"none\" stroke=\"#222\" stroke-width=\"1.6\"/><rect x=\"37\" y=\"116\" width=\"16\" height=\"3\" fill=\"#222\"/><line x1=\"39\" y1=\"119\" x2=\"39\" y2=\"124\" stroke=\"#222\"/><line x1=\"51\" y1=\"119\" x2=\"51\" y2=\"124\" stroke=\"#222\"/><polygon points=\"45,141 32,166 58,166\" fill=\"none\" stroke=\"#222\" stroke-width=\"1.6\"/><text x=\"45\" y=\"162\" font-size=\"11\" text-anchor=\"middle\">★</text><circle cx=\"45\" cy=\"192\" r=\"14\" fill=\"url(#c1h)\" stroke=\"#1e8449\" stroke-width=\"1.4\"/><text x=\"180\" y=\"224\" font-size=\"10.5\" font-weight=\"700\" text-anchor=\"middle\" fill=\"#6e2c00\">收束句：可走・可辨・可歇・可記・可歸</text></svg>",
-      "sketch_image": "diagram_sketches/diag_01_sketch.webp",
-      "sketch_source_page": "P9",
-      "sketch_title": "地景八大元素與審題符號轉譯",
-      "sketch_techniques": "Poché 陰影、符號層級線條、指引箭頭"
+      "sketch_image": null,
+      "sketch_source_page": null,
+      "sketch_title": null,
+      "sketch_techniques": null
     },
     {
       "id": "diag_02",
@@ -3608,7 +3608,7 @@
       "svg_code": "<svg viewBox=\"0 0 360 240\" xmlns=\"http://www.w3.org/2000/svg\" font-family=\"Noto Sans CJK TC, sans-serif\"><defs><pattern id=\"c2h\" width=\"5\" height=\"5\" patternUnits=\"userSpaceOnUse\" patternTransform=\"rotate(45)\"><line x1=\"0\" y1=\"0\" x2=\"0\" y2=\"5\" stroke=\"#c0392b\" stroke-width=\"1.1\"/></pattern></defs><rect x=\"0.5\" y=\"0.5\" width=\"359\" height=\"239\" fill=\"#fff\" stroke=\"#ccc\"/><circle cx=\"140\" cy=\"125\" r=\"100\" fill=\"none\" stroke=\"#888\" stroke-dasharray=\"4 3\"/><circle cx=\"140\" cy=\"125\" r=\"72\" fill=\"none\" stroke=\"#555\" stroke-width=\"1.2\"/><circle cx=\"140\" cy=\"125\" r=\"38\" fill=\"none\" stroke=\"#222\" stroke-width=\"1.8\"/><path d=\"M160,92.7 A38,38 0 0 1 160,157.3 Z\" fill=\"url(#c2h)\" stroke=\"none\"/><rect x=\"156\" y=\"12\" width=\"8\" height=\"220\" fill=\"#bbb\"/><text x=\"168\" y=\"24\" font-size=\"9\" fill=\"#555\">幹道（阻隔）</text><text x=\"140\" y=\"83\" font-size=\"9\" text-anchor=\"middle\" font-weight=\"700\">400M</text><text x=\"140\" y=\"49\" font-size=\"9\" text-anchor=\"middle\">800M</text><text x=\"140\" y=\"21\" font-size=\"9\" text-anchor=\"middle\" fill=\"#777\">1200M</text><rect x=\"134\" y=\"121\" width=\"12\" height=\"10\" fill=\"#fff\" stroke=\"#222\"/><polygon points=\"132,121 140,114 148,121\" fill=\"#222\"/><rect x=\"98\" y=\"91\" width=\"10\" height=\"10\" fill=\"#222\"/><text x=\"111\" y=\"100\" font-size=\"9\" font-weight=\"700\">A</text><polygon points=\"118,168 112,178 124,178\" fill=\"#222\"/><text x=\"127\" y=\"178\" font-size=\"9\" font-weight=\"700\">B</text><circle cx=\"112\" cy=\"128\" r=\"3.2\" fill=\"#222\"/><circle cx=\"148\" cy=\"146\" r=\"3.2\" fill=\"#222\"/><circle cx=\"128\" cy=\"104\" r=\"3.2\" fill=\"#222\"/><text x=\"100\" y=\"140\" font-size=\"9\" font-weight=\"700\">C</text><text x=\"175\" y=\"130\" font-size=\"15\" fill=\"#c0392b\" font-weight=\"900\">×</text><rect x=\"252\" y=\"86\" width=\"9\" height=\"9\" fill=\"#222\"/><text x=\"266\" y=\"94\" font-size=\"8.6\">A 整合型（區）</text><polygon points=\"256,103 251,112 261,112\" fill=\"#222\"/><text x=\"266\" y=\"110\" font-size=\"8.6\">B 複合型（里）</text><circle cx=\"256\" cy=\"124\" r=\"3.2\" fill=\"#222\"/><text x=\"266\" y=\"126\" font-size=\"8.6\">C 巷弄站（鄰）</text><rect x=\"251\" y=\"133\" width=\"10\" height=\"9\" fill=\"url(#c2h)\" stroke=\"#c0392b\"/><text x=\"266\" y=\"142\" font-size=\"8.6\">服務空白</text><rect x=\"251\" y=\"150\" width=\"10\" height=\"9\" fill=\"#bbb\"/><text x=\"266\" y=\"158\" font-size=\"8.6\">阻隔物</text><text x=\"250\" y=\"186\" font-size=\"8.6\" fill=\"#6e2c00\" font-weight=\"700\">判準：畫出來的圓</text><text x=\"250\" y=\"198\" font-size=\"8.6\" fill=\"#6e2c00\" font-weight=\"700\">≠ 走得到的範圍</text></svg>",
       "sketch_image": "diagram_sketches/diag_02_sketch.webp",
       "sketch_source_page": "P7",
-      "sketch_title": "服務圈同心圓與防災網絡配置",
+      "sketch_title": "服務圈同心圓與生活圈防災網絡配置",
       "sketch_techniques": "400M 同心圓、虛線動線、阻隔帶紅筆標記"
     },
     {
@@ -3624,10 +3624,10 @@
       ],
       "pitfall": "左右比例不同；塗黑不徹底導致讀不出圖底",
       "svg_code": "<svg viewBox=\"0 0 360 200\" xmlns=\"http://www.w3.org/2000/svg\" font-family=\"Noto Sans CJK TC, sans-serif\"><defs><marker id=\"c3a\" viewBox=\"0 0 10 10\" refX=\"8\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\"><path d=\"M0,0 L10,5 L0,10 z\" fill=\"#c0392b\"/></marker><marker id=\"c3b\" viewBox=\"0 0 10 10\" refX=\"8\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\"><path d=\"M0,0 L10,5 L0,10 z\" fill=\"#222\"/></marker></defs><rect x=\"0.5\" y=\"0.5\" width=\"359\" height=\"199\" fill=\"#fff\" stroke=\"#ccc\"/><text x=\"90\" y=\"18\" font-size=\"10\" font-weight=\"700\" text-anchor=\"middle\">現況</text><text x=\"270\" y=\"18\" font-size=\"10\" font-weight=\"700\" text-anchor=\"middle\">再生後</text><rect x=\"20\" y=\"25\" width=\"140\" height=\"140\" fill=\"#fff\" stroke=\"#222\" stroke-width=\"1.4\"/><rect x=\"200\" y=\"25\" width=\"140\" height=\"140\" fill=\"#fff\" stroke=\"#222\" stroke-width=\"1.4\"/><rect x=\"24\" y=\"29\" width=\"22\" height=\"30\" fill=\"#222\"/><rect x=\"50\" y=\"29\" width=\"14\" height=\"22\" fill=\"#222\"/><rect x=\"68\" y=\"29\" width=\"26\" height=\"34\" fill=\"#222\"/><rect x=\"98\" y=\"29\" width=\"18\" height=\"24\" fill=\"#222\"/><rect x=\"120\" y=\"29\" width=\"36\" height=\"20\" fill=\"#222\"/><rect x=\"24\" y=\"64\" width=\"16\" height=\"26\" fill=\"#222\"/><rect x=\"46\" y=\"70\" width=\"30\" height=\"18\" fill=\"#222\"/><rect x=\"82\" y=\"68\" width=\"14\" height=\"30\" fill=\"#222\"/><rect x=\"104\" y=\"58\" width=\"22\" height=\"22\" fill=\"#222\"/><rect x=\"132\" y=\"54\" width=\"24\" height=\"34\" fill=\"#222\"/><rect x=\"24\" y=\"96\" width=\"34\" height=\"20\" fill=\"#222\"/><rect x=\"64\" y=\"94\" width=\"18\" height=\"28\" fill=\"#222\"/><rect x=\"90\" y=\"104\" width=\"30\" height=\"16\" fill=\"#222\"/><rect x=\"128\" y=\"94\" width=\"28\" height=\"20\" fill=\"#222\"/><rect x=\"24\" y=\"122\" width=\"20\" height=\"39\" fill=\"#222\"/><rect x=\"50\" y=\"128\" width=\"26\" height=\"33\" fill=\"#222\"/><rect x=\"82\" y=\"128\" width=\"16\" height=\"20\" fill=\"#222\"/><rect x=\"104\" y=\"126\" width=\"30\" height=\"35\" fill=\"#222\"/><rect x=\"140\" y=\"120\" width=\"16\" height=\"24\" fill=\"#222\"/><rect x=\"200\" y=\"25\" width=\"140\" height=\"30\" fill=\"#222\"/><rect x=\"200\" y=\"55\" width=\"30\" height=\"80\" fill=\"#222\"/><rect x=\"310\" y=\"55\" width=\"30\" height=\"80\" fill=\"#222\"/><rect x=\"200\" y=\"135\" width=\"58\" height=\"30\" fill=\"#222\"/><rect x=\"282\" y=\"135\" width=\"58\" height=\"30\" fill=\"#222\"/><text x=\"270\" y=\"95\" font-size=\"9\" text-anchor=\"middle\" fill=\"#1e8449\" font-weight=\"700\">連續開放空間</text><line x1=\"270\" y1=\"118\" x2=\"270\" y2=\"163\" stroke=\"#c0392b\" stroke-width=\"1.6\" stroke-dasharray=\"4 3\" marker-end=\"url(#c3a)\"/><text x=\"286\" y=\"178\" font-size=\"8.4\" fill=\"#c0392b\">穿越通道</text><line x1=\"166\" y1=\"95\" x2=\"194\" y2=\"95\" stroke=\"#222\" stroke-width=\"2\" marker-end=\"url(#c3b)\"/><text x=\"90\" y=\"182\" font-size=\"8.6\" text-anchor=\"middle\">細碎量體・零碎空地</text><text x=\"220\" y=\"192\" font-size=\"8.6\" text-anchor=\"middle\">整合量體</text></svg>",
-      "sketch_image": "diagram_sketches/diag_03_sketch.webp",
-      "sketch_source_page": "P5",
-      "sketch_title": "配置推導六步驟幾何拓撲與圖底對照",
-      "sketch_techniques": "量體實體塗黑、虛體開放空間 3:7 比例"
+      "sketch_image": null,
+      "sketch_source_page": null,
+      "sketch_title": null,
+      "sketch_techniques": null
     },
     {
       "id": "diag_04",
@@ -3644,9 +3644,9 @@
       "pitfall": "不標尺寸＝沒有檢討",
       "svg_code": "<svg viewBox=\"0 0 360 250\" xmlns=\"http://www.w3.org/2000/svg\" font-family=\"Noto Sans CJK TC, sans-serif\"><rect x=\"0.5\" y=\"0.5\" width=\"359\" height=\"249\" fill=\"#fff\" stroke=\"#ccc\"/><text x=\"10\" y=\"18\" font-size=\"10\" font-weight=\"700\">改造前</text><line x1=\"10\" y1=\"100\" x2=\"350\" y2=\"100\" stroke=\"#222\" stroke-width=\"1.6\"/><rect x=\"10\" y=\"30\" width=\"62\" height=\"42\" fill=\"#eee\" stroke=\"#222\"/><line x1=\"70\" y1=\"72\" x2=\"70\" y2=\"94\" stroke=\"#222\" stroke-width=\"2\"/><rect x=\"10\" y=\"94\" width=\"62\" height=\"6\" fill=\"#999\"/><text x=\"48\" y=\"90\" font-size=\"14\" fill=\"#c0392b\" font-weight=\"900\">×</text><text x=\"18\" y=\"112\" font-size=\"8.4\" fill=\"#c0392b\">騎樓高差</text><line x1=\"100\" y1=\"58\" x2=\"100\" y2=\"100\" stroke=\"#222\" stroke-width=\"2.2\"/><text x=\"94\" y=\"56\" font-size=\"14\" fill=\"#c0392b\" font-weight=\"900\">×</text><text x=\"84\" y=\"112\" font-size=\"8.4\" fill=\"#c0392b\">電桿</text><rect x=\"112\" y=\"90\" width=\"12\" height=\"8\" rx=\"2\" fill=\"#666\"/><rect x=\"126\" y=\"90\" width=\"12\" height=\"8\" rx=\"2\" fill=\"#666\"/><rect x=\"140\" y=\"90\" width=\"12\" height=\"8\" rx=\"2\" fill=\"#666\"/><text x=\"124\" y=\"84\" font-size=\"14\" fill=\"#c0392b\" font-weight=\"900\">×</text><text x=\"116\" y=\"112\" font-size=\"8.4\" fill=\"#c0392b\">機車佔用</text><text x=\"250\" y=\"94\" font-size=\"9\" text-anchor=\"middle\" fill=\"#555\">車道</text><line x1=\"156\" y1=\"100\" x2=\"156\" y2=\"96\" stroke=\"#222\"/><text x=\"10\" y=\"142\" font-size=\"10\" font-weight=\"700\">改造後</text><line x1=\"10\" y1=\"220\" x2=\"350\" y2=\"220\" stroke=\"#222\" stroke-width=\"1.6\"/><rect x=\"10\" y=\"150\" width=\"56\" height=\"70\" fill=\"#eee\" stroke=\"#222\"/><line x1=\"66\" y1=\"182\" x2=\"100\" y2=\"182\" stroke=\"#222\" stroke-width=\"2.4\"/><text x=\"70\" y=\"177\" font-size=\"8.4\">簷下廊道</text><rect x=\"100\" y=\"214\" width=\"30\" height=\"6\" fill=\"#1e8449\" opacity=\".45\"/><line x1=\"115\" y1=\"214\" x2=\"115\" y2=\"196\" stroke=\"#6b4f2a\" stroke-width=\"2\"/><circle cx=\"115\" cy=\"186\" r=\"14\" fill=\"#1e8449\" opacity=\".35\" stroke=\"#1e8449\"/><line x1=\"178\" y1=\"220\" x2=\"178\" y2=\"214\" stroke=\"#222\" stroke-width=\"2\"/><text x=\"182\" y=\"211\" font-size=\"8.4\">路緣外推</text><text x=\"265\" y=\"214\" font-size=\"9\" text-anchor=\"middle\" fill=\"#555\">車道</text><g stroke=\"#0b3d7a\" stroke-width=\"1\"><line x1=\"66\" y1=\"232\" x2=\"178\" y2=\"232\"/><line x1=\"66\" y1=\"228\" x2=\"66\" y2=\"236\"/><line x1=\"100\" y1=\"228\" x2=\"100\" y2=\"236\"/><line x1=\"130\" y1=\"228\" x2=\"130\" y2=\"236\"/><line x1=\"178\" y1=\"228\" x2=\"178\" y2=\"236\"/></g><text x=\"83\" y=\"245\" font-size=\"8.2\" text-anchor=\"middle\" fill=\"#0b3d7a\">退縮帶</text><text x=\"115\" y=\"245\" font-size=\"8.2\" text-anchor=\"middle\" fill=\"#0b3d7a\">植栽帶</text><text x=\"154\" y=\"245\" font-size=\"8.2\" text-anchor=\"middle\" fill=\"#0b3d7a\">人行道</text><text x=\"262\" y=\"245\" font-size=\"8.6\" text-anchor=\"middle\" fill=\"#0b3d7a\" font-weight=\"700\">← 各段尺寸必標（M）</text></svg>",
       "sketch_image": "diagram_sketches/diag_04_sketch.webp",
-      "sketch_source_page": "P23",
-      "sketch_title": "歷史街區街道剖面改善與人行環境",
-      "sketch_techniques": "高差整平、簷高對齊、連續騎樓與行道樹"
+      "sketch_source_page": "P83",
+      "sketch_title": "街道透水鋪面與人行環境剖面",
+      "sketch_techniques": "透水鋪面、行道樹、人行道與退縮街道斷面"
     },
     {
       "id": "diag_05",
@@ -3662,10 +3662,10 @@
       ],
       "pitfall": "只畫最終狀態；施工與使用動線沒分開",
       "svg_code": "<svg viewBox=\"0 0 360 200\" xmlns=\"http://www.w3.org/2000/svg\" font-family=\"Noto Sans CJK TC, sans-serif\"><defs><pattern id=\"c5h\" width=\"4\" height=\"4\" patternUnits=\"userSpaceOnUse\" patternTransform=\"rotate(45)\"><line x1=\"0\" y1=\"0\" x2=\"0\" y2=\"4\" stroke=\"#222\" stroke-width=\"1.1\"/></pattern></defs><rect x=\"0.5\" y=\"0.5\" width=\"359\" height=\"199\" fill=\"#fff\" stroke=\"#ccc\"/><text x=\"65\" y=\"17\" font-size=\"10\" font-weight=\"700\" text-anchor=\"middle\">第一期</text><rect x=\"10\" y=\"24\" width=\"110\" height=\"110\" fill=\"#fff\" stroke=\"#222\" stroke-width=\"1.4\"/><text x=\"180\" y=\"17\" font-size=\"10\" font-weight=\"700\" text-anchor=\"middle\">第二期</text><rect x=\"125\" y=\"24\" width=\"110\" height=\"110\" fill=\"#fff\" stroke=\"#222\" stroke-width=\"1.4\"/><text x=\"295\" y=\"17\" font-size=\"10\" font-weight=\"700\" text-anchor=\"middle\">第三期</text><rect x=\"240\" y=\"24\" width=\"110\" height=\"110\" fill=\"#fff\" stroke=\"#222\" stroke-width=\"1.4\"/><rect x=\"20\" y=\"34\" width=\"56\" height=\"40\" fill=\"#bbb\"/><text x=\"48\" y=\"58\" font-size=\"8.4\" text-anchor=\"middle\">舊校舍</text><rect x=\"72\" y=\"86\" width=\"40\" height=\"40\" fill=\"url(#c5h)\" stroke=\"#222\"/><text x=\"92\" y=\"110\" font-size=\"10\" text-anchor=\"middle\" font-weight=\"700\">A</text><path d=\"M12,130 L40,130 L40,76\" fill=\"none\" stroke=\"#c0392b\" stroke-width=\"1.4\" stroke-dasharray=\"4 3\"/><rect x=\"135\" y=\"34\" width=\"56\" height=\"40\" fill=\"url(#c5h)\" stroke=\"#222\"/><text x=\"163\" y=\"58\" font-size=\"10\" text-anchor=\"middle\" font-weight=\"700\">B</text><rect x=\"187\" y=\"86\" width=\"40\" height=\"40\" fill=\"#222\"/><text x=\"207\" y=\"110\" font-size=\"10\" text-anchor=\"middle\" fill=\"#fff\" font-weight=\"700\">A</text><path d=\"M127,130 L175,130 L187,112\" fill=\"none\" stroke=\"#c0392b\" stroke-width=\"1.4\" stroke-dasharray=\"4 3\"/><rect x=\"250\" y=\"34\" width=\"56\" height=\"40\" fill=\"#222\"/><text x=\"278\" y=\"58\" font-size=\"10\" text-anchor=\"middle\" fill=\"#fff\" font-weight=\"700\">B</text><rect x=\"302\" y=\"86\" width=\"40\" height=\"40\" fill=\"#222\"/><text x=\"322\" y=\"110\" font-size=\"10\" text-anchor=\"middle\" fill=\"#fff\" font-weight=\"700\">A</text><text x=\"275\" y=\"104\" font-size=\"8.2\" text-anchor=\"middle\" fill=\"#1e8449\">開放空間</text><rect x=\"12\" y=\"146\" width=\"12\" height=\"9\" fill=\"#bbb\"/><text x=\"28\" y=\"154\" font-size=\"8.6\">既有・使用中</text><rect x=\"92\" y=\"146\" width=\"12\" height=\"9\" fill=\"url(#c5h)\" stroke=\"#222\"/><text x=\"108\" y=\"154\" font-size=\"8.6\">施工中</text><rect x=\"172\" y=\"146\" width=\"12\" height=\"9\" fill=\"#222\"/><text x=\"188\" y=\"154\" font-size=\"8.6\">新建完成</text><line x1=\"250\" y1=\"151\" x2=\"264\" y2=\"151\" stroke=\"#c0392b\" stroke-width=\"1.4\" stroke-dasharray=\"4 3\"/><text x=\"268\" y=\"154\" font-size=\"8.6\">臨時動線</text><text x=\"180\" y=\"176\" font-size=\"9\" text-anchor=\"middle\" font-weight=\"700\" fill=\"#6e2c00\">先建後拆｜每期三判準：自成完整單元・施工動線分離・</text><text x=\"180\" y=\"189\" font-size=\"9\" text-anchor=\"middle\" font-weight=\"700\" fill=\"#6e2c00\">維持法定最低需求（操場、室外活動空間）</text></svg>",
-      "sketch_image": "diagram_sketches/diag_05_sketch.webp",
-      "sketch_source_page": "P13",
-      "sketch_title": "關鍵字時間軸與分期演進 Before/After",
-      "sketch_techniques": "三期進程演進、施工動線紅虛線隔離"
+      "sketch_image": null,
+      "sketch_source_page": null,
+      "sketch_title": null,
+      "sketch_techniques": null
     },
     {
       "id": "diag_06",
@@ -3680,10 +3680,10 @@
       ],
       "pitfall": "只列獎勵 % 不畫落點；公共空間塞在角落",
       "svg_code": "<svg viewBox=\"0 0 360 210\" xmlns=\"http://www.w3.org/2000/svg\" font-family=\"Noto Sans CJK TC, sans-serif\"><defs><pattern id=\"c6h\" width=\"5\" height=\"5\" patternUnits=\"userSpaceOnUse\" patternTransform=\"rotate(45)\"><line x1=\"0\" y1=\"0\" x2=\"0\" y2=\"5\" stroke=\"#c0392b\" stroke-width=\"1.1\"/></pattern></defs><rect x=\"0.5\" y=\"0.5\" width=\"359\" height=\"209\" fill=\"#fff\" stroke=\"#ccc\"/><rect x=\"10\" y=\"18\" width=\"112\" height=\"40\" rx=\"3\" fill=\"#f1f5fb\" stroke=\"#0b3d7a\"/><text x=\"66\" y=\"34\" font-size=\"10\" font-weight=\"700\" text-anchor=\"middle\">實體空間</text><text x=\"66\" y=\"49\" font-size=\"8.8\" text-anchor=\"middle\" fill=\"#0b3d7a\">社福 30%・公設 15%</text><rect x=\"10\" y=\"70\" width=\"112\" height=\"40\" rx=\"3\" fill=\"#f1f5fb\" stroke=\"#0b3d7a\"/><text x=\"66\" y=\"86\" font-size=\"10\" font-weight=\"700\" text-anchor=\"middle\">環境品質</text><text x=\"66\" y=\"101\" font-size=\"8.8\" text-anchor=\"middle\" fill=\"#0b3d7a\">綠建築 ≤10%</text><rect x=\"10\" y=\"122\" width=\"112\" height=\"40\" rx=\"3\" fill=\"#f1f5fb\" stroke=\"#0b3d7a\"/><text x=\"66\" y=\"138\" font-size=\"10\" font-weight=\"700\" text-anchor=\"middle\">文化保存</text><text x=\"66\" y=\"153\" font-size=\"8.8\" text-anchor=\"middle\" fill=\"#0b3d7a\">文資 1.5 倍</text><polygon points=\"128,84 150,84 150,74 172,98 150,122 150,112 128,112\" fill=\"#222\"/><text x=\"146\" y=\"102\" font-size=\"9\" fill=\"#fff\" text-anchor=\"middle\" font-weight=\"700\">容積</text><rect x=\"180\" y=\"18\" width=\"170\" height=\"150\" fill=\"#fff\" stroke=\"#222\"/><rect x=\"180\" y=\"168\" width=\"170\" height=\"16\" fill=\"#ddd\"/><text x=\"265\" y=\"180\" font-size=\"8.4\" text-anchor=\"middle\">主要道路</text><rect x=\"196\" y=\"40\" width=\"112\" height=\"96\" fill=\"#eee\" stroke=\"#222\"/><rect x=\"306\" y=\"22\" width=\"40\" height=\"40\" fill=\"url(#c6h)\" stroke=\"#c0392b\"/><text x=\"326\" y=\"74\" font-size=\"8.2\" text-anchor=\"middle\" fill=\"#c0392b\">②公設用地</text><rect x=\"210\" y=\"124\" width=\"60\" height=\"12\" fill=\"#0b3d7a\"/><text x=\"240\" y=\"119\" font-size=\"8.2\" text-anchor=\"middle\" fill=\"#0b3d7a\" font-weight=\"700\">①社福面街</text><rect x=\"184\" y=\"142\" width=\"162\" height=\"22\" fill=\"none\" stroke=\"#1e8449\" stroke-width=\"1.6\" stroke-dasharray=\"5 3\"/><text x=\"265\" y=\"157\" font-size=\"8.2\" text-anchor=\"middle\" fill=\"#1e8449\" font-weight=\"700\">③連續開放空間（全時開放）</text><text x=\"180\" y=\"202\" font-size=\"9.4\" text-anchor=\"middle\" font-weight=\"700\" fill=\"#6e2c00\">放對位置才有效：面街・可及・連續・全時開放</text></svg>",
-      "sketch_image": "diagram_sketches/diag_06_sketch.webp",
-      "sketch_source_page": "P8",
-      "sketch_title": "設計課題構想四欄表與容積對價",
-      "sketch_techniques": "四欄式文字骨架、立體機能軸測圖解"
+      "sketch_image": null,
+      "sketch_source_page": null,
+      "sketch_title": null,
+      "sketch_techniques": null
     },
     {
       "id": "diag_07",
@@ -3696,10 +3696,10 @@
       ],
       "pitfall": "只畫圖不寫工具，退回「感覺」層次",
       "svg_code": "<svg viewBox=\"0 0 360 180\" xmlns=\"http://www.w3.org/2000/svg\" font-family=\"Noto Sans CJK TC, sans-serif\"><defs><marker id=\"c7a\" viewBox=\"0 0 10 10\" refX=\"8\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\"><path d=\"M0,0 L10,5 L0,10 z\" fill=\"#2e86c1\"/></marker><marker id=\"c7b\" viewBox=\"0 0 10 10\" refX=\"8\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\"><path d=\"M0,0 L10,5 L0,10 z\" fill=\"#0b3d7a\"/></marker><pattern id=\"c7h\" width=\"3\" height=\"3\" patternUnits=\"userSpaceOnUse\" patternTransform=\"rotate(45)\"><line x1=\"0\" y1=\"0\" x2=\"0\" y2=\"3\" stroke=\"#999\" stroke-width=\"1.1\"/></pattern></defs><rect x=\"0.5\" y=\"0.5\" width=\"359\" height=\"179\" fill=\"#fff\" stroke=\"#ccc\"/><text x=\"63\" y=\"16\" font-size=\"10\" font-weight=\"700\" text-anchor=\"middle\">都市</text><rect x=\"8\" y=\"22\" width=\"110\" height=\"100\" fill=\"#fff\" stroke=\"#222\" stroke-width=\"1.3\"/><text x=\"180\" y=\"16\" font-size=\"10\" font-weight=\"700\" text-anchor=\"middle\">街廓</text><rect x=\"125\" y=\"22\" width=\"110\" height=\"100\" fill=\"#fff\" stroke=\"#222\" stroke-width=\"1.3\"/><text x=\"297\" y=\"16\" font-size=\"10\" font-weight=\"700\" text-anchor=\"middle\">基地</text><rect x=\"242\" y=\"22\" width=\"110\" height=\"100\" fill=\"#fff\" stroke=\"#222\" stroke-width=\"1.3\"/><path d=\"M8,100 C40,80 70,90 118,50\" fill=\"none\" stroke=\"#2e86c1\" stroke-width=\"7\" opacity=\".5\"/><path d=\"M8,72 C40,56 70,64 118,30\" fill=\"none\" stroke=\"#1e8449\" stroke-width=\"6\" opacity=\".35\"/><line x1=\"20\" y1=\"112\" x2=\"42\" y2=\"98\" stroke=\"#2e86c1\" stroke-width=\"1.6\" marker-end=\"url(#c7a)\"/><line x1=\"52\" y1=\"104\" x2=\"74\" y2=\"90\" stroke=\"#2e86c1\" stroke-width=\"1.6\" marker-end=\"url(#c7a)\"/><line x1=\"84\" y1=\"90\" x2=\"106\" y2=\"76\" stroke=\"#2e86c1\" stroke-width=\"1.6\" marker-end=\"url(#c7a)\"/><rect x=\"140\" y=\"52\" width=\"30\" height=\"70\" fill=\"#ddd\" stroke=\"#222\"/><rect x=\"200\" y=\"52\" width=\"30\" height=\"70\" fill=\"#ddd\" stroke=\"#222\"/><line x1=\"170\" y1=\"112\" x2=\"200\" y2=\"112\" stroke=\"#0b3d7a\" marker-start=\"url(#c7b)\" marker-end=\"url(#c7b)\"/><text x=\"185\" y=\"108\" font-size=\"9\" text-anchor=\"middle\" fill=\"#0b3d7a\">W</text><line x1=\"236\" y1=\"52\" x2=\"236\" y2=\"122\" stroke=\"#0b3d7a\" marker-start=\"url(#c7b)\" marker-end=\"url(#c7b)\"/><text x=\"240\" y=\"92\" font-size=\"9\" fill=\"#0b3d7a\">H</text><line x1=\"172\" y1=\"70\" x2=\"198\" y2=\"70\" stroke=\"#2e86c1\" stroke-width=\"1.6\" marker-end=\"url(#c7a)\"/><line x1=\"258\" y1=\"122\" x2=\"350\" y2=\"122\" stroke=\"#222\" stroke-width=\"1.4\"/><rect x=\"258\" y=\"116\" width=\"92\" height=\"6\" fill=\"url(#c7h)\"/><line x1=\"285\" y1=\"116\" x2=\"285\" y2=\"80\" stroke=\"#6b4f2a\" stroke-width=\"2.4\"/><circle cx=\"285\" cy=\"66\" r=\"22\" fill=\"#1e8449\" opacity=\".35\" stroke=\"#1e8449\"/><ellipse cx=\"292\" cy=\"116\" rx=\"26\" ry=\"3\" fill=\"#555\" opacity=\".5\"/><circle cx=\"318\" cy=\"96\" r=\"3.4\" fill=\"#222\"/><line x1=\"318\" y1=\"100\" x2=\"318\" y2=\"114\" stroke=\"#222\" stroke-width=\"2\"/><text x=\"63\" y=\"138\" font-size=\"8.6\" text-anchor=\"middle\">風廊・藍綠帶</text><text x=\"63\" y=\"151\" font-size=\"8.2\" text-anchor=\"middle\" fill=\"#0b3d7a\">工具：都市環境氣候地圖</text><text x=\"180\" y=\"138\" font-size=\"8.6\" text-anchor=\"middle\">棟距・街谷 H/W</text><text x=\"180\" y=\"151\" font-size=\"8.2\" text-anchor=\"middle\" fill=\"#0b3d7a\">棟距 ≥10M・面寬比 &lt;70%</text><text x=\"297\" y=\"138\" font-size=\"8.6\" text-anchor=\"middle\">遮蔭・鋪面</text><text x=\"297\" y=\"151\" font-size=\"8.2\" text-anchor=\"middle\" fill=\"#0b3d7a\">遮蔭連續・中明度透水</text><text x=\"180\" y=\"171\" font-size=\"9\" text-anchor=\"middle\" font-weight=\"700\" fill=\"#6e2c00\">每個尺度配一個量化工具或門檻，微氣候就不再是「感覺」</text></svg>",
-      "sketch_image": "diagram_sketches/diag_07_sketch.webp",
-      "sketch_source_page": "P28",
-      "sketch_title": "微氣候與 WOHA 垂直覆綠生態剖面",
-      "sketch_techniques": "階梯式立體綠化、出挑遮陽、通風拔風井"
+      "sketch_image": null,
+      "sketch_source_page": null,
+      "sketch_title": null,
+      "sketch_techniques": null
     },
     {
       "id": "diag_08",
@@ -3736,9 +3736,9 @@
       "pitfall": "只畫設計水位，沒有失效情境",
       "svg_code": "<svg viewBox=\"0 0 360 230\" xmlns=\"http://www.w3.org/2000/svg\" font-family=\"Noto Sans CJK TC, sans-serif\"><defs><marker id=\"c9a\" viewBox=\"0 0 10 10\" refX=\"8\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\"><path d=\"M0,0 L10,5 L0,10 z\" fill=\"#2e86c1\"/></marker></defs><rect x=\"0.5\" y=\"0.5\" width=\"359\" height=\"229\" fill=\"#fff\" stroke=\"#ccc\"/><path d=\"M165,172 L250,172 L250,152 L165,152 Z\" fill=\"#aed6f1\" opacity=\".6\"/><polyline points=\"10,120 132,120 160,172 250,172 268,148 318,148 318,188 346,188 346,148 352,148\" fill=\"none\" stroke=\"#222\" stroke-width=\"1.8\"/><rect x=\"20\" y=\"40\" width=\"100\" height=\"80\" fill=\"#eee\" stroke=\"#222\"/><rect x=\"60\" y=\"48\" width=\"52\" height=\"14\" fill=\"#f5b7b1\" stroke=\"#c0392b\"/><text x=\"86\" y=\"58\" font-size=\"7.8\" text-anchor=\"middle\" fill=\"#a93226\">機電（抬高）</text><rect x=\"28\" y=\"120\" width=\"86\" height=\"30\" fill=\"none\" stroke=\"#222\" stroke-dasharray=\"4 3\"/><text x=\"71\" y=\"139\" font-size=\"8\" text-anchor=\"middle\">地下停車</text><line x1=\"126\" y1=\"104\" x2=\"126\" y2=\"120\" stroke=\"#c0392b\" stroke-width=\"4\"/><text x=\"128\" y=\"98\" font-size=\"7.8\" fill=\"#c0392b\">止水閘＋反樑</text><line x1=\"162\" y1=\"152\" x2=\"252\" y2=\"152\" stroke=\"#2e86c1\" stroke-width=\"1.6\"/><text x=\"207\" y=\"148\" font-size=\"7.8\" text-anchor=\"middle\" fill=\"#1b4f72\">設計水位</text><line x1=\"150\" y1=\"134\" x2=\"290\" y2=\"134\" stroke=\"#2e86c1\" stroke-width=\"1.4\" stroke-dasharray=\"5 3\"/><text x=\"220\" y=\"129\" font-size=\"7.8\" text-anchor=\"middle\" fill=\"#1b4f72\" font-weight=\"700\">超越設計水位</text><path d=\"M254,146 Q290,140 326,170\" fill=\"none\" stroke=\"#2e86c1\" stroke-width=\"2\" marker-end=\"url(#c9a)\"/><text x=\"300\" y=\"206\" font-size=\"8\" text-anchor=\"middle\" fill=\"#1b4f72\">指定溢流路徑→區排</text><text x=\"332\" y=\"182\" font-size=\"7.2\" text-anchor=\"middle\" fill=\"#555\">區排</text><text x=\"207\" y=\"188\" font-size=\"8.2\" text-anchor=\"middle\" fill=\"#c0392b\" font-weight=\"700\">可犧牲區域（下凹廣場）</text><text x=\"70\" y=\"32\" font-size=\"8.2\" text-anchor=\"middle\" fill=\"#1e8449\" font-weight=\"700\">保護區域（建築置高處）</text><text x=\"180\" y=\"222\" font-size=\"9\" text-anchor=\"middle\" font-weight=\"700\" fill=\"#6e2c00\">一定要畫「失效時水往哪裡走」，只畫設計水位等於沒有韌性</text></svg>",
       "sketch_image": "diagram_sketches/diag_09_sketch.webp",
-      "sketch_source_page": "P31",
-      "sketch_title": "滯洪雨水水循環與平災雙向切換剖面",
-      "sketch_techniques": "下凹式水階梯、雨水儲集槽、止水閘防護"
+      "sketch_source_page": "P82",
+      "sketch_title": "水岸生態與溢流護岸剖面 (橫向正向)",
+      "sketch_techniques": "自然護岸、透水水深、多孔隙、下凹水階梯"
     },
     {
       "id": "diag_10",
@@ -3757,9 +3757,9 @@
       "pitfall": "層高亂寫；地下室草率帶過（114 年明訂要交代）",
       "svg_code": "<svg viewBox=\"0 0 360 290\" xmlns=\"http://www.w3.org/2000/svg\" font-family=\"Noto Sans CJK TC, sans-serif\"><defs><pattern id=\"c10h\" width=\"4\" height=\"4\" patternUnits=\"userSpaceOnUse\" patternTransform=\"rotate(45)\"><line x1=\"0\" y1=\"0\" x2=\"0\" y2=\"4\" stroke=\"#888\" stroke-width=\"1.1\"/></pattern><marker id=\"c10a\" viewBox=\"0 0 10 10\" refX=\"8\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\"><path d=\"M0,0 L10,5 L0,10 z\" fill=\"#222\"/></marker><marker id=\"c10b\" viewBox=\"0 0 10 10\" refX=\"8\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\"><path d=\"M0,0 L10,5 L0,10 z\" fill=\"#6c3483\"/></marker><marker id=\"c10c\" viewBox=\"0 0 10 10\" refX=\"8\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\"><path d=\"M0,0 L10,5 L0,10 z\" fill=\"#1e8449\"/></marker></defs><rect x=\"0.5\" y=\"0.5\" width=\"359\" height=\"289\" fill=\"#fff\" stroke=\"#ccc\"/><line x1=\"70\" y1=\"44\" x2=\"230\" y2=\"44\" stroke=\"#222\" stroke-width=\"2\"/><line x1=\"80\" y1=\"44\" x2=\"80\" y2=\"54\" stroke=\"#222\"/><line x1=\"150\" y1=\"44\" x2=\"150\" y2=\"54\" stroke=\"#222\"/><line x1=\"220\" y1=\"44\" x2=\"220\" y2=\"54\" stroke=\"#222\"/><text x=\"150\" y=\"40\" font-size=\"8\" text-anchor=\"middle\">PV 棚架・雨水回收・屋頂綠化</text><rect x=\"70\" y=\"54\" width=\"160\" height=\"39\" fill=\"#e8daef\" stroke=\"#222\" stroke-width=\".9\"/><text x=\"150\" y=\"76.5\" font-size=\"8.2\" text-anchor=\"middle\">運動中心（無柱大跨距）</text><text x=\"12\" y=\"76.5\" font-size=\"8.4\" font-weight=\"700\">7F</text><text x=\"40\" y=\"76.5\" font-size=\"7.4\" fill=\"#0b3d7a\">7.5M</text><rect x=\"70\" y=\"93\" width=\"160\" height=\"53\" fill=\"#e5e7e9\" stroke=\"#222\" stroke-width=\".9\"/><text x=\"150\" y=\"122.5\" font-size=\"8.2\" text-anchor=\"middle\">立體停車（平坦樓板）</text><text x=\"12\" y=\"122.5\" font-size=\"8.4\" font-weight=\"700\">4–6F</text><text x=\"40\" y=\"122.5\" font-size=\"7.4\" fill=\"#0b3d7a\">3.2–3.6M</text><rect x=\"70\" y=\"146\" width=\"160\" height=\"10.400000000000006\" fill=\"url(#c10h)\" stroke=\"#222\" stroke-width=\".9\"/><text x=\"150\" y=\"154.2\" font-size=\"7.2\" text-anchor=\"middle\">設備／半戶外緩衝層</text><text x=\"12\" y=\"154.2\" font-size=\"8.4\" font-weight=\"700\">設備</text><text x=\"40\" y=\"154.2\" font-size=\"7.4\" fill=\"#0b3d7a\"></text><rect x=\"70\" y=\"156.4\" width=\"160\" height=\"21.799999999999983\" fill=\"#d5f5e3\" stroke=\"#222\" stroke-width=\".9\"/><text x=\"150\" y=\"170.3\" font-size=\"8.2\" text-anchor=\"middle\">日照・托育＋戶外平台</text><text x=\"12\" y=\"170.3\" font-size=\"8.4\" font-weight=\"700\">3F</text><text x=\"40\" y=\"170.3\" font-size=\"7.4\" fill=\"#0b3d7a\">4.2M</text><rect x=\"70\" y=\"178.2\" width=\"160\" height=\"21.80000000000001\" fill=\"#d6eaf8\" stroke=\"#222\" stroke-width=\".9\"/><text x=\"150\" y=\"192.1\" font-size=\"8.2\" text-anchor=\"middle\">區公所・活動中心</text><text x=\"12\" y=\"192.1\" font-size=\"8.4\" font-weight=\"700\">2F</text><text x=\"40\" y=\"192.1\" font-size=\"7.4\" fill=\"#0b3d7a\">4.2M</text><rect x=\"70\" y=\"200\" width=\"160\" height=\"25\" fill=\"#fdebd0\" stroke=\"#222\" stroke-width=\".9\"/><text x=\"150\" y=\"215.5\" font-size=\"8.2\" text-anchor=\"middle\">大廳・食堂・面街店鋪</text><text x=\"12\" y=\"215.5\" font-size=\"8.4\" font-weight=\"700\">1F</text><text x=\"40\" y=\"215.5\" font-size=\"7.4\" fill=\"#0b3d7a\">4.5–5.0M</text><rect x=\"70\" y=\"225\" width=\"160\" height=\"18.69999999999999\" fill=\"#d5d8dc\" stroke=\"#222\" stroke-width=\".9\"/><text x=\"150\" y=\"237.35\" font-size=\"8.2\" text-anchor=\"middle\">停車・回收・卸貨</text><text x=\"12\" y=\"237.35\" font-size=\"8.4\" font-weight=\"700\">B1</text><text x=\"40\" y=\"237.35\" font-size=\"7.4\" fill=\"#0b3d7a\">3.6M</text><rect x=\"70\" y=\"243.7\" width=\"160\" height=\"18.69999999999999\" fill=\"#d5d8dc\" stroke=\"#222\" stroke-width=\".9\"/><text x=\"150\" y=\"256.04999999999995\" font-size=\"8.2\" text-anchor=\"middle\">停車・機電・筏基滯洪</text><text x=\"12\" y=\"256.04999999999995\" font-size=\"8.4\" font-weight=\"700\">B2</text><text x=\"40\" y=\"256.04999999999995\" font-size=\"7.4\" fill=\"#0b3d7a\">3.6M</text><line x1=\"10\" y1=\"225\" x2=\"350\" y2=\"225\" stroke=\"#222\" stroke-width=\"2\"/><text x=\"236\" y=\"221\" font-size=\"7.4\">±0</text><line x1=\"346\" y1=\"214\" x2=\"233\" y2=\"240\" stroke=\"#222\" stroke-width=\"1.2\" marker-end=\"url(#c10a)\"/><text x=\"262\" y=\"258\" font-size=\"7.8\" fill=\"#0b3d7a\">車道坡度 ≤1/6</text><line x1=\"258\" y1=\"200\" x2=\"258\" y2=\"66\" stroke=\"#6c3483\" stroke-width=\"2\" marker-end=\"url(#c10b)\"/><text x=\"264\" y=\"92\" font-size=\"8.4\" fill=\"#6c3483\" font-weight=\"700\">跨距↑</text><text x=\"264\" y=\"104\" font-size=\"8.4\" fill=\"#6c3483\" font-weight=\"700\">私密性↑</text><line x1=\"300\" y1=\"70\" x2=\"300\" y2=\"200\" stroke=\"#1e8449\" stroke-width=\"2\" marker-end=\"url(#c10c)\"/><text x=\"306\" y=\"186\" font-size=\"8.4\" fill=\"#1e8449\" font-weight=\"700\">可及性↑</text><text x=\"180\" y=\"282\" font-size=\"8.8\" text-anchor=\"middle\" font-weight=\"700\" fill=\"#6e2c00\">可及性倒序・跨距倒序・干擾隔離・可逆性（平坦樓板）</text></svg>",
       "sketch_image": "diagram_sketches/diag_10_sketch.webp",
-      "sketch_source_page": "P78",
-      "sketch_title": "公設多目標垂直機能分層堆疊圖",
-      "sketch_techniques": "垂直機能堆疊、層高標註、地下室車道坡度"
+      "sketch_source_page": "P8",
+      "sketch_title": "生活/共用/開放垂直機能立體分層剖面",
+      "sketch_techniques": "垂直機能堆疊、層高標註、立體軸測剖面"
     },
     {
       "id": "diag_11",
@@ -3776,28 +3776,8 @@
       "svg_code": "<svg viewBox=\"0 0 360 230\" xmlns=\"http://www.w3.org/2000/svg\" font-family=\"Noto Sans CJK TC, sans-serif\"><defs><pattern id=\"c11h\" width=\"4\" height=\"4\" patternUnits=\"userSpaceOnUse\" patternTransform=\"rotate(45)\"><line x1=\"0\" y1=\"0\" x2=\"0\" y2=\"4\" stroke=\"#6c3483\" stroke-width=\"1.1\"/></pattern><pattern id=\"c11g\" width=\"4\" height=\"4\" patternUnits=\"userSpaceOnUse\" patternTransform=\"rotate(45)\"><line x1=\"0\" y1=\"0\" x2=\"0\" y2=\"4\" stroke=\"#1e8449\" stroke-width=\"1.1\"/></pattern><marker id=\"c11a\" viewBox=\"0 0 10 10\" refX=\"8\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\"><path d=\"M0,0 L10,5 L0,10 z\" fill=\"#222\"/></marker><pattern id=\"c11d\" width=\"5\" height=\"5\" patternUnits=\"userSpaceOnUse\"><circle cx=\"2.5\" cy=\"2.5\" r=\"0.9\" fill=\"#888\"/></pattern></defs><rect x=\"0.5\" y=\"0.5\" width=\"359\" height=\"229\" fill=\"#fff\" stroke=\"#ccc\"/><polygon points=\"14,52 110,52 146,18 50,18\" fill=\"#d6eaf8\" opacity=\".85\" stroke=\"#222\" stroke-width=\"1\"/><path d=\"M40,44 Q60,34 80,44 T120,40\" fill=\"none\" stroke=\"#2e86c1\" stroke-width=\"2\"/><circle cx=\"110\" cy=\"26\" r=\"4\" fill=\"#1e8449\" opacity=\".6\"/><circle cx=\"120\" cy=\"30\" r=\"4\" fill=\"#1e8449\" opacity=\".6\"/><circle cx=\"102\" cy=\"32\" r=\"4\" fill=\"#1e8449\" opacity=\".6\"/><polygon points=\"14,106 110,106 146,72 50,72\" fill=\"#fdebd0\" opacity=\".85\" stroke=\"#222\" stroke-width=\"1\"/><line x1=\"44\" y1=\"102\" x2=\"120\" y2=\"78\" stroke=\"#c0392b\" stroke-width=\"1.6\" stroke-dasharray=\"4 3\"/><rect x=\"60\" y=\"80\" width=\"8\" height=\"8\" fill=\"#6e2c00\"/><circle cx=\"112\" cy=\"94\" r=\"5\" fill=\"#1e8449\" opacity=\".6\"/><polygon points=\"14,160 110,160 146,126 50,126\" fill=\"#e8daef\" opacity=\".85\" stroke=\"#222\" stroke-width=\"1\"/><polygon points=\"120,160 132,160 146,126 134,126\" fill=\"url(#c11h)\"/><line x1=\"18\" y1=\"156\" x2=\"112\" y2=\"156\" stroke=\"#6c3483\" stroke-width=\"1.4\" stroke-dasharray=\"5 3\"/><text x=\"156\" y=\"40\" font-size=\"9.4\" font-weight=\"700\">自然層</text><text x=\"156\" y=\"52\" font-size=\"7.8\" fill=\"#555\">水文・樹群</text><text x=\"156\" y=\"94\" font-size=\"9.4\" font-weight=\"700\">人文層</text><text x=\"156\" y=\"106\" font-size=\"7.8\" fill=\"#555\">水圳・廟・老樹</text><text x=\"156\" y=\"148\" font-size=\"9.4\" font-weight=\"700\">法規層</text><text x=\"156\" y=\"160\" font-size=\"7.8\" fill=\"#555\">退縮・建築線</text><line x1=\"206\" y1=\"100\" x2=\"228\" y2=\"100\" stroke=\"#222\" stroke-width=\"2.2\" marker-end=\"url(#c11a)\"/><rect x=\"232\" y=\"24\" width=\"118\" height=\"150\" fill=\"#fff\" stroke=\"#222\" stroke-width=\"2\"/><rect x=\"324\" y=\"24\" width=\"26\" height=\"150\" fill=\"url(#c11g)\" stroke=\"none\"/><circle cx=\"318\" cy=\"42\" r=\"14\" fill=\"url(#c11g)\" stroke=\"#1e8449\"/><rect x=\"308\" y=\"56\" width=\"16\" height=\"118\" fill=\"url(#c11d)\"/><path d=\"M232,150 L350,70\" stroke=\"#f5cba7\" stroke-width=\"12\" opacity=\".7\"/><path d=\"M232,150 L350,70\" stroke=\"#c0392b\" stroke-width=\"1.4\" stroke-dasharray=\"4 3\"/><rect x=\"240\" y=\"34\" width=\"62\" height=\"98\" fill=\"none\" stroke=\"#0b3d7a\" stroke-width=\"2.4\"/><text x=\"266\" y=\"62\" font-size=\"9\" font-weight=\"700\" text-anchor=\"middle\" fill=\"#0b3d7a\">可建區</text><text x=\"286\" y=\"116\" font-size=\"14\" fill=\"#c0392b\" font-weight=\"900\" text-anchor=\"middle\">✱</text><text x=\"291\" y=\"166\" font-size=\"7.8\" fill=\"#a93226\" text-anchor=\"middle\">保留線性空間</text><rect x=\"14\" y=\"186\" width=\"12\" height=\"9\" fill=\"url(#c11g)\" stroke=\"#1e8449\"/><text x=\"30\" y=\"194\" font-size=\"8.4\">保全區</text><rect x=\"80\" y=\"186\" width=\"12\" height=\"9\" fill=\"url(#c11d)\" stroke=\"#888\"/><text x=\"96\" y=\"194\" font-size=\"8.4\">緩衝區</text><rect x=\"146\" y=\"186\" width=\"12\" height=\"9\" fill=\"none\" stroke=\"#0b3d7a\" stroke-width=\"2\"/><text x=\"162\" y=\"194\" font-size=\"8.4\">可建區</text><text x=\"214\" y=\"195\" font-size=\"12\" fill=\"#c0392b\" font-weight=\"900\">✱</text><text x=\"228\" y=\"194\" font-size=\"8.4\">衝突點（最適建＝最需保全）</text><text x=\"180\" y=\"218\" font-size=\"9\" text-anchor=\"middle\" font-weight=\"700\" fill=\"#6e2c00\">只畫三層不畫結果圖＝沒有「綜合」；衝突點就是設計的關鍵決策點</text></svg>",
       "sketch_image": "diagram_sketches/diag_11_sketch.webp",
       "sketch_source_page": "P4",
-      "sketch_title": "基地條件分析疊圖 (Overlay)",
+      "sketch_title": "基地限制條件分析疊圖 (Overlay)",
       "sketch_techniques": "自然/人文/法規三層透明疊圖、可建區標定"
-    },
-    {
-      "id": "diag_12",
-      "header": "圖卡 12｜營建公害防治與工地安全剖面",
-      "used_for": "施工管理、工地安全、基地開挖與公害防治等考題（歷屆 15~20 分必備）",
-      "draw_step": "畫地坪線與開挖面 → 畫 H>180cm 圍籬（防溢座、防塵網、隔音帆布） → 出口設洗車台與沉砂池 → 標高壓清洗機與排水循環",
-      "must_mark": "圍籬高度 H>180cm、防溢座、沉砂池與洗車台、高壓清洗機、防塵網罩/隔音帆布",
-      "checklist": [
-        "圍籬高度 H>180cm",
-        "防溢座",
-        "沉砂池與洗車台",
-        "高壓清洗機",
-        "防塵網罩/隔音帆布"
-      ],
-      "pitfall": "只畫圍籬沒畫洗車台與沉砂池，公害防治直接失分",
-      "svg_code": "",
-      "sketch_image": "diagram_sketches/sketch_site_safety.webp",
-      "sketch_source_page": "P124",
-      "sketch_title": "營建公害防治與工地安全圍籬剖面",
-      "sketch_techniques": "地坪塗黑 Poché、洗車動線箭頭、H>180cm 規範標註"
     }
   ],
   "sop": {
@@ -3809,6 +3789,7 @@
         "phase_ratio": "25% (步驟1~4)",
         "name": "審題",
         "ratio": "10% (1~2.5)",
+        "minutes_35h": "21 分鐘 (步驟1~2.5共佔10%・不可壓縮)",
         "key_points": "三遍審題：通讀 → 分色標記 → 需求清單；圈出所有帶單位的數字（㎡、戶、席、層、M、%）",
         "worktable_ref": "需求清單與面積表（編號、空間名稱、面積、數量、樓層、小計、入圖位置、打勾）",
         "next_step": 2,
@@ -3821,6 +3802,7 @@
         "phase_ratio": "25% (步驟1~4)",
         "name": "基地分析",
         "ratio": "10% (1~2.5)",
+        "minutes_35h": "21 分鐘 (步驟1~2.5共佔10%・不可壓縮)",
         "key_points": "基地圖順時針掃描：指北／比例尺 → 道路 → 鄰地 → 高差 → 既有物 → 題文條件，每項寫一行對策",
         "worktable_ref": "基地圖順時針掃描對策表（各圖皆標、道路層級、鄰地緩衝、剖面最大高差、既有物保存）",
         "next_step": 2.5,
@@ -3833,6 +3815,7 @@
         "phase_ratio": "25% (步驟1~4)",
         "name": "需求面積表",
         "ratio": "10% (1~2.5)",
+        "minutes_35h": "21 分鐘 (步驟1~2.5共佔10%・不可壓縮)",
         "key_points": "列表合計，以建蔽率、容積率反推建築面積與樓層數（基地面積×建蔽率、基地面積×容積率、需求合計÷建築面積≈層數）",
         "worktable_ref": "建蔽率／容積率反推公式，對照限高 M 檢驗合理性",
         "next_step": 3,
@@ -3845,6 +3828,7 @@
         "phase_ratio": "25% (步驟1~4)",
         "name": "泡泡圖",
         "ratio": "15% (3~4)",
+        "minutes_35h": "31.5 分鐘 (步驟3~4共佔15%・5分定案)",
         "key_points": "機能分區與相鄰關係在此定案，正圖不再重新討論（動靜分區、服務與被服務、人車介面）",
         "worktable_ref": "定案即鎖死機能相鄰邏輯，不可進正圖時猶豫推翻",
         "next_step": 4,
@@ -3857,6 +3841,7 @@
         "phase_ratio": "25% (步驟1~4)",
         "name": "量體配置",
         "ratio": "15% (3~4)",
+        "minutes_35h": "31.5 分鐘 (步驟3~4共佔15%・5分定案)",
         "key_points": "判準評分，最多比較 2 案，5 分鐘定案（主要出入口對應道路、退縮救災面、日照風向、人車分流、開放空間）",
         "worktable_ref": "量體方案判準評分表（○=2 △=1 ×=0，同分選最好畫、最好說明的方案）",
         "next_step": 5,
@@ -3869,6 +3854,7 @@
         "phase_ratio": "35% (步驟5~8)",
         "name": "配置圖骨架",
         "ratio": "35% (5~8)",
+        "minutes_35h": "73.5 分鐘 (步驟5~8共佔35%・畫到60%)",
         "key_points": "建築線、退縮線、量體輪廓、出入口位置（先定出全區骨架線條）",
         "worktable_ref": "第一輪全部畫到 60%，粗線為主，不急著細畫景觀鋪面",
         "next_step": 6,
@@ -3881,6 +3867,7 @@
         "phase_ratio": "35% (步驟5~8)",
         "name": "動線",
         "ratio": "35% (5~8)",
+        "minutes_35h": "73.5 分鐘 (步驟5~8共佔35%・畫到60%)",
         "key_points": "人行、車行、服務、消防救災動線（人車分流、垃圾與卸貨獨立車道）",
         "worktable_ref": "救災面標清楚主/次救災面，車道出入口對準高階路",
         "next_step": 7,
@@ -3893,6 +3880,7 @@
         "phase_ratio": "35% (步驟5~8)",
         "name": "剖面骨架",
         "ratio": "35% (5~8)",
+        "minutes_35h": "73.5 分鐘 (步驟5~8共佔35%・畫到60%)",
         "key_points": "剖線切過最大高差；地形線、量體高度、限高線（梁深設備留 0.8~1.2M）",
         "worktable_ref": "切過最精彩空間與最大地形落差，層高堆疊表校核",
         "next_step": 8,
@@ -3905,6 +3893,7 @@
         "phase_ratio": "35% (步驟5~8)",
         "name": "其他圖骨架",
         "ratio": "35% (5~8)",
+        "minutes_35h": "73.5 分鐘 (步驟5~8共佔35%・畫到60%)",
         "key_points": "平面、分析圖、透視，全部先畫到 60%（維持版面完整度）",
         "worktable_ref": "由粗到細，推進鐵律：先全部 60%，再統一加深，絕不單張畫完 100% 才換張",
         "next_step": 9,
@@ -3917,6 +3906,7 @@
         "phase_ratio": "40% (步驟9~11)",
         "name": "全圖加深",
         "ratio": "25%",
+        "minutes_35h": "52.5 分鐘 (佔比25%・全圖加深)",
         "key_points": "線條層級、尺寸標註（粗線主角、中線次要、細線鋪面與尺寸線）",
         "worktable_ref": "拉開視覺對比度，標註道路寬、退縮寬、建築長寬",
         "next_step": 10,
@@ -3929,6 +3919,7 @@
         "phase_ratio": "40% (步驟9~11)",
         "name": "法規檢討",
         "ratio": "10%",
+        "minutes_35h": "21 分鐘 (佔比10%・法規檢討)",
         "key_points": "建蔽率、容積率、退縮、限高，全部標註於圖面（白紙黑字寫上數據檢驗合格）",
         "worktable_ref": "檢核欄白底黑字寫出：法定 vs 實設，有寫就拿基本分",
         "next_step": 11,
@@ -3941,6 +3932,7 @@
         "phase_ratio": "40% (步驟9~11)",
         "name": "反向核對",
         "ratio": "5%",
+        "minutes_35h": "10.5 分鐘 (佔比5%・反向核對)",
         "key_points": "需求清單逐項找出圖面位置，找不到就是漏了；配置圖每棟標面積與樓層；背景最後處理",
         "worktable_ref": "拿試卷需求表逐項打勾對照，避免致命漏項！",
         "next_step": null,
