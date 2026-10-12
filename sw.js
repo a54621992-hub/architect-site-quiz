@@ -1,11 +1,12 @@
 // Service Worker - 敷地速刷 PWA 離線快取（2026-10-12 改版）
 // 改 APP 任何檔案後，把 CACHE_NAME 版號加一，手機才會拿到新版。
-const CACHE_NAME = 'site-planning-quiz-v6.4';
+const CACHE_NAME = 'site-planning-quiz-v6.5';
 const ASSETS = [
   './',
   './index.html',
   './offline_wrongbook.js',
   './tracing_lib.js',
+  './reading_lib.js',
   './manifest.json',
   './icon-192.png',
   './icon-512.png',

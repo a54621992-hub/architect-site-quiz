@@ -103,6 +103,7 @@
     var anchor = document.querySelector('[onclick="openScrollsModal()"]');
     if (!anchor || !anchor.parentNode) return;
     var card = document.createElement('div');
+    card.setAttribute('data-tr-entry', '');
     card.className = 'bg-slate-900/90 p-4 rounded-2xl border border-violet-800/50 active:scale-95 transition cursor-pointer space-y-2 bg-gradient-to-br from-violet-950/30 to-slate-900';
     card.innerHTML =
       '<div class="flex justify-between items-center"><div class="text-2xl">✏️</div>' +
