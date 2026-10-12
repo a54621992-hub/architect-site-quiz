@@ -18,14 +18,35 @@
 
   var TAB_ON = 'bg-sky-500 text-slate-950';
   var TAB_OFF = 'bg-slate-800 text-slate-300';
+  var UNIT_ON = 'bg-sky-700 text-white';
   var HIDDEN_TEXT = '👆 點一下顯示答案';
+
+  function setOn(btn, on, onCls) {
+    (on ? TAB_OFF : onCls).split(' ').forEach(function (k) { btn.classList.remove(k); });
+    (on ? onCls : TAB_OFF).split(' ').forEach(function (k) { btn.classList.add(k); });
+  }
+
+  function unitLabel(u) { return String(u).replace(/^議題：/, ''); }
+
+  // 單元篩選：只留該單元的頁籤，並跳到該單元第一頁；'' = 全部
+  function applyUnit(modal, pages, unit) {
+    var first = -1;
+    modal.querySelectorAll('[data-rd-tab]').forEach(function (btn) {
+      var i = Number(btn.getAttribute('data-rd-tab'));
+      var show = unit === '' || pages[i].unit === unit;
+      btn.classList.toggle('hidden', !show);
+      if (show && first < 0) first = i;
+    });
+    modal.querySelectorAll('[data-rd-unit]').forEach(function (btn) {
+      setOn(btn, btn.getAttribute('data-rd-unit') === unit, UNIT_ON);
+    });
+    if (first >= 0) renderPage(modal, pages, first);
+  }
 
   function renderPage(modal, pages, idx) {
     var p = pages[idx];
     modal.querySelectorAll('[data-rd-tab]').forEach(function (btn) {
-      var on = Number(btn.getAttribute('data-rd-tab')) === idx;
-      (on ? TAB_OFF : TAB_ON).split(' ').forEach(function (k) { btn.classList.remove(k); });
-      (on ? TAB_ON : TAB_OFF).split(' ').forEach(function (k) { btn.classList.add(k); });
+      setOn(btn, Number(btn.getAttribute('data-rd-tab')) === idx, TAB_ON);
     });
     modal.querySelector('[data-rd-body]').innerHTML =
       '<div class="flex items-center justify-between gap-2">' +
@@ -57,6 +78,8 @@
   }
 
   function buildModal(pages) {
+    var units = pages.map(function (p) { return p.unit; })
+      .filter(function (v, i, a) { return a.indexOf(v) === i; });
     var modal = document.createElement('div');
     modal.id = 'reading-modal';
     modal.className = 'fixed inset-0 z-50 bg-slate-950/90 backdrop-blur-md flex items-center justify-center p-3 hidden';
@@ -70,6 +93,13 @@
           '<button data-rd-close class="w-8 h-8 rounded-full bg-slate-800 text-slate-400 hover:text-white flex items-center justify-center text-xs">✕</button>' +
         '</div>' +
         '<div class="flex space-x-2 overflow-x-auto no-scrollbar shrink-0 pb-1">' +
+          [''].concat(units).map(function (u, i) {
+            var n = u === '' ? pages.length : pages.filter(function (p) { return p.unit === u; }).length;
+            return '<button data-rd-unit="' + esc(u) + '" class="px-3 py-1.5 rounded-xl text-xs font-bold whitespace-nowrap transition ' + (i === 0 ? UNIT_ON : TAB_OFF) + '">' +
+              (u === '' ? '全部' : esc(unitLabel(u))) + ' ' + n + '</button>';
+          }).join('') +
+        '</div>' +
+        '<div class="flex space-x-2 overflow-x-auto no-scrollbar shrink-0 pb-1">' +
           pages.map(function (p, i) {
             return '<button data-rd-tab="' + i + '" class="px-3 py-1.5 rounded-xl text-xs font-bold whitespace-nowrap transition ' + TAB_OFF + '">' + esc(p.source_page) + '</button>';
           }).join('') +
@@ -80,6 +110,8 @@
     modal.addEventListener('click', function (ev) {
       try {
         if (ev.target === modal || ev.target.closest('[data-rd-close]')) { modal.classList.add('hidden'); return; }
+        var unitBtn = ev.target.closest('[data-rd-unit]');
+        if (unitBtn) { applyUnit(modal, pages, unitBtn.getAttribute('data-rd-unit')); return; }
         var tab = ev.target.closest('[data-rd-tab]');
         if (tab) { renderPage(modal, pages, Number(tab.getAttribute('data-rd-tab'))); return; }
         var all = ev.target.closest('[data-rd-all]');
