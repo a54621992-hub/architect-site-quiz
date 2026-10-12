@@ -23,7 +23,31 @@
     } catch (e) { console.warn('[臨摹庫] 開圖失敗', e); }
   }
 
-  function buildModal(cards) {
+  var TAB_ON = 'bg-violet-500 text-slate-950';
+  var TAB_OFF = 'bg-slate-800 text-slate-300';
+
+  function filterTabs(categories, cards) {
+    var tabs = [['', '全部', cards.length]].concat(categories.map(function (cat) {
+      return [cat, cat, cards.filter(function (c) { return c.category === cat; }).length];
+    }));
+    return tabs.map(function (t, i) {
+      return '<button data-tr-filter="' + esc(t[0]) + '" class="px-3 py-1.5 rounded-xl text-xs font-bold whitespace-nowrap transition ' +
+        (i === 0 ? TAB_ON : TAB_OFF) + '">' + esc(t[1]) + ' ' + t[2] + '</button>';
+    }).join('');
+  }
+
+  function applyFilter(modal, cat) {
+    modal.querySelectorAll('[data-tr-cat]').forEach(function (el) {
+      el.classList.toggle('hidden', cat !== '' && el.getAttribute('data-tr-cat') !== cat);
+    });
+    modal.querySelectorAll('[data-tr-filter]').forEach(function (btn) {
+      var on = btn.getAttribute('data-tr-filter') === cat;
+      (on ? TAB_OFF : TAB_ON).split(' ').forEach(function (k) { btn.classList.remove(k); });
+      (on ? TAB_ON : TAB_OFF).split(' ').forEach(function (k) { btn.classList.add(k); });
+    });
+  }
+
+  function buildModal(cards, categories) {
     var modal = document.createElement('div');
     modal.id = 'tracing-modal';
     modal.className = 'fixed inset-0 z-50 bg-slate-950/90 backdrop-blur-md flex items-center justify-center p-3 hidden';
@@ -36,11 +60,13 @@
           '</div></div>' +
           '<button data-tr-close class="w-8 h-8 rounded-full bg-slate-800 text-slate-400 hover:text-white flex items-center justify-center text-xs">✕</button>' +
         '</div>' +
-        '<div class="overflow-y-auto pr-1 flex-1 grid grid-cols-2 gap-3">' +
+        '<div class="flex space-x-2 overflow-x-auto no-scrollbar shrink-0 pb-1">' + filterTabs(categories, cards) + '</div>' +
+        '<div class="overflow-y-auto pr-1 flex-1 grid grid-cols-2 gap-3 content-start">' +
           cards.map(function (c, i) {
+            var cat = ' data-tr-cat="' + esc(c.category) + '"';
             var head = (i === 0 || cards[i - 1].category !== c.category)
-              ? '<div class="col-span-2 text-xs font-black text-violet-300 pt-1">' + esc(c.category) + '</div>' : '';
-            return head + '<div data-tr-idx="' + i + '" class="bg-slate-950/80 p-2 rounded-2xl border border-slate-800 space-y-1.5 cursor-pointer active:scale-95 transition">' +
+              ? '<div' + cat + ' class="col-span-2 text-xs font-black text-violet-300 pt-1">' + esc(c.category) + '</div>' : '';
+            return head + '<div data-tr-idx="' + i + '"' + cat + ' class="bg-slate-950/80 p-2 rounded-2xl border border-slate-800 space-y-1.5 cursor-pointer active:scale-95 transition">' +
               '<div class="bg-white rounded-xl overflow-hidden flex items-center justify-center h-40">' +
                 '<img loading="lazy" src="' + esc(c.image) + '" alt="' + esc(c.title) + '" class="w-full h-full object-contain">' +
               '</div>' +
@@ -57,6 +83,8 @@
     modal.addEventListener('click', function (ev) {
       try {
         if (ev.target === modal || ev.target.closest('[data-tr-close]')) { modal.classList.add('hidden'); return; }
+        var tab = ev.target.closest('[data-tr-filter]');
+        if (tab) { applyFilter(modal, tab.getAttribute('data-tr-filter')); return; }
         var item = ev.target.closest('[data-tr-idx]');
         if (item) {
           var c = cards[Number(item.getAttribute('data-tr-idx'))];
@@ -80,7 +108,7 @@
       '<div class="flex justify-between items-center"><div class="text-2xl">✏️</div>' +
       '<span class="text-[10px] px-1.5 py-0.5 rounded-full bg-violet-500/20 text-violet-300 font-bold border border-violet-500/30">' + count + '頁</span></div>' +
       '<div class="text-sm font-bold text-white">手繪臨摹庫</div>' +
-      '<div class="text-[11px] text-slate-400">' + esc(categories.join('＋')) + '，點圖放大臨摹</div>';
+      '<div class="text-[11px] text-slate-400">' + categories.length + ' 類分類按鍵，點圖放大臨摹</div>';
     card.addEventListener('click', function () {
       try { modal.classList.remove('hidden'); } catch (e) { console.warn('[臨摹庫] 開啟失敗', e); }
     });
@@ -93,7 +121,7 @@
       if (!cards.length || document.getElementById('tracing-modal')) return;
       var categories = cards.map(function (c) { return c.category; })
         .filter(function (v, i, a) { return a.indexOf(v) === i; });
-      buildEntryCard(buildModal(cards), cards.length, categories);
+      buildEntryCard(buildModal(cards, categories), cards.length, categories);
     } catch (e) { console.warn('[臨摹庫] 初始化失敗', e); }
   }
 

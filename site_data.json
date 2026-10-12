@@ -1247,18 +1247,18 @@
     {
       "id": "num_070",
       "category": "四、動線・無障礙・尺度",
-      "number": "1/12・150・Ø150・80",
-      "content": "無障礙坡度／通路淨寬 cm／輪椅迴轉 cm／門淨寬 cm",
-      "usage": "無障礙鏈一段不通即全鏈失效",
-      "source": "無障礙設施設計規範",
-      "status": "○",
+      "number": "1/12・130/120・Ø150・90",
+      "content": "無障礙坡道坡度／通路寬 cm（室外 130、室內走廊 120）／輪椅迴轉 cm／出入口門框間 cm（拉門開啟淨寬 80）",
+      "usage": "無障礙鏈一段不通即全鏈失效；寬度不足 150 處要設迴轉空間",
+      "source": "建築物無障礙設施設計規範（108.7.1）206.2.3、203.2.3、204.2.2、205.2.3（115.10.12 查證）",
+      "status": "✓",
       "keywords": [
         "無障礙通用設計",
         "坡度1:12",
         "輪椅迴轉150cm"
       ],
       "scenario": "審題見「高差基地、無障礙動線連續鏈與高齡友善人行空間」時：",
-      "reflex": "【全套無障礙黃金尺寸連貫】剖面標坡道 ≤1:12（每高差75cm設150cm平台）；全區圖人行道淨寬 ≥150cm、轉彎處標 Ø150cm 迴轉圈！",
+      "reflex": "【全套無障礙黃金尺寸連貫】剖面標坡道 ≤1:12（每高差75cm設150cm平台）；全區圖無障礙通路標室外 ≥130cm、室內走廊 ≥120cm，寬度不足 150cm 處標 Ø150cm 迴轉圈；出入口門框間 ≥90cm！",
       "linked_diag_id": "diag_04",
       "linked_diag_name": "圖卡 04｜人本街道剖面與無障礙 (P23)"
     },
@@ -6068,6 +6068,94 @@
       "desc": "廟宇與合院聚落鳥瞰、合院正立面",
       "source_page": "P131",
       "image": "tracing/trace_p131.webp"
+    },
+    {
+      "id": "trace_p089",
+      "title": "集合住宅單元與配置",
+      "category": "平面模矩",
+      "desc": "住宅單元平面、可左右擴充的配置、住宅群配置圖",
+      "source_page": "P89",
+      "image": "tracing/trace_p089.webp"
+    },
+    {
+      "id": "trace_p090",
+      "title": "社會住宅房型與垂直分層",
+      "category": "平面模矩",
+      "desc": "8／16／24 坪房型尺寸、低中高層配比與剖面",
+      "source_page": "P90",
+      "image": "tracing/trace_p090.webp"
+    },
+    {
+      "id": "trace_p092",
+      "title": "雙核心平面與服務空間",
+      "category": "平面模矩",
+      "desc": "雙核心（core）配置、梯廳與服務空間平面",
+      "source_page": "P92",
+      "image": "tracing/trace_p092.webp"
+    },
+    {
+      "id": "trace_p098",
+      "title": "活動中心球場平面",
+      "category": "平面模矩",
+      "desc": "籃球場與舞台、廁所服務空間配置",
+      "source_page": "P98",
+      "image": "tracing/trace_p098.webp"
+    },
+    {
+      "id": "trace_p100",
+      "title": "兒童遊戲區與幼兒園平面",
+      "category": "平面模矩",
+      "desc": "戶外遊戲區、幼兒園教室與廚房配置",
+      "source_page": "P100",
+      "image": "tracing/trace_p100.webp"
+    },
+    {
+      "id": "trace_p133",
+      "title": "一梯四戶住宅標準層",
+      "category": "平面模矩",
+      "desc": "住一～住四單元圍繞核心與採光天井",
+      "source_page": "P133",
+      "image": "tracing/trace_p133.webp"
+    },
+    {
+      "id": "trace_p104",
+      "title": "走廊型態與服務核組合",
+      "category": "量體造型",
+      "desc": "單邊、中間、雙邊走廊平面與量體，樓梯電梯廁所群組",
+      "source_page": "P104",
+      "image": "tracing/trace_p104.webp"
+    },
+    {
+      "id": "trace_p125",
+      "title": "立面陽台與入口造型 8 式",
+      "category": "量體造型",
+      "desc": "陽台、格柵、雨庇、入口的量體變化",
+      "source_page": "P125",
+      "image": "tracing/trace_p125.webp"
+    },
+    {
+      "id": "trace_p126",
+      "title": "量體削切與退縮 8 式",
+      "category": "量體造型",
+      "desc": "削角、退縮、挑空、懸挑的量體手法",
+      "source_page": "P126",
+      "image": "tracing/trace_p126.webp"
+    },
+    {
+      "id": "trace_p130",
+      "title": "商業複合量體鳥瞰",
+      "category": "量體造型",
+      "desc": "退台露台、中庭下沉、人行穿越的量體鳥瞰",
+      "source_page": "P130",
+      "image": "tracing/trace_p130.webp"
+    },
+    {
+      "id": "trace_p134",
+      "title": "幾何量體堆疊等角",
+      "category": "量體造型",
+      "desc": "量體錯位堆疊與空中綠化的等角圖",
+      "source_page": "P134",
+      "image": "tracing/trace_p134.webp"
     }
   ]
 }
