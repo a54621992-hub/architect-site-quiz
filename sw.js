@@ -1,12 +1,14 @@
 // Service Worker - 敷地速刷 PWA 離線快取（2026-10-12 改版）
 // 改 APP 任何檔案後，把 CACHE_NAME 版號加一，手機才會拿到新版。
-const CACHE_NAME = 'site-planning-quiz-v7.3';
+const CACHE_NAME = 'site-planning-quiz-v7.4';
 const ASSETS = [
   './',
   './index.html',
   './offline_wrongbook.js',
   './tracing_lib.js',
   './reading_lib.js',
+  './offline_pack.js',
+  './tailwind.js',
   './manifest.json',
   './icon-192.png',
   './icon-512.png',
@@ -21,7 +23,7 @@ self.addEventListener('install', (e) => {
 self.addEventListener('activate', (e) => {
   e.waitUntil(
     caches.keys().then((keys) =>
-      Promise.all(keys.filter((k) => k !== CACHE_NAME).map((k) => caches.delete(k)))
+      Promise.all(keys.filter((k) => k !== CACHE_NAME && k !== 'site-planning-img').map((k) => caches.delete(k)))
     )
   );
   self.clients.claim();
@@ -31,7 +33,9 @@ function putCache(req, res) {
   // opaque（跨域 CDN，如 Tailwind）也存，離線時版面才不會毀
   if (res && (res.ok || res.type === 'opaque')) {
     const copy = res.clone();
-    caches.open(CACHE_NAME).then((c) => c.put(req, copy));
+    // 圖片存獨立快取（換版不刪，與 offline_pack.js 共用）
+    const name = /\.(webp|png|jpe?g|svg)$/i.test(new URL(req.url).pathname) ? 'site-planning-img' : CACHE_NAME;
+    caches.open(name).then((c) => c.put(req, copy));
   }
   return res;
 }
