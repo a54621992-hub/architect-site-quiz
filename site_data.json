@@ -5801,8 +5801,8 @@
       "id": "mod_05",
       "title": "無障礙與垂直動線模矩",
       "subtitle": "全區人本無障礙連續鏈骨架",
-      "key_numbers": "坡度 1:12 ｜ 梯級 T≥26 / R≤18 ｜ 電梯 2.2×2.2M",
-      "details": "• 無障礙坡道：坡度 ≤ 1:12，每高差 75cm 需設 150cm 休息平台\n• 通路淨寬：≥ 150cm，輪椅迴轉直徑 Ø150cm，門淨寬 ≥ 80cm\n• 樓梯踏步：級高 R ≤ 18cm，級深 T ≥ 26cm\n• 無障礙昇降機：機道外包模矩約 2.2M × 2.2M",
+      "key_numbers": "坡度 1:12 ｜ 梯級 R≤16 / T≥26 ｜ 迴轉 Ø150",
+      "details": "• 無障礙坡道：坡度 ≤ 1:12，每高差 75cm 設長 150cm 中間平台，起終點設 150×150cm 平台（無障礙規範 206.2.3、206.3）\n• 通路寬度：室外 ≥ 130cm、室內走廊 ≥ 120cm；寬度不足 150cm 者需每隔一段設 Ø150cm 迴轉空間（203.2.3、204.2.2、204.2.4）\n• 出入口：門框間 ≥ 90cm；橫向拉門、折疊門開啟後淨寬 ≥ 80cm（205.2.3）\n• 樓梯踏步：級高 R ≤ 16cm，級深 T ≥ 26cm（304.1；僅小型住宅公寓大廈例外 R ≤ 18、T ≥ 24）\n• 無障礙昇降機：機廂門淨寬 ≥ 90cm、深 ≥ 135cm（406.1）；平面估算機道約 2.2M × 2.2M（設計估算，非法規值）",
       "exam_usage": "高差處理剖面必標 1:12 與 Ø150cm 迴轉圈，避免空泛文字。"
     }
   ],
@@ -5916,6 +5916,158 @@
       "desc": "老樹穿廊、無障礙草坡看台、街角咖啡",
       "source_page": "P80",
       "image": "tracing/trace_p080.webp"
+    },
+    {
+      "id": "trace_p082",
+      "title": "生態護岸與建築通風剖面",
+      "category": "剖面構造",
+      "desc": "多孔隙護岸、雨水滯留、建築被動通風路徑",
+      "source_page": "P82",
+      "image": "tracing/trace_p082.webp"
+    },
+    {
+      "id": "trace_p083",
+      "title": "雨水回收與人本街道斷面",
+      "category": "剖面構造",
+      "desc": "雨水回收系統、透水鋪面、植穴與人行步道完整斷面",
+      "source_page": "P83",
+      "image": "tracing/trace_p083.webp"
+    },
+    {
+      "id": "trace_p087",
+      "title": "教室通風剖面與校園配置",
+      "category": "剖面構造",
+      "desc": "斜屋頂教室剖面、校園配置、對流通風剖面",
+      "source_page": "P87",
+      "image": "tracing/trace_p087.webp"
+    },
+    {
+      "id": "trace_p088",
+      "title": "老樹中庭校園平剖面",
+      "category": "剖面構造",
+      "desc": "老樹穿層剖面、圍合中庭平面、開放空間供社區使用",
+      "source_page": "P88",
+      "image": "tracing/trace_p088.webp"
+    },
+    {
+      "id": "trace_p099",
+      "title": "傘狀屋頂通風剖面",
+      "category": "剖面構造",
+      "desc": "活動中心配置、傘狀屋頂排熱通風剖面、棚架小品",
+      "source_page": "P99",
+      "image": "tracing/trace_p099.webp"
+    },
+    {
+      "id": "trace_p110",
+      "title": "開放空間剖面與膜棚架",
+      "category": "剖面構造",
+      "desc": "下沉廣場、照明設計剖面、膜構造棚架",
+      "source_page": "P110",
+      "image": "tracing/trace_p110.webp"
+    },
+    {
+      "id": "trace_p111",
+      "title": "張拉膜構造造型集",
+      "category": "剖面構造",
+      "desc": "單曲、雙曲、傘狀等膜構造造型，附樹木畫法",
+      "source_page": "P111",
+      "image": "tracing/trace_p111.webp"
+    },
+    {
+      "id": "trace_p112",
+      "title": "竹木棚架構造節點",
+      "category": "剖面構造",
+      "desc": "樹狀柱棚架、竹構接頭大樣、棚架平面",
+      "source_page": "P112",
+      "image": "tracing/trace_p112.webp"
+    },
+    {
+      "id": "trace_p113",
+      "title": "棚架與傘柱構造草圖",
+      "category": "剖面構造",
+      "desc": "棚架、傘柱、懸挑構造速寫",
+      "source_page": "P113",
+      "image": "tracing/trace_p113.webp"
+    },
+    {
+      "id": "trace_p114",
+      "title": "熱煙囪通風剖面",
+      "category": "剖面構造",
+      "desc": "階梯式空間、垂直煙囪效應通風剖面",
+      "source_page": "P114",
+      "image": "tracing/trace_p114.webp"
+    },
+    {
+      "id": "trace_p115",
+      "title": "高腳屋與折板屋頂剖面",
+      "category": "剖面構造",
+      "desc": "干欄高腳屋、折板屋頂體育館、塔樓剖面",
+      "source_page": "P115",
+      "image": "tracing/trace_p115.webp"
+    },
+    {
+      "id": "trace_p116",
+      "title": "樹木與人物配景畫法",
+      "category": "剖面構造",
+      "desc": "立面與剖面上的喬木、灌木、人物配景筆觸",
+      "source_page": "P116",
+      "image": "tracing/trace_p116.webp"
+    },
+    {
+      "id": "trace_p117",
+      "title": "坡地退台與地下車道剖面",
+      "category": "剖面構造",
+      "desc": "坡地退台、地下車道、通風採光剖面",
+      "source_page": "P117",
+      "image": "tracing/trace_p117.webp"
+    },
+    {
+      "id": "trace_p118",
+      "title": "老街立面（山牆・教堂・廟宇）",
+      "category": "剖面構造",
+      "desc": "巴洛克山牆街屋、教堂、廟宇立面",
+      "source_page": "P118",
+      "image": "tracing/trace_p118.webp"
+    },
+    {
+      "id": "trace_p119",
+      "title": "斜屋頂採光與樹狀柱大棚",
+      "category": "剖面構造",
+      "desc": "斜屋頂採光剖面、挑空剖面、樹狀柱大跨棚架",
+      "source_page": "P119",
+      "image": "tracing/trace_p119.webp"
+    },
+    {
+      "id": "trace_p120",
+      "title": "挑空剖面與拱形桁架",
+      "category": "剖面構造",
+      "desc": "草坡涼亭、階梯挑空剖面、拱形桁架屋頂",
+      "source_page": "P120",
+      "image": "tracing/trace_p120.webp"
+    },
+    {
+      "id": "trace_p121",
+      "title": "圖書館分層剖面",
+      "category": "剖面構造",
+      "desc": "量體立面、圖書館分層剖面（會議室、閱覽、兒童區）",
+      "source_page": "P121",
+      "image": "tracing/trace_p121.webp"
+    },
+    {
+      "id": "trace_p122",
+      "title": "高層與下沉看台剖面",
+      "category": "剖面構造",
+      "desc": "高層與裙樓、下沉看台、覆土剖面",
+      "source_page": "P122",
+      "image": "tracing/trace_p122.webp"
+    },
+    {
+      "id": "trace_p131",
+      "title": "廟宇聚落鳥瞰與合院立面",
+      "category": "剖面構造",
+      "desc": "廟宇與合院聚落鳥瞰、合院正立面",
+      "source_page": "P131",
+      "image": "tracing/trace_p131.webp"
     }
   ]
 }

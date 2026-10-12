@@ -38,7 +38,9 @@
         '</div>' +
         '<div class="overflow-y-auto pr-1 flex-1 grid grid-cols-2 gap-3">' +
           cards.map(function (c, i) {
-            return '<div data-tr-idx="' + i + '" class="bg-slate-950/80 p-2 rounded-2xl border border-slate-800 space-y-1.5 cursor-pointer active:scale-95 transition">' +
+            var head = (i === 0 || cards[i - 1].category !== c.category)
+              ? '<div class="col-span-2 text-xs font-black text-violet-300 pt-1">' + esc(c.category) + '</div>' : '';
+            return head + '<div data-tr-idx="' + i + '" class="bg-slate-950/80 p-2 rounded-2xl border border-slate-800 space-y-1.5 cursor-pointer active:scale-95 transition">' +
               '<div class="bg-white rounded-xl overflow-hidden flex items-center justify-center h-40">' +
                 '<img loading="lazy" src="' + esc(c.image) + '" alt="' + esc(c.title) + '" class="w-full h-full object-contain">' +
               '</div>' +
@@ -69,7 +71,7 @@
     return modal;
   }
 
-  function buildEntryCard(modal, count) {
+  function buildEntryCard(modal, count, categories) {
     var anchor = document.querySelector('[onclick="openScrollsModal()"]');
     if (!anchor || !anchor.parentNode) return;
     var card = document.createElement('div');
@@ -78,7 +80,7 @@
       '<div class="flex justify-between items-center"><div class="text-2xl">✏️</div>' +
       '<span class="text-[10px] px-1.5 py-0.5 rounded-full bg-violet-500/20 text-violet-300 font-bold border border-violet-500/30">' + count + '頁</span></div>' +
       '<div class="text-sm font-bold text-white">手繪臨摹庫</div>' +
-      '<div class="text-[11px] text-slate-400">版面格線＋情境透視，點圖放大臨摹</div>';
+      '<div class="text-[11px] text-slate-400">' + esc(categories.join('＋')) + '，點圖放大臨摹</div>';
     card.addEventListener('click', function () {
       try { modal.classList.remove('hidden'); } catch (e) { console.warn('[臨摹庫] 開啟失敗', e); }
     });
@@ -89,7 +91,9 @@
     try {
       var cards = getCards();
       if (!cards.length || document.getElementById('tracing-modal')) return;
-      buildEntryCard(buildModal(cards), cards.length);
+      var categories = cards.map(function (c) { return c.category; })
+        .filter(function (v, i, a) { return a.indexOf(v) === i; });
+      buildEntryCard(buildModal(cards), cards.length, categories);
     } catch (e) { console.warn('[臨摹庫] 初始化失敗', e); }
   }
 
