@@ -31,7 +31,7 @@
       return [cat, cat, cards.filter(function (c) { return c.category === cat; }).length];
     }));
     return tabs.map(function (t, i) {
-      return '<button data-tr-filter="' + esc(t[0]) + '" class="px-3 py-1.5 rounded-xl text-xs font-bold whitespace-nowrap transition ' +
+      return '<button data-tr-filter="' + esc(t[0]) + '" class="px-3 min-h-[40px] rounded-xl text-xs font-bold whitespace-nowrap transition ' +
         (i === 0 ? TAB_ON : TAB_OFF) + '">' + esc(t[1]) + ' ' + t[2] + '</button>';
     }).join('');
   }
@@ -58,7 +58,7 @@
             '<h3 class="text-base font-black text-white">手繪臨摹庫</h3>' +
             '<p class="text-[11px] text-violet-300">名師筆記整頁掃描，點圖放大照著畫（共 ' + cards.length + ' 頁）</p>' +
           '</div></div>' +
-          '<button data-tr-close class="w-8 h-8 rounded-full bg-slate-800 text-slate-400 hover:text-white flex items-center justify-center text-xs">✕</button>' +
+          '<button data-tr-close class="shrink-0 w-11 h-11 rounded-full bg-slate-800 text-slate-400 hover:text-white flex items-center justify-center text-xs">✕</button>' +
         '</div>' +
         '<div class="flex space-x-2 overflow-x-auto no-scrollbar shrink-0 pb-1">' + filterTabs(categories, cards) + '</div>' +
         '<div class="overflow-y-auto pr-1 flex-1 grid grid-cols-2 gap-3 content-start">' +

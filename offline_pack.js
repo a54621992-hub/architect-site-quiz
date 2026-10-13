@@ -86,7 +86,14 @@
         '<div class="text-sm font-bold text-white">離線圖片包</div>' +
         '<div data-op-status class="text-[11px] text-slate-400">建議 Wi-Fi 下載，' + list.length + ' 張圖存進手機</div>';
       card.addEventListener('click', function () {
-        try { download(card, list); } catch (e) { console.warn('[離線包] 下載失敗', e); }
+        try {
+          if (card.getAttribute('data-op-busy') === '1') return;
+          // 下載前確認：行動數據會被扣流量（navigator.connection 僅 Android Chrome 有）
+          var c = navigator.connection || {};
+          var cell = c.type === 'cellular' || c.saveData;
+          if (!window.confirm((cell ? '⚠ 偵測到行動數據或省流量模式。\n' : '') + '要下載離線圖片包嗎？共 ' + list.length + ' 張、約 55 MB，已下載的會略過。')) return;
+          download(card, list);
+        } catch (e) { console.warn('[離線包] 下載失敗', e); }
       });
       anchor.parentNode.appendChild(card);
       refresh(card, list);

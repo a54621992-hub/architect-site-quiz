@@ -28,17 +28,18 @@
 
   function unitLabel(u) { return String(u).replace(/^議題：/, ''); }
 
-  // 單元篩選：只留該單元的頁籤，並跳到該單元第一頁；'' = 全部
+  // 單元篩選：只留該單元的頁籤，並跳到該單元第一頁；'' = 全部；陣列 = 多個單元（筆記單元主目錄用）
   function applyUnit(modal, pages, unit) {
     var first = -1;
+    var set = Array.isArray(unit) ? unit : (unit === '' ? null : [unit]);
     modal.querySelectorAll('[data-rd-tab]').forEach(function (btn) {
       var i = Number(btn.getAttribute('data-rd-tab'));
-      var show = unit === '' || pages[i].unit === unit;
+      var show = !set || set.indexOf(pages[i].unit) >= 0;
       btn.classList.toggle('hidden', !show);
       if (show && first < 0) first = i;
     });
     modal.querySelectorAll('[data-rd-unit]').forEach(function (btn) {
-      setOn(btn, btn.getAttribute('data-rd-unit') === unit, UNIT_ON);
+      setOn(btn, btn.getAttribute('data-rd-unit') === (Array.isArray(unit) ? unit[0] : unit), UNIT_ON);
     });
     if (first >= 0) renderPage(modal, pages, first);
   }
@@ -52,18 +53,23 @@
       '<div class="flex items-center justify-between gap-2">' +
         '<div><div class="text-[10px] text-sky-300">' + esc(p.unit) + '・' + esc(p.source_page) + '</div>' +
         '<h4 class="text-sm font-black text-white">' + esc(p.title) + '</h4></div>' +
-        '<button data-rd-src class="text-[11px] px-2 py-1 rounded-lg bg-slate-800 text-cyan-300 whitespace-nowrap">📄 看原頁</button>' +
+        '<button data-rd-src class="shrink-0 text-xs px-3 min-h-[40px] rounded-lg bg-slate-800 text-cyan-300 whitespace-nowrap">📄 看原頁</button>' +
       '</div>' +
       '<div class="flex gap-2">' +
-        '<button data-rd-all="1" class="flex-1 text-[11px] py-1.5 rounded-lg bg-slate-800 text-slate-300">全部顯示</button>' +
-        '<button data-rd-all="0" class="flex-1 text-[11px] py-1.5 rounded-lg bg-slate-800 text-slate-300">全部遮住</button>' +
+        '<button data-rd-all="1" class="flex-1 text-xs min-h-[40px] rounded-lg bg-slate-800 text-slate-300">全部顯示</button>' +
+        '<button data-rd-all="0" class="flex-1 text-xs min-h-[40px] rounded-lg bg-slate-800 text-slate-300">全部遮住</button>' +
       '</div>' +
       p.items.map(function (it, i) {
         return '<div data-rd-item="' + i + '" class="bg-slate-950/80 p-3 rounded-2xl border border-slate-800 space-y-2 cursor-pointer">' +
-          '<div class="text-xs font-bold text-white">Q' + (i + 1) + '．' + esc(it.q) + '</div>' +
-          '<div data-rd-ans class="text-xs text-slate-500 whitespace-pre-line leading-relaxed bg-slate-900/70 p-2.5 rounded-xl border border-slate-800/60">' + HIDDEN_TEXT + '</div>' +
+          '<div class="text-sm font-bold text-white">Q' + (i + 1) + '．' + esc(it.q) + '</div>' +
+          '<div data-rd-ans class="text-sm text-slate-500 whitespace-pre-line leading-relaxed bg-slate-900/70 p-2.5 rounded-xl border border-slate-800/60">' + HIDDEN_TEXT + '</div>' +
         '</div>';
-      }).join('');
+      }).join('') +
+      '<div class="flex gap-2 pt-1">' +
+        '<button data-rd-step="-1" class="flex-1 min-h-[44px] rounded-xl bg-slate-800 text-slate-200 text-sm font-bold">‹ 上一頁</button>' +
+        '<button data-rd-step="1" class="flex-1 min-h-[44px] rounded-xl bg-sky-600 text-white text-sm font-bold">下一頁 ›</button>' +
+      '</div>';
+    modal.querySelector('[data-rd-body]').scrollTop = 0;
     modal.setAttribute('data-rd-cur', String(idx));
   }
 
@@ -90,7 +96,7 @@
             '<h3 class="text-base font-black text-white">筆記讀背</h3>' +
             '<p class="text-[11px] text-sky-300">名師筆記文字轉錄，先想答案再點開（〔?〕＝原稿字跡不確定）</p>' +
           '</div></div>' +
-          '<button data-rd-close class="w-8 h-8 rounded-full bg-slate-800 text-slate-400 hover:text-white flex items-center justify-center text-xs">✕</button>' +
+          '<button data-rd-close class="shrink-0 w-11 h-11 rounded-full bg-slate-800 text-slate-400 hover:text-white flex items-center justify-center text-xs">✕</button>' +
         '</div>' +
         '<div class="flex space-x-2 overflow-x-auto no-scrollbar shrink-0 pb-1">' +
           [''].concat(units).map(function (u, i) {
@@ -112,6 +118,15 @@
         if (ev.target === modal || ev.target.closest('[data-rd-close]')) { modal.classList.add('hidden'); return; }
         var unitBtn = ev.target.closest('[data-rd-unit]');
         if (unitBtn) { applyUnit(modal, pages, unitBtn.getAttribute('data-rd-unit')); return; }
+        var step = ev.target.closest('[data-rd-step]');
+        if (step) {
+          var vis = Array.prototype.filter.call(modal.querySelectorAll('[data-rd-tab]'), function (b) { return !b.classList.contains('hidden'); })
+            .map(function (b) { return Number(b.getAttribute('data-rd-tab')); });
+          var at = vis.indexOf(Number(modal.getAttribute('data-rd-cur')));
+          var to = vis[at + Number(step.getAttribute('data-rd-step'))];
+          if (to !== undefined) renderPage(modal, pages, to);
+          return;
+        }
         var tab = ev.target.closest('[data-rd-tab]');
         if (tab) { renderPage(modal, pages, Number(tab.getAttribute('data-rd-tab'))); return; }
         var all = ev.target.closest('[data-rd-all]');
@@ -159,7 +174,19 @@
     try {
       var pages = getPages();
       if (!pages.length || document.getElementById('reading-modal')) return;
-      buildEntryCard(buildModal(pages), pages);
+      var modal = buildModal(pages);
+      buildEntryCard(modal, pages);
+      // units：單元名稱陣列；page：可選，直接跳到該筆記頁碼
+      window.openReadingUnit = function (units, page) {
+        try {
+          applyUnit(modal, pages, units && units.length ? units : '');
+          if (page) {
+            var i = pages.map(function (p) { return p.source_page; }).indexOf('P' + page);
+            if (i >= 0) renderPage(modal, pages, i);
+          }
+          modal.classList.remove('hidden');
+        } catch (e) { console.warn('[讀背] 開啟單元失敗', e); }
+      };
     } catch (e) { console.warn('[讀背] 初始化失敗', e); }
   }
 
