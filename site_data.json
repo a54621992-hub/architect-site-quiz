@@ -4197,7 +4197,7 @@
         "據點層級"
       ],
       "pitfall": "只畫正圓不標阻隔＝沒有檢討實際可及性",
-      "svg_code": "<svg viewBox=\"0 0 360 240\" xmlns=\"http://www.w3.org/2000/svg\" font-family=\"Noto Sans CJK TC, sans-serif\"><defs><pattern id=\"c2h\" width=\"5\" height=\"5\" patternUnits=\"userSpaceOnUse\" patternTransform=\"rotate(45)\"><line x1=\"0\" y1=\"0\" x2=\"0\" y2=\"5\" stroke=\"#c0392b\" stroke-width=\"1.1\"/></pattern></defs><rect x=\"0.5\" y=\"0.5\" width=\"359\" height=\"239\" fill=\"#fff\" stroke=\"#ccc\"/><circle cx=\"140\" cy=\"125\" r=\"100\" fill=\"none\" stroke=\"#888\" stroke-dasharray=\"4 3\"/><circle cx=\"140\" cy=\"125\" r=\"72\" fill=\"none\" stroke=\"#555\" stroke-width=\"1.2\"/><circle cx=\"140\" cy=\"125\" r=\"38\" fill=\"none\" stroke=\"#222\" stroke-width=\"1.8\"/><path d=\"M160,92.7 A38,38 0 0 1 160,157.3 Z\" fill=\"url(#c2h)\" stroke=\"none\"/><rect x=\"156\" y=\"12\" width=\"8\" height=\"220\" fill=\"#bbb\"/><text x=\"168\" y=\"24\" font-size=\"9\" fill=\"#555\">幹道（阻隔）</text><text x=\"140\" y=\"83\" font-size=\"9\" text-anchor=\"middle\" font-weight=\"700\">400M</text><text x=\"140\" y=\"49\" font-size=\"9\" text-anchor=\"middle\">800M</text><text x=\"140\" y=\"21\" font-size=\"9\" text-anchor=\"middle\" fill=\"#777\">1200M</text><rect x=\"134\" y=\"121\" width=\"12\" height=\"10\" fill=\"#fff\" stroke=\"#222\"/><polygon points=\"132,121 140,114 148,121\" fill=\"#222\"/><rect x=\"98\" y=\"91\" width=\"10\" height=\"10\" fill=\"#222\"/><text x=\"111\" y=\"100\" font-size=\"9\" font-weight=\"700\">A</text><polygon points=\"118,168 112,178 124,178\" fill=\"#222\"/><text x=\"127\" y=\"178\" font-size=\"9\" font-weight=\"700\">B</text><circle cx=\"112\" cy=\"128\" r=\"3.2\" fill=\"#222\"/><circle cx=\"148\" cy=\"146\" r=\"3.2\" fill=\"#222\"/><circle cx=\"128\" cy=\"104\" r=\"3.2\" fill=\"#222\"/><text x=\"100\" y=\"140\" font-size=\"9\" font-weight=\"700\">C</text><text x=\"175\" y=\"130\" font-size=\"15\" fill=\"#c0392b\" font-weight=\"900\">×</text><rect x=\"252\" y=\"86\" width=\"9\" height=\"9\" fill=\"#222\"/><text x=\"266\" y=\"94\" font-size=\"8.6\">A 整合型（區）</text><polygon points=\"256,103 251,112 261,112\" fill=\"#222\"/><text x=\"266\" y=\"110\" font-size=\"8.6\">B 複合型（里）</text><circle cx=\"256\" cy=\"124\" r=\"3.2\" fill=\"#222\"/><text x=\"266\" y=\"126\" font-size=\"8.6\">C 巷弄站（鄰）</text><rect x=\"251\" y=\"133\" width=\"10\" height=\"9\" fill=\"url(#c2h)\" stroke=\"#c0392b\"/><text x=\"266\" y=\"142\" font-size=\"8.6\">服務空白</text><rect x=\"251\" y=\"150\" width=\"10\" height=\"9\" fill=\"#bbb\"/><text x=\"266\" y=\"158\" font-size=\"8.6\">阻隔物</text><text x=\"250\" y=\"186\" font-size=\"8.6\" fill=\"#6e2c00\" font-weight=\"700\">判準：畫出來的圓</text><text x=\"250\" y=\"198\" font-size=\"8.6\" fill=\"#6e2c00\" font-weight=\"700\">≠ 走得到的範圍</text></svg>",
+      "svg_code": "<svg viewBox=\"0 0 360 240\" xmlns=\"http://www.w3.org/2000/svg\" font-family=\"Noto Sans CJK TC, sans-serif\"><defs><pattern id=\"c2h\" width=\"5\" height=\"5\" patternUnits=\"userSpaceOnUse\" patternTransform=\"rotate(45)\"><line x1=\"0\" y1=\"0\" x2=\"0\" y2=\"5\" stroke=\"#c0392b\" stroke-width=\"1.1\"/></pattern></defs><rect x=\"0.5\" y=\"0.5\" width=\"359\" height=\"239\" fill=\"#fff\" stroke=\"#ccc\"/><circle cx=\"140\" cy=\"125\" r=\"100\" fill=\"none\" stroke=\"#888\" stroke-dasharray=\"4 3\"/><circle cx=\"140\" cy=\"125\" r=\"72\" fill=\"none\" stroke=\"#555\" stroke-width=\"1.2\"/><circle cx=\"140\" cy=\"125\" r=\"38\" fill=\"none\" stroke=\"#222\" stroke-width=\"1.8\"/><path d=\"M160,92.7 A38,38 0 0 1 160,157.3 Z\" fill=\"url(#c2h)\" stroke=\"none\"/><rect x=\"156\" y=\"12\" width=\"8\" height=\"220\" fill=\"#bbb\"/><text x=\"168\" y=\"24\" font-size=\"9\" fill=\"#555\">幹道（阻隔）</text><text x=\"140\" y=\"83\" font-size=\"9\" text-anchor=\"middle\" font-weight=\"700\">400M</text><text x=\"140\" y=\"49\" font-size=\"9\" text-anchor=\"middle\">800M</text><text x=\"140\" y=\"21\" font-size=\"9\" text-anchor=\"middle\" fill=\"#777\">1200M</text><rect x=\"134\" y=\"121\" width=\"12\" height=\"10\" fill=\"#fff\" stroke=\"#222\"/><polygon points=\"132,121 140,114 148,121\" fill=\"#222\"/><rect x=\"98\" y=\"91\" width=\"10\" height=\"10\" fill=\"#222\"/><text x=\"111\" y=\"100\" font-size=\"9\" font-weight=\"700\">A</text><polygon points=\"118,168 112,178 124,178\" fill=\"#222\"/><text x=\"127\" y=\"178\" font-size=\"9\" font-weight=\"700\">B</text><circle cx=\"112\" cy=\"128\" r=\"3.2\" fill=\"#222\"/><circle cx=\"148\" cy=\"146\" r=\"3.2\" fill=\"#222\"/><circle cx=\"128\" cy=\"104\" r=\"3.2\" fill=\"#222\"/><text x=\"100\" y=\"140\" font-size=\"9\" font-weight=\"700\">C</text><text x=\"175\" y=\"130\" font-size=\"15\" fill=\"#c0392b\" font-weight=\"900\">×</text><rect x=\"252\" y=\"86\" width=\"9\" height=\"9\" fill=\"#222\"/><text x=\"266\" y=\"94\" font-size=\"8.6\">A 社整中心（區）</text><polygon points=\"256,103 251,112 261,112\" fill=\"#222\"/><text x=\"266\" y=\"110\" font-size=\"8.6\">B 特約單位（里）</text><circle cx=\"256\" cy=\"124\" r=\"3.2\" fill=\"#222\"/><text x=\"266\" y=\"126\" font-size=\"8.6\">C 巷弄站（鄰）</text><rect x=\"251\" y=\"133\" width=\"10\" height=\"9\" fill=\"url(#c2h)\" stroke=\"#c0392b\"/><text x=\"266\" y=\"142\" font-size=\"8.6\">服務空白</text><rect x=\"251\" y=\"150\" width=\"10\" height=\"9\" fill=\"#bbb\"/><text x=\"266\" y=\"158\" font-size=\"8.6\">阻隔物</text><text x=\"250\" y=\"186\" font-size=\"8.6\" fill=\"#6e2c00\" font-weight=\"700\">判準：畫出來的圓</text><text x=\"250\" y=\"198\" font-size=\"8.6\" fill=\"#6e2c00\" font-weight=\"700\">≠ 走得到的範圍</text></svg>",
       "sketch_image": "diagram_sketches/diag_02_sketch.webp",
       "sketch_source_page": "P7",
       "sketch_title": "服務圈同心圓與生活圈防災網絡配置",
@@ -4382,7 +4382,7 @@
         "name": "審題",
         "ratio": "10% (1~2.5)",
         "minutes_35h": "21 分鐘 (步驟1~2.5共佔10%・不可壓縮)",
-        "key_points": "三遍審題：通讀 → 分色標記 → 需求清單；圈出所有帶單位的數字（㎡、戶、席、層、M、%）",
+        "key_points": "三遍審題：通讀 → 分色標記 → 需求清單；圈出所有帶單位的數字（㎡、戶、席、層、M、%）\n📝 筆記 p.4 建議審題半小時（30 分鐘）；若照筆記，多出的 9 分鐘從步驟 5～8 扣",
         "worktable_ref": "需求清單與面積表（編號、空間名稱、面積、數量、樓層、小計、入圖位置、打勾）",
         "next_step": 2,
         "next_step_name": "基地分析"
@@ -4540,7 +4540,7 @@
       },
       {
         "title": "定案｜夠好就走",
-        "key_action": "最多比較 2 案，5 分鐘上限；同分選最好畫、最好說明的方案",
+        "key_action": "最多比較 2 案，5 分鐘上限；同分選最好畫、最好說明的方案（筆記 p.4 排出 ①②③ 三案；時間不夠時以 2 案為限）",
         "quote": "評的是決策邏輯，不是最佳解！方案 A 與方案 B 只要合規，選好畫的就衝！",
         "why": "考場上沒有完美設計，只有完整畫完且邏輯一致的設計。"
       },
@@ -4611,7 +4611,7 @@
           "步驟 4 量體配置",
           "步驟 11 反向核對"
         ],
-        "explanation": "【步驟 1 審題】的執行重點是：三遍審題：通讀 → 分色標記 → 需求清單；圈出所有帶單位的數字（㎡、戶、席、層、M、%）。定案後緊接著進行【步驟 2 基地分析】！"
+        "explanation": "【步驟 1 審題】的執行重點是：三遍審題：通讀 → 分色標記 → 需求清單；圈出所有帶單位的數字（㎡、戶、席、層、M、%）\n📝 筆記 p.4 建議審題半小時（30 分鐘）；若照筆記，多出的 9 分鐘從步驟 5～8 扣。定案後緊接著進行【步驟 2 基地分析】！"
       },
       {
         "id": "sop_q_02",
