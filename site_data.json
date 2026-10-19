@@ -1,5 +1,5 @@
 {
- "version": "8.3.0",
+ "version": "8.4.0",
  "generated_at": "2026-10-17",
  "numbers": [
   {
@@ -8028,6 +8028,22 @@
    "image": "tracing/trace_p092.webp"
   },
   {
+   "id": "trace_p094",
+   "title": "站前廣場與公園綠帶配置",
+   "category": "配置平面",
+   "desc": "捷運站前廣場、公園綠帶、街角基地的彩色全區配置與入口箭頭",
+   "source_page": "P94",
+   "image": "tracing/trace_p094.webp"
+  },
+  {
+   "id": "trace_p095",
+   "title": "街角廣場與街道家具配置",
+   "category": "配置平面",
+   "desc": "四組街角、森林廣場、街道家具的小基地配置範例",
+   "source_page": "P95",
+   "image": "tracing/trace_p095.webp"
+  },
+  {
    "id": "trace_p098",
    "title": "活動中心球場平面",
    "category": "配置平面",
@@ -8044,12 +8060,52 @@
    "image": "tracing/trace_p100.webp"
   },
   {
+   "id": "trace_p101",
+   "title": "開放空間綠地與水景配置",
+   "category": "配置平面",
+   "desc": "運動場地、聚落綠地、水岸台地三組開放空間配置",
+   "source_page": "P101",
+   "image": "tracing/trace_p101.webp"
+  },
+  {
+   "id": "trace_p102",
+   "title": "中庭綠地與服務車道配置",
+   "category": "配置平面",
+   "desc": "多棟量體間的綠地中庭、植栽分區與出入動線",
+   "source_page": "P102",
+   "image": "tracing/trace_p102.webp"
+  },
+  {
+   "id": "trace_p105",
+   "title": "水岸聚落與植栽配景",
+   "category": "配置平面",
+   "desc": "河岸聚落建築群、水景與植栽、屋頂符號的彩色配置",
+   "source_page": "P105",
+   "image": "tracing/trace_p105.webp"
+  },
+  {
+   "id": "trace_p106",
+   "title": "植栽符號與庭園配置",
+   "category": "配置平面",
+   "desc": "各式樹種平面符號、水池輪廓與庭園建築量體的配置",
+   "source_page": "P106",
+   "image": "tracing/trace_p106.webp"
+  },
+  {
    "id": "trace_p133",
    "title": "一梯四戶住宅標準層",
    "category": "配置平面",
    "desc": "住一～住四單元圍繞核心與採光天井",
    "source_page": "P133",
    "image": "tracing/trace_p133.webp"
+  },
+  {
+   "id": "trace_p138",
+   "title": "園區量體與周邊綠帶配置",
+   "category": "配置平面",
+   "desc": "大量體與周邊綠帶、停車場、廣場的全區配置與手寫標註",
+   "source_page": "P138",
+   "image": "tracing/trace_p138.webp"
   },
   {
    "id": "trace_p082",
