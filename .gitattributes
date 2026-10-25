@@ -1,0 +1,5 @@
+# 三機協作（2026-10-25）：repo 一律 LF，避免各機 autocrlf 不同造成整檔差異
+* text=auto eol=lf
+*.png binary
+*.webp binary
+*.jpg binary
