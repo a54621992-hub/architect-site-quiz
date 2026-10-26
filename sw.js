@@ -1,6 +1,6 @@
 // Service Worker - 敷地＋設計雙科速刷 PWA 離線快取（2026-10-15 v8.1 改版）
 // 改 APP 任何檔案後，把 CACHE_NAME 版號加一，手機才會拿到新版。
-const CACHE_NAME = 'site-planning-quiz-v8.6';
+const CACHE_NAME = 'site-planning-quiz-v8.7';
 const ASSETS = [
   './',
   './index.html',

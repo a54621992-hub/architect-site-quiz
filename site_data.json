@@ -1,5 +1,5 @@
 {
- "version": "8.6.0",
+ "version": "8.7.0",
  "generated_at": "2026-10-25",
  "numbers": [
   {
@@ -1374,7 +1374,7 @@
    "id": "num_073",
    "category": "四、動線・無障礙・尺度",
    "number": "6.1 M→7.5 M",
-   "content": "羽球場淨高需求→建議結構層高；停車層 3.2～3.6 M",
+   "content": "羽球場淨高需求→建議結構層高；停車層 2.6～2.8 M（地上）／3.2 M（地下）",
    "usage": "層高堆疊表是 BIM 得分區",
    "source": "立體化包",
    "status": "△",
@@ -1384,7 +1384,7 @@
     "結構層高7.5M"
    ],
    "scenario": "審題見「國民運動中心、市民活動體育館垂直機能剖面層高」時：",
-   "reflex": "【層高堆疊表】羽球場淨高 ≥6.1M（建議結構層高 7.5M）；停車層 3.2～3.6M；其他層高依題目機能自訂並寫明是設計值。",
+   "reflex": "【層高堆疊表】羽球場淨高 ≥6.1M（建議結構層高 7.5M）；停車層 2.6～2.8M（地上）／3.2M（地下）；其他層高依題目機能自訂並寫明是設計值。",
    "linked_diag_id": "diag_10",
    "linked_diag_name": "圖卡 10｜垂直機能配置剖面",
    "subject_tag": "common"
@@ -3607,7 +3607,7 @@
    "func_abbr": "時",
    "title": "超越標準與維護管理",
    "keywords": "指定溢流路徑・關鍵設施抬高・維護計畫入圖",
-   "number": "▸ 凱米單日 1,343.5mm",
+   "number": "▸ 凱米茂林 7/24～25 中午累積 1,343.5mm（媒體報導）",
    "diagram": "溢流示意圖"
   },
   {
@@ -3654,8 +3654,8 @@
    "grid_no": 4,
    "func_abbr": "策",
    "title": "綠化與立體綠化",
-   "keywords": "CO₂ 固定量・複層綠化・大喬木優先",
-   "number": "▸ TCO₂ ＞ TCO₂c；北市綠容率 115.1.1 施行",
+   "keywords": "固碳當量・複層綠化・大喬木優先",
+   "number": "▸ 綠化總固碳當量 ＞ ½ 最小綠化面積 × 固碳當量基準值（建技規第 302 條）；北市綠容率 115.1.1 施行",
    "diagram": "複層綠化剖面"
   },
   {
@@ -3775,7 +3775,7 @@
    "func_abbr": "策",
    "title": "垂直機能與量體",
    "keywords": "可及性倒序・大跨距在上・設備層緩衝",
-   "number": "▸ 羽球淨高 6.1M→層高 7.5M↑；停車 3.2–3.6M",
+   "number": "▸ 羽球淨高 6.1M→層高 7.5M↑；停車 2.6–2.8M（地上）／3.2M（地下）",
    "diagram": "垂直機能堆疊圖"
   },
   {
@@ -4111,7 +4111,7 @@
    "func_abbr": "時",
    "title": "地下遺構與時間策略",
    "keywords": "試掘・避開推測範圍・分期與暫時使用",
-   "number": "◎ 發見疑似考古遺址應停工通報（條號請核對）⚠",
+   "number": "▸ 發見疑似考古遺址應停工通報（文資法第 57 條第 2 項）",
    "diagram": "開挖線與水圳剖面"
   }
  ],
@@ -4283,8 +4283,8 @@
    {
     "topic_header": "氣候②｜熱島與微氣候量化",
     "title": "綠化與立體綠化",
-    "keywords": "CO₂ 固定量・複層綠化・大喬木優先",
-    "number": "▸ TCO₂ ＞ TCO₂c；北市綠容率 115.1.1 施行",
+    "keywords": "固碳當量・複層綠化・大喬木優先",
+    "number": "▸ 綠化總固碳當量 ＞ ½ 最小綠化面積 × 固碳當量基準值（建技規第 302 條）；北市綠容率 115.1.1 施行",
     "diagram": "複層綠化剖面"
    },
    {
@@ -4305,7 +4305,7 @@
     "topic_header": "立體⑩｜公設多目標使用與立體化",
     "title": "垂直機能與量體",
     "keywords": "可及性倒序・大跨距在上・設備層緩衝",
-    "number": "▸ 羽球淨高 6.1M→層高 7.5M↑；停車 3.2–3.6M",
+    "number": "▸ 羽球淨高 6.1M→層高 7.5M↑；停車 2.6–2.8M（地上）／3.2M（地下）",
     "diagram": "垂直機能堆疊圖"
    },
    {
@@ -4670,7 +4670,7 @@
     "topic_header": "氣候①｜極端降雨：從排水到承納",
     "title": "超越標準與維護管理",
     "keywords": "指定溢流路徑・關鍵設施抬高・維護計畫入圖",
-    "number": "▸ 凱米單日 1,343.5mm",
+    "number": "▸ 凱米茂林 7/24～25 中午累積 1,343.5mm（媒體報導）",
     "diagram": "溢流示意圖"
    },
    {
@@ -4712,7 +4712,7 @@
     "topic_header": "方法⑭｜非量化因素的調查與分析",
     "title": "地下遺構與時間策略",
     "keywords": "試掘・避開推測範圍・分期與暫時使用",
-    "number": "◎ 發見疑似考古遺址應停工通報（條號請核對）⚠",
+    "number": "▸ 發見疑似考古遺址應停工通報（文資法第 57 條第 2 項）",
     "diagram": "開挖線與水圳剖面"
    }
   ]
@@ -4898,7 +4898,7 @@
     "6.1M"
    ],
    "pitfall": "層高亂寫；地下室草率帶過（114 年明訂要交代）",
-   "svg_code": "<svg viewBox=\"0 0 360 290\" xmlns=\"http://www.w3.org/2000/svg\" font-family=\"Noto Sans CJK TC, sans-serif\"><defs><pattern id=\"c10h\" width=\"4\" height=\"4\" patternUnits=\"userSpaceOnUse\" patternTransform=\"rotate(45)\"><line x1=\"0\" y1=\"0\" x2=\"0\" y2=\"4\" stroke=\"#888\" stroke-width=\"1.1\"/></pattern><marker id=\"c10a\" viewBox=\"0 0 10 10\" refX=\"8\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\"><path d=\"M0,0 L10,5 L0,10 z\" fill=\"#222\"/></marker><marker id=\"c10b\" viewBox=\"0 0 10 10\" refX=\"8\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\"><path d=\"M0,0 L10,5 L0,10 z\" fill=\"#6c3483\"/></marker><marker id=\"c10c\" viewBox=\"0 0 10 10\" refX=\"8\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\"><path d=\"M0,0 L10,5 L0,10 z\" fill=\"#1e8449\"/></marker></defs><rect x=\"0.5\" y=\"0.5\" width=\"359\" height=\"289\" fill=\"#fff\" stroke=\"#ccc\"/><line x1=\"70\" y1=\"44\" x2=\"230\" y2=\"44\" stroke=\"#222\" stroke-width=\"2\"/><line x1=\"80\" y1=\"44\" x2=\"80\" y2=\"54\" stroke=\"#222\"/><line x1=\"150\" y1=\"44\" x2=\"150\" y2=\"54\" stroke=\"#222\"/><line x1=\"220\" y1=\"44\" x2=\"220\" y2=\"54\" stroke=\"#222\"/><text x=\"150\" y=\"40\" font-size=\"8\" text-anchor=\"middle\">PV 棚架・雨水回收・屋頂綠化</text><rect x=\"70\" y=\"54\" width=\"160\" height=\"39\" fill=\"#e8daef\" stroke=\"#222\" stroke-width=\".9\"/><text x=\"150\" y=\"76.5\" font-size=\"8.2\" text-anchor=\"middle\">運動中心（無柱大跨距）</text><text x=\"12\" y=\"76.5\" font-size=\"8.4\" font-weight=\"700\">7F</text><text x=\"40\" y=\"76.5\" font-size=\"7.4\" fill=\"#0b3d7a\">7.5M</text><rect x=\"70\" y=\"93\" width=\"160\" height=\"53\" fill=\"#e5e7e9\" stroke=\"#222\" stroke-width=\".9\"/><text x=\"150\" y=\"122.5\" font-size=\"8.2\" text-anchor=\"middle\">立體停車（平坦樓板）</text><text x=\"12\" y=\"122.5\" font-size=\"8.4\" font-weight=\"700\">4–6F</text><text x=\"40\" y=\"122.5\" font-size=\"7.4\" fill=\"#0b3d7a\">3.2–3.6M</text><rect x=\"70\" y=\"146\" width=\"160\" height=\"10.400000000000006\" fill=\"url(#c10h)\" stroke=\"#222\" stroke-width=\".9\"/><text x=\"150\" y=\"154.2\" font-size=\"7.2\" text-anchor=\"middle\">設備／半戶外緩衝層</text><text x=\"12\" y=\"154.2\" font-size=\"8.4\" font-weight=\"700\">設備</text><text x=\"40\" y=\"154.2\" font-size=\"7.4\" fill=\"#0b3d7a\"></text><rect x=\"70\" y=\"156.4\" width=\"160\" height=\"21.799999999999983\" fill=\"#d5f5e3\" stroke=\"#222\" stroke-width=\".9\"/><text x=\"150\" y=\"170.3\" font-size=\"8.2\" text-anchor=\"middle\">日照・托育＋戶外平台</text><text x=\"12\" y=\"170.3\" font-size=\"8.4\" font-weight=\"700\">3F</text><text x=\"40\" y=\"170.3\" font-size=\"7.4\" fill=\"#0b3d7a\">4.2M</text><rect x=\"70\" y=\"178.2\" width=\"160\" height=\"21.80000000000001\" fill=\"#d6eaf8\" stroke=\"#222\" stroke-width=\".9\"/><text x=\"150\" y=\"192.1\" font-size=\"8.2\" text-anchor=\"middle\">區公所・活動中心</text><text x=\"12\" y=\"192.1\" font-size=\"8.4\" font-weight=\"700\">2F</text><text x=\"40\" y=\"192.1\" font-size=\"7.4\" fill=\"#0b3d7a\">4.2M</text><rect x=\"70\" y=\"200\" width=\"160\" height=\"25\" fill=\"#fdebd0\" stroke=\"#222\" stroke-width=\".9\"/><text x=\"150\" y=\"215.5\" font-size=\"8.2\" text-anchor=\"middle\">大廳・食堂・面街店鋪</text><text x=\"12\" y=\"215.5\" font-size=\"8.4\" font-weight=\"700\">1F</text><text x=\"40\" y=\"215.5\" font-size=\"7.4\" fill=\"#0b3d7a\">4.5–5.0M</text><rect x=\"70\" y=\"225\" width=\"160\" height=\"18.69999999999999\" fill=\"#d5d8dc\" stroke=\"#222\" stroke-width=\".9\"/><text x=\"150\" y=\"237.35\" font-size=\"8.2\" text-anchor=\"middle\">停車・回收・卸貨</text><text x=\"12\" y=\"237.35\" font-size=\"8.4\" font-weight=\"700\">B1</text><text x=\"40\" y=\"237.35\" font-size=\"7.4\" fill=\"#0b3d7a\">3.6M</text><rect x=\"70\" y=\"243.7\" width=\"160\" height=\"18.69999999999999\" fill=\"#d5d8dc\" stroke=\"#222\" stroke-width=\".9\"/><text x=\"150\" y=\"256.04999999999995\" font-size=\"8.2\" text-anchor=\"middle\">停車・機電・筏基滯洪</text><text x=\"12\" y=\"256.04999999999995\" font-size=\"8.4\" font-weight=\"700\">B2</text><text x=\"40\" y=\"256.04999999999995\" font-size=\"7.4\" fill=\"#0b3d7a\">3.6M</text><line x1=\"10\" y1=\"225\" x2=\"350\" y2=\"225\" stroke=\"#222\" stroke-width=\"2\"/><text x=\"236\" y=\"221\" font-size=\"7.4\">±0</text><line x1=\"346\" y1=\"214\" x2=\"233\" y2=\"240\" stroke=\"#222\" stroke-width=\"1.2\" marker-end=\"url(#c10a)\"/><text x=\"262\" y=\"258\" font-size=\"7.8\" fill=\"#0b3d7a\">車道坡度 ≤1/6</text><line x1=\"258\" y1=\"200\" x2=\"258\" y2=\"66\" stroke=\"#6c3483\" stroke-width=\"2\" marker-end=\"url(#c10b)\"/><text x=\"264\" y=\"92\" font-size=\"8.4\" fill=\"#6c3483\" font-weight=\"700\">跨距↑</text><text x=\"264\" y=\"104\" font-size=\"8.4\" fill=\"#6c3483\" font-weight=\"700\">私密性↑</text><line x1=\"300\" y1=\"70\" x2=\"300\" y2=\"200\" stroke=\"#1e8449\" stroke-width=\"2\" marker-end=\"url(#c10c)\"/><text x=\"306\" y=\"186\" font-size=\"8.4\" fill=\"#1e8449\" font-weight=\"700\">可及性↑</text><text x=\"180\" y=\"282\" font-size=\"8.8\" text-anchor=\"middle\" font-weight=\"700\" fill=\"#6e2c00\">可及性倒序・跨距倒序・干擾隔離・可逆性（平坦樓板）</text></svg>",
+   "svg_code": "<svg viewBox=\"0 0 360 290\" xmlns=\"http://www.w3.org/2000/svg\" font-family=\"Noto Sans CJK TC, sans-serif\"><defs><pattern id=\"c10h\" width=\"4\" height=\"4\" patternUnits=\"userSpaceOnUse\" patternTransform=\"rotate(45)\"><line x1=\"0\" y1=\"0\" x2=\"0\" y2=\"4\" stroke=\"#888\" stroke-width=\"1.1\"/></pattern><marker id=\"c10a\" viewBox=\"0 0 10 10\" refX=\"8\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\"><path d=\"M0,0 L10,5 L0,10 z\" fill=\"#222\"/></marker><marker id=\"c10b\" viewBox=\"0 0 10 10\" refX=\"8\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\"><path d=\"M0,0 L10,5 L0,10 z\" fill=\"#6c3483\"/></marker><marker id=\"c10c\" viewBox=\"0 0 10 10\" refX=\"8\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\"><path d=\"M0,0 L10,5 L0,10 z\" fill=\"#1e8449\"/></marker></defs><rect x=\"0.5\" y=\"0.5\" width=\"359\" height=\"289\" fill=\"#fff\" stroke=\"#ccc\"/><line x1=\"70\" y1=\"44\" x2=\"230\" y2=\"44\" stroke=\"#222\" stroke-width=\"2\"/><line x1=\"80\" y1=\"44\" x2=\"80\" y2=\"54\" stroke=\"#222\"/><line x1=\"150\" y1=\"44\" x2=\"150\" y2=\"54\" stroke=\"#222\"/><line x1=\"220\" y1=\"44\" x2=\"220\" y2=\"54\" stroke=\"#222\"/><text x=\"150\" y=\"40\" font-size=\"8\" text-anchor=\"middle\">PV 棚架・雨水回收・屋頂綠化</text><rect x=\"70\" y=\"54\" width=\"160\" height=\"39\" fill=\"#e8daef\" stroke=\"#222\" stroke-width=\".9\"/><text x=\"150\" y=\"76.5\" font-size=\"8.2\" text-anchor=\"middle\">運動中心（無柱大跨距）</text><text x=\"12\" y=\"76.5\" font-size=\"8.4\" font-weight=\"700\">7F</text><text x=\"40\" y=\"76.5\" font-size=\"7.4\" fill=\"#0b3d7a\">7.5M</text><rect x=\"70\" y=\"93\" width=\"160\" height=\"53\" fill=\"#e5e7e9\" stroke=\"#222\" stroke-width=\".9\"/><text x=\"150\" y=\"122.5\" font-size=\"8.2\" text-anchor=\"middle\">立體停車（平坦樓板）</text><text x=\"12\" y=\"122.5\" font-size=\"8.4\" font-weight=\"700\">4–6F</text><text x=\"40\" y=\"122.5\" font-size=\"7.4\" fill=\"#0b3d7a\">2.6–2.8M</text><rect x=\"70\" y=\"146\" width=\"160\" height=\"10.400000000000006\" fill=\"url(#c10h)\" stroke=\"#222\" stroke-width=\".9\"/><text x=\"150\" y=\"154.2\" font-size=\"7.2\" text-anchor=\"middle\">設備／半戶外緩衝層</text><text x=\"12\" y=\"154.2\" font-size=\"8.4\" font-weight=\"700\">設備</text><text x=\"40\" y=\"154.2\" font-size=\"7.4\" fill=\"#0b3d7a\"></text><rect x=\"70\" y=\"156.4\" width=\"160\" height=\"21.799999999999983\" fill=\"#d5f5e3\" stroke=\"#222\" stroke-width=\".9\"/><text x=\"150\" y=\"170.3\" font-size=\"8.2\" text-anchor=\"middle\">日照・托育＋戶外平台</text><text x=\"12\" y=\"170.3\" font-size=\"8.4\" font-weight=\"700\">3F</text><text x=\"40\" y=\"170.3\" font-size=\"7.4\" fill=\"#0b3d7a\">4.2M</text><rect x=\"70\" y=\"178.2\" width=\"160\" height=\"21.80000000000001\" fill=\"#d6eaf8\" stroke=\"#222\" stroke-width=\".9\"/><text x=\"150\" y=\"192.1\" font-size=\"8.2\" text-anchor=\"middle\">區公所・活動中心</text><text x=\"12\" y=\"192.1\" font-size=\"8.4\" font-weight=\"700\">2F</text><text x=\"40\" y=\"192.1\" font-size=\"7.4\" fill=\"#0b3d7a\">4.2M</text><rect x=\"70\" y=\"200\" width=\"160\" height=\"25\" fill=\"#fdebd0\" stroke=\"#222\" stroke-width=\".9\"/><text x=\"150\" y=\"215.5\" font-size=\"8.2\" text-anchor=\"middle\">大廳・食堂・面街店鋪</text><text x=\"12\" y=\"215.5\" font-size=\"8.4\" font-weight=\"700\">1F</text><text x=\"40\" y=\"215.5\" font-size=\"7.4\" fill=\"#0b3d7a\">4.5–5.0M</text><rect x=\"70\" y=\"225\" width=\"160\" height=\"18.69999999999999\" fill=\"#d5d8dc\" stroke=\"#222\" stroke-width=\".9\"/><text x=\"150\" y=\"237.35\" font-size=\"8.2\" text-anchor=\"middle\">停車・回收・卸貨（卸貨須加高）</text><text x=\"12\" y=\"237.35\" font-size=\"8.4\" font-weight=\"700\">B1</text><text x=\"40\" y=\"237.35\" font-size=\"7.4\" fill=\"#0b3d7a\">3.6M</text><rect x=\"70\" y=\"243.7\" width=\"160\" height=\"18.69999999999999\" fill=\"#d5d8dc\" stroke=\"#222\" stroke-width=\".9\"/><text x=\"150\" y=\"256.04999999999995\" font-size=\"8.2\" text-anchor=\"middle\">停車・機電・筏基滯洪</text><text x=\"12\" y=\"256.04999999999995\" font-size=\"8.4\" font-weight=\"700\">B2</text><text x=\"40\" y=\"256.04999999999995\" font-size=\"7.4\" fill=\"#0b3d7a\">3.2M</text><line x1=\"10\" y1=\"225\" x2=\"350\" y2=\"225\" stroke=\"#222\" stroke-width=\"2\"/><text x=\"236\" y=\"221\" font-size=\"7.4\">±0</text><line x1=\"346\" y1=\"214\" x2=\"233\" y2=\"240\" stroke=\"#222\" stroke-width=\"1.2\" marker-end=\"url(#c10a)\"/><text x=\"262\" y=\"258\" font-size=\"7.8\" fill=\"#0b3d7a\">車道坡度 ≤1/6</text><line x1=\"258\" y1=\"200\" x2=\"258\" y2=\"66\" stroke=\"#6c3483\" stroke-width=\"2\" marker-end=\"url(#c10b)\"/><text x=\"264\" y=\"92\" font-size=\"8.4\" fill=\"#6c3483\" font-weight=\"700\">跨距↑</text><text x=\"264\" y=\"104\" font-size=\"8.4\" fill=\"#6c3483\" font-weight=\"700\">私密性↑</text><line x1=\"300\" y1=\"70\" x2=\"300\" y2=\"200\" stroke=\"#1e8449\" stroke-width=\"2\" marker-end=\"url(#c10c)\"/><text x=\"306\" y=\"186\" font-size=\"8.4\" fill=\"#1e8449\" font-weight=\"700\">可及性↑</text><text x=\"180\" y=\"282\" font-size=\"8.8\" text-anchor=\"middle\" font-weight=\"700\" fill=\"#6e2c00\">可及性倒序・跨距倒序・干擾隔離・可逆性（平坦樓板）</text></svg>",
    "sketch_image": "diagram_sketches/diag_10_sketch.webp",
    "sketch_source_page": "P8",
    "sketch_title": "生活/共用/開放垂直機能立體分層剖面",
